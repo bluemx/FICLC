@@ -52,6 +52,7 @@
         background: var(--lbii);
       }
       .lbii-title{
+        text-align: center;
         background: var(--colMain);
         width: fit-content;
         padding: 1% 5%;
@@ -436,16 +437,16 @@
               <div class="row">
 
                 <div v-for="(item, index) in filterScreeningsByFilmAndMonth(activeFilm.id, screeningmonth.month_num)" :key="index" class="col-md-6">
-                  <div class="lbii-filmscreen row row-cols-2 p-3 mx-1 my-3">
-                    <div class="d-flex gap-3 align-items-center h4 col-6">
+                  <div class="lbii-filmscreen row row-cols-lg-2 p-3 mx-1 my-3">
+                    <div class="d-flex gap-3 align-items-center h4 col-md-6 p-1 flex-wrap">
                       <iconify-icon icon="ph:calendar-dots-duotone"></iconify-icon>
                       <strong>{{item.dayNameSpanish}} {{item.day}}</strong>
                     </div>
-                    <div class="d-flex gap-3 align-items-center h5 col-6">
+                    <div class="d-flex gap-3 align-items-center h5 col-md-6 p-1  flex-wrap">
                       <iconify-icon icon="ph:buildings-duotone"></iconify-icon>
                       <span>{{item.venue.name}}</span>
                     </div>
-                    <div class="d-flex gap-3 align-items-center h5 col-6">
+                    <div class="d-flex gap-3 align-items-center h5 col-12 p-1  flex-wrap">
                       <iconify-icon icon="ph:watch-duotone"></iconify-icon>
                       <span>{{item.time}}</span>
                     </div>
@@ -457,9 +458,9 @@
             <div class="mt-5">
 
               <div class="lbii-title">CONSULTA EL RESTO DE LA PROGRAMACIÓN</div>
-              <div class="row">
+              <div class="row justify-content-center">
                 <template v-for="(item, index) in films" :key="index" >
-                  <div v-if="item.id!==activeFilm.id" class="col-md-4 col-6">
+                  <div v-if="item.id!==activeFilm.id" class="col-md-4 col-sm-6 col-9">
                     <div class="lbiibox-component" @click="openLink('film',item.id, item.film.name, $event)">
                       <div class="lbiibox-inner" :style="'background-image: url(images/labajainspira-itinerante/2024/films/filmId_'+item.id+'.jpg)'">
                         <div class="lbiibox-title">{{item.film.name}}</div>
