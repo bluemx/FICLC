@@ -1,0 +1,169 @@
+.error-ajax{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: auto;
+	color: #e23434;
+	font-weight: 400;
+	padding: 8px 10px;
+	margin-bottom: 8px;
+	border-radius: 3px;
+	background-color: transparent;
+	margin-top: 5px;
+	display: none;
+}
+
+.main-popup-message {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	height: 100%;
+	width: 100%;
+	z-index: 3200;
+	overflow-y: auto;
+	background-color: rgba(0, 0, 0, .7);
+	backdrop-filter: blur(8px);
+}
+
+.popup-color1 {
+	background-color: rgba(0, 0, 0, 0.42) !important;;
+}
+
+.mppm-popup-box {
+	position: relative;
+	right: 0;
+	left: 0;
+	margin-top: 160px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 140px;
+	max-width: 900px;
+	width: 94%;
+	border-radius: 3px;
+	/*background-color: #011e41;*/
+	background-color: #fff;
+	color: #444;
+	font-weight: 400;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+	
+}
+
+.mppm-popup-text3 {
+	position: relative;
+	font-size: 1.4em;
+	max-width: 460px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px 20px;
+	text-align: center;
+}
+
+.mppm-popup-text3 img{
+	display: block;
+	max-width: 290px;
+	margin: 0 auto;
+}
+
+.mppm-popup-text3 div{
+	position: relative;
+	margin-top:30px;
+}
+
+.mppm-popup-text3 div img{
+	display: block;
+	max-width: 70px;
+	margin: 0 auto;
+}
+
+.mppm-popup-close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 15px;
+	height: 15px;
+	background-image: url('https://bluepureloyalty.com/app/images/mail/close-b.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 100;
+	cursor: pointer;
+}
+
+.mppm-popup-logo{
+	position: relative;
+	padding: 30px 30px 13px 30px;
+	background: var(--colMain);
+}
+
+.mppm-popup-logo img{
+	max-width: 220px;
+	width: 100%;
+}
+
+.mppm-popup-image{
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding: 30px;
+}
+
+.mppm-popup-image img:nth-child(1){
+	max-width: 100px;
+	width: 100%;
+	margin: 0px 10px;
+}
+
+.mppm-popup-image img:nth-child(2){
+	max-width: 100px;
+	width: 100%;
+	margin: 0px 10px;
+}
+
+.mppm-popup-image img:nth-child(3){
+	max-width: 100px;
+	width: 100%;
+	margin: 0px 10px;
+}
+
+.mppm-popup-image img:nth-child(4){
+	max-width: 180px;
+	width: 100%;
+	margin: 0px 10px;
+}
+
+.mppm-popup-footer{
+	position: relative;
+	text-align: center;
+	background: var(--colMain);
+	padding: 10px 10px;
+}
+
+.mppm-popup-footer img{
+	max-width: 60px;
+	width: 100%;
+}
+
+.mppm-popup-pleca{
+	position: relative;
+	background: #e36232;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	display: flex;
+}
+
+.mppm-popup-pleca span:nth-child(1) {
+	width: 33%;
+	background: var(--colMain);
+}
+
+.mppm-popup-pleca span:nth-child(2) {
+	width: 33%;
+	background: #f37c50;
+}

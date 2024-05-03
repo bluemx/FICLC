@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;700&family=Barlow:wght@200;300;400;700;800&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="app/app.css?v=2.5" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- aos.css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Newsletter-->
+    <link rel="stylesheet" href="app/newsletter.css" />
+
+    <link rel="stylesheet" href="app/Carousel.css" />
+
+
+    <script type="text/javascript" src="app/newsletter.js"></script>
+    <script type="text/javascript" src="app/include.js"></script>
+   
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0N0NFB1B5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-K0N0NFB1B5');
+  </script>
+  <script>$(document).ready(function () 
+  { $("#myModal").modal("show")});
+    </script>
+
+
+    <title>FIC Los Cabos</title>
+
+
+    <style>
+      .lbii-barra{
+        width: 40px;
+        min-height: 100%;
+        background: var(--lbii);
+      }
+      .lbii-title{
+        background: var(--colMain);
+        width: fit-content;
+        padding: 1% 5%;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+      .lbiibox-component {
+        margin: 10px 0;
+        cursor: pointer;
+        transition: 0.5s all;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+      }
+      .lbiibox-component .lbiibox-inner {
+        transition: 1s all;
+        border: 4px solid var(--colMain);
+        aspect-ratio: 6/5;
+        background-size: 100%;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .lbiibox-component .lbiibox-inner .lbiibox-title {
+        background: var(--colMain);
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding: 0.5rem;
+      }
+      .lbiibox-component .lbiibox-inner .lbiibox-btn {
+        transition: 0.3s all;
+        background: #fff;
+        padding: 0.8rem;
+        text-align: center;
+        max-width: 300px;
+        width: auto;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: -4px;
+        color: var(--colMain);
+      }
+      .lbiibox-component .lbiibox-data {
+        background-image: linear-gradient(#fff, #F5F5F5);
+        padding: 0.8rem;
+        color: var(--colMain);
+      }
+      .lbiibox-component:hover {
+        box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+      }
+      .lbiibox-component:hover .lbiibox-inner {
+        background-size: 120%;
+      }
+      .lbiibox-component:hover .lbiibox-inner .lbiibox-btn {
+        background: var(--colMain);
+        max-width: 100%;
+        width: 100%;
+        color: #fff;
+      }
+      .lbiibox-icon{ margin: 0 auto; }
+      .lbiibox-icon img{ margin-top: -50%; max-width: 60px; }
+
+
+      .lbii-pop {
+        position: fixed;
+        z-index: 999999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation: popIn 0.5s forwards;
+      }
+      .lbii-pop .lbiipop-inner {
+        background: #fff;
+        min-width: 300px;
+        max-width: 94%;
+        max-height: 98%;
+        position: relative;
+        color: var(--colMain);
+      }
+      .lbii-pop .lbiipop-inner .lbiipop-close {
+        margin-left: auto;
+        background: var(mainCol);
+        line-height: 1;
+        z-index: 9;
+        font-size: 2rem;
+        color: var(--colMain);
+        cursor: pointer;
+        padding: 10px;
+      }
+      .lbii-pop .lbiipop-inner .lbiipop-close:hover {
+        color: var(--lbii);
+      }
+      .lbii-pop .lbiipop-inner.lbii-pop-film {
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      }
+      .lbii-pop .lbiipop-inner.lbii-pop-venue {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 800px;
+        height: fit-content;
+        min-height: 420px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      }
+      .lbii-pop .lbiipop-inner.lbii-pop-film .lbii-title {
+        margin: 0 auto 20px;
+        text-transform: uppercase;
+      }
+      .lbii-pop .lbiipop-inner.lbii-pop-film .lbiipop-image {
+        aspect-ratio: 1/1;
+        background-size: cover;
+        border: 8px solid var(--colMain);
+      }
+      .lbii-pop .lbiipop-inner.lbii-pop-film .lbiipop-infoboxes {
+        padding: 1rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      .lbii-pop .lbiipop-inner.lbii-pop-film .lbiipop-infobox {
+        font-size: 1.1rem;
+        display: flex;
+        gap: 1.4rem;
+        align-items: center;
+      }
+      .lbii-pop .lbiipop-inner.lbii-pop-film iconify-icon {
+        font-size: 40px;
+      }
+      .lbii-filmscreen{
+        background: var(--colMain);
+        color: #fff;
+      }
+      .lbii-entradalibre{
+        border: 4px solid #ffdd00;
+        width: fit-content;
+        padding: 5px 10px;
+        margin: 0 auto;
+        animation: floatUp 1s infinite alternate ease-in-out;
+      }
+
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0);
+        }
+        100% { transform: translateY(-6px); border: 4px solid #ffff00;}
+      }
+
+      @keyframes popIn {
+        from {
+          opacity: 0;
+          top: -10%;
+        }
+        to {
+          opacity: 1;
+          top: 0;
+        }
+      }
+
+      [v-cloak] { display: none; }
+
+      .lbii-innervenueimg{
+        background-position: center;
+        background-size: cover;
+      }
+
+      .lbii-downloadcal{
+        background: var(--colMain);
+        width: fit-content;
+        color: #fff;
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 15px;
+        text-decoration: none;
+        font-weight: bold;
+        gap: 10px;
+      }
+      .lbii-downloadcal:hover{
+        color: #fff;
+        background: var(--lbii);
+      }
+
+      .lbii-footer-venue {
+	      background: var(--colMain);
+        margin: 1rem -1rem -1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .lbii-footer-venue .lbiibox-iconfoot {
+        margin-top: -2rem;
+      }
+      .lbii-footer-venue .lbiibox-iconfoot img {
+        max-width: 48px;
+      }
+      .lbii-footer-venue p {
+        color: #fff;
+        padding: 0.4rem 2rem;
+      }
+      .lcii-gmapslink {
+        color: var(--colMain);
+        background: #fff;
+        width: fit-content;
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 15px;
+        text-decoration: none;
+        font-weight: bold;
+        gap: 10px;
+      }
+      .lcii-gmapslink:hover {
+        color: #fff;
+        background: var(--lbii);
+      }
+
+    
+
+    </style>
+
+     
+
+
+  </head>
+  <body>
+<header id="divmenu" class="inclusion" data-file="header.html" >
+</header>
+
+  <!-- ##################################################################################################################################################################################################################-->
+  <!-- Fondo Fílmico -->
+  <!-- ##########################-->
+
+  <section class="text-center my-5 container">
+    <img src="images/labajainspira-itinerante/2024/banner.png" alt="La Baja Inspira Itinerante" class="w-100">
+  </section>
+
+  <section class="container mb-5">
+      <div class="d-flex">
+        <div class="lbii-barra"></div>
+        <div class="p-5">
+          <p><strong>La Baja Inspira</strong> nace en nuestra edición 2021 como una sección que coloca los reflectores en películas que de una u otra forma vinculan su origen a la península de Baja California, rindiendo homenaje a las tierras sede de nuestro Festival.</p>
+          <p>Tras dos exitosas ediciones, esta sección amplía sus horizontes y se fortalece con <strong>La Baja Inspira Itinerante</strong>, programa conformado por una serie de títulos que hemos tenido la fortuna de exhibir y que ahora emprenderán un recorrido por cinco hermosos escenarios de la región: La Paz, Loreto, Mulegé, Todos Santos y Los Cabos.</p>
+          
+        </div>
+        <div class="lbii-barra"></div>
+      </div>
+  </section>
+
+
+  
+
+
+
+  <div id="lbii-app">
+    
+    <section class="container" v-cloak>
+      <div class="lbii-title mx-auto">CONÓCE LA PROGRAMACIÓN</div>
+      <div class="row mt-5" >
+        <div class="col-md-6 " v-for="(item, index) in films" :key="index" >
+          <div class="lbiibox-component" @click="openLink('film',item.id, item.film.name, $event)">
+            <div class="lbiibox-inner lbii-source" :style="'background-image: url(images/labajainspira-itinerante/2024/films/filmId_'+item.id+'.jpg)'">
+              <div class="lbiibox-title">{{item.film.name}}</div>
+              <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
+            </div>
+            <div class="lbiibox-data">Dir. {{item.film.director}}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="container" v-cloak>
+      <div class="lbii-title mx-auto">CONÓCE LAS SEDES</div>
+      <div class="row mt-5" >
+        <div class="col-md-4 col-sm-6 mt-3" v-for="(item, index) in venues" :key="index" >
+          <div class="lbiibox-component" @click="openLink('venue',item.id, item.name)">
+            <div class="lbiibox-inner lbii-source" :style="'background-image: url(images/labajainspira-itinerante/2024/sedes/'+item.imageName+')'">
+              <div class="lbiibox-icon"><img src="images/labajainspira-itinerante/2024/sedes/marker.svg"></div>
+              <div class="lbiibox-btn">{{item.name}}</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="container">
+      <div class="d-flex justify-content-center align-items-center flex-wrap w-100 gap-5">
+        <img src="images/labajainspira-itinerante/2024/logos/1.png" alt="IMCINE" class="img-fluid">
+        <img src="images/labajainspira-itinerante/2024/logos/2.png" alt="FOCINE"  class="img-fluid">
+        <img src="images/labajainspira-itinerante/2024/logos/3.png" alt="CONACULTA"  class="img-fluid">
+        <img src="images/labajainspira-itinerante/2024/logos/4.png" alt="BAJA CALIFORNIA CULTURA"  class="img-fluid">
+      </div>
+    </section>
+
+
+
+    <!-- POP UPS -->
+
+
+
+    <div class="lbii-pop" v-if="activeFilm || activeVenue" v-cloak>
+      <div class="lbiipop-inner lbii-pop-film" v-if="activeFilm">
+          <div class="d-flex w-100">
+            <div class="lbiipop-close" @click="closePop"><i class="fa fa-times"></i></div>
+          </div>
+          <div class="lbii-title">{{activeFilm.film.name}}</div>
+          
+          <div class="container h-100 overflow-auto">
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="lbiipop-image lbii-target" :style="'background-image: url(images/labajainspira-itinerante/2024/films/filmId_'+activeFilm.id+'.jpg)'"></div>
+              </div>
+              <div class="col-md-6 lbiipop-infoboxes">
+                <!--pais-->
+                <div class="lbiipop-infobox">
+                  <div class="lbiipop-ico"><iconify-icon icon="ph:map-pin-area-duotone"></iconify-icon></div>
+                  <div class="lbiipop-info"><div><strong>País:</strong> {{activeFilm.film.country}} </div></div>
+                </div>
+                <div class="lbiipop-infobox">
+                  <div class="lbiipop-ico"><iconify-icon icon="ph:calendar-dots-duotone"></iconify-icon></div>
+                  <div class="lbiipop-info"><div><strong>Año:</strong> {{activeFilm.film.year}} </div></div>
+                </div>
+                <div class="lbiipop-infobox">
+                  <div class="lbiipop-ico"><iconify-icon icon="ph:user-duotone"></iconify-icon></div>
+                  <div class="lbiipop-info"><div><strong>Director:</strong></div><div>{{activeFilm.film.director}}</div></div>
+                </div>
+                <div class="lbiipop-infobox">
+                  <div class="lbiipop-ico"><iconify-icon icon="ph:files-duotone"></iconify-icon></div>
+                  <div class="lbiipop-info"><div><strong>Guión:</strong></div><div>{{activeFilm.film.script}}</div></div>
+                </div>
+                <div class="lbiipop-infobox">
+                  <div class="lbiipop-ico"><iconify-icon icon="ph:camera-duotone"></iconify-icon></div>
+                  <div class="lbiipop-info"><div><strong>Fotografía:</strong></div><div>{{activeFilm.film.photo}}</div></div>
+                </div>
+                <div class="lbiipop-infobox">
+                  <div class="lbiipop-ico"><iconify-icon icon="ph:user-duotone"></iconify-icon></div>
+                  <div class="lbiipop-info"><div><strong>Duración:</strong> {{activeFilm.film.duration}} <span>minutos</span></div></div>
+                </div>
+                <div class="lbiipop-infobox">
+                  <div class="lbiipop-ico"><iconify-icon icon="ph:film-strip-duotone"></iconify-icon></div>
+                  <div class="lbiipop-info"><div><strong>Clasificación:</strong> {{activeFilm.film.rating}}</div></div>
+                </div>
+              </div>
+            </div><!-- /.row-->
+            <div class=" mt-4">
+              <section class="container mb-5">
+                <div class="d-flex">
+                  <div class="lbii-barra"></div>
+                  <div class="p-5">
+                      <div class="h3"><strong>SINÓPSIS</strong></div>
+                      <p>{{activeFilm.film.synopsis}}</p>
+                    </div>
+                    <div class="lbii-barra"></div>
+                  </div>
+              </section>
+            </div><!-- /sinopsis-->
+            
+            <div class="mt-5" v-for="(screeningmonth, screeningindex) in currentscreeninglist" :key="screeningindex">
+              <div class="lbii-title">FUNCIONES {{screeningmonth.month}}</div>
+              <div class="text-center text-center h4 mb-3">
+                <div class=" lbii-entradalibre" v-if="filterScreeningsByFilmAndMonth(activeFilm.id, screeningmonth.month_num).length>0">ENTRADA LIBRE</div>
+                <div v-else >PRÓXIMAMENTE</div>
+              </div>
+              <div class="row">
+
+                <div v-for="(item, index) in filterScreeningsByFilmAndMonth(activeFilm.id, screeningmonth.month_num)" :key="index" class="col-md-6">
+                  <div class="lbii-filmscreen row row-cols-2 p-3 mx-1 my-3">
+                    <div class="d-flex gap-3 align-items-center h4 col-6">
+                      <iconify-icon icon="ph:calendar-dots-duotone"></iconify-icon>
+                      <strong>{{item.dayNameSpanish}} {{item.day}}</strong>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center h5 col-6">
+                      <iconify-icon icon="ph:buildings-duotone"></iconify-icon>
+                      <span>{{item.venue.name}}</span>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center h5 col-6">
+                      <iconify-icon icon="ph:watch-duotone"></iconify-icon>
+                      <span>{{item.time}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- / funciones -->
+
+            <div class="mt-5">
+
+              <div class="lbii-title">CONSULTA EL RESTO DE LA PROGRAMACIÓN</div>
+              <div class="row">
+                <template v-for="(item, index) in films" :key="index" >
+                  <div v-if="item.id!==activeFilm.id" class="col-md-4 col-6">
+                    <div class="lbiibox-component" @click="openLink('film',item.id, item.film.name, $event)">
+                      <div class="lbiibox-inner" :style="'background-image: url(images/labajainspira-itinerante/2024/films/filmId_'+item.id+'.jpg)'">
+                        <div class="lbiibox-title">{{item.film.name}}</div>
+                        <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </template>
+              </div>
+
+            </div>
+
+
+
+          </div>
+
+        </div>
+
+        <div class="lbiipop-inner lbii-pop-venue" v-if="activeVenue">
+
+            <div class="row h-100 g-0">
+              <div class="col-6 lbii-innervenueimg" :style="'background-image: url(images/labajainspira-itinerante/2024/sedes/'+activeVenue.imageName+')'">
+                
+              </div>
+              <div class="col-6 h-100">
+                <div class="h-100 d-flex flex-column justify-content-between p-3">
+                  <div class="d-flex w-100">
+                    <div class="lbiipop-close" @click="closePop"><i class="fa fa-times"></i></div>
+                  </div>
+                  <div class="text-center h4 my-3 text-uppercase"><strong>{{activeVenue.name}}</strong></div>
+                  <div class="my-3 h5">{{activeVenue.description}}</div>
+                  <a :href="activeVenue.calendarLink" class="lbii-downloadcal">
+                    <iconify-icon icon="ph:download-simple-duotone" height="32"></iconify-icon>
+                    Descargar calendario
+                  </a>
+                  <div class="mt-5 lbii-footer-venue">
+                    <div class="lbiibox-iconfoot"><img src="images/labajainspira-itinerante/2024/sedes/marker.svg"></div>
+                    <p>{{activeVenue.address}}</p>
+                    <div class="text-center p-2">
+                      <a class="lcii-gmapslink" target="_blank" :href="activeVenue.googleMapsLink">
+                        <iconify-icon icon="ph:map-trifold-duotone" height="32"></iconify-icon>
+                        Abrir en Google Maps</a>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+          
+
+        </div>
+
+          
+
+    </div>
+
+
+
+  </div> <!-- / #lbii-app-->
+
+
+
+  <!-- ##################################################################################################################################################################################################################-->
+
+
+    <footer id="divfooter" class="inclusion" data-file="footer.html" ></footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
+    
+
+<!-- aos.js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+
+
+<script>
+  AOS.init();
+</script>
+
+<!--/aos.js-->
+<!--ediciones-->
+<script src="https://news.loscabosiff.org/loscabos-components.js?v=2"></script>
+<!--/ediciones-->
+
+<script src="app/app.js?v=1.5"></script>
+
+
+
+
+<!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@3.4.26/dist/vue.global.min.js"></script>
+
+<script src="app/lbii.js"></script>
+<script>
+  const { createApp, ref } = Vue
+
+  createApp({
+    setup() {
+
+      const currentscreeninglist = lbii_currentscreeninglist
+
+
+
+      const films = lbii_films
+      const venues = lbii_venues
+      const screenings = lbii_screenings
+
+      const activeFilm = ref(null)
+      const activeVenue = ref(null)
+
+      const sourceTransition = ref()
+      const initialRect = ref()
+
+      const filterScreeningsByFilmAndMonth = (filmId, month) => {
+        var filteredScreenings = screenings.filter(function(screening) {
+          return screening.filmId === filmId && new Date(screening.dateTime).getMonth() + 1 === month;
+        });
+        var screeningsWithInfo = filteredScreenings.map(function(screening) {
+            var film = films.find(function(film) {
+                return film.id === screening.filmId;
+            });
+            var venue = venues.find(function(venue) {
+                return venue.id === screening.venueId;
+            });
+            var screeningDate = new Date(screening.dateTime);
+            var dayNameSpanish = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'][screeningDate.getDay()];
+            var dayNameEnglish = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][screeningDate.getDay()];
+            var day = screeningDate.getDay()
+            var hours = screeningDate.getHours();
+            var minutes = screeningDate.getMinutes();
+            var time = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0');
+
+            return { ...screening, film: film, venue: venue, dayNameSpanish: dayNameSpanish, dayNameEnglish: dayNameEnglish,day, time: time };
+        });
+
+        return screeningsWithInfo;
+    }
+
+
+      const parseHash = (hash) => {
+        const pattern = /^#(film|venue)-(\d+)\/(.+)$/;
+        const match = hash.match(pattern);
+        return match ? { type: match[1], id: match[2], name: match[3] } : null;
+      }
+
+      const handleHashChange = () => {
+        const hashInfo = parseHash(window.location.hash);
+        if (hashInfo) {
+            const { type, id } = hashInfo;
+            const targetArray = type === 'film' ? films : venues;
+            const item = targetArray.find(item => item.id === parseInt(id));
+            if (item) {
+                type === 'film' ? (activeFilm.value = item, activeVenue.value = null) : (activeVenue.value = item, activeFilm.value = null);
+              } else {
+                console.log("Item not found in the array.");
+            }
+        } else {
+            console.log("Invalid hash.");
+        }
+      }
+
+
+      const slugify = (name) => {
+        return name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      }
+
+
+
+      const openLink = (type, id, name, $event) => {
+        location.hash = type+'-'+id+'/'+slugify(name)
+      }
+      const closePop = () => {
+        //window.location.href.split('#')[0]
+        history.pushState(null,null,'#');
+
+        activeFilm.value = null
+        activeVenue.value = null
+      }
+
+
+      
+
+
+      handleHashChange();
+      window.onhashchange = handleHashChange;
+
+      return {
+        films,
+        venues,
+        screenings,
+        openLink: openLink,
+        activeFilm: activeFilm,
+        activeVenue: activeVenue,
+        filterScreeningsByFilmAndMonth,
+        closePop,
+        currentscreeninglist
+      }
+    }
+  }).mount('#lbii-app')
+</script>
+
+
+
+</body>
+</html>
