@@ -139,7 +139,7 @@ nav.navbar{
     content:"";
     width: 100%;
     position: absolute; left: 0; bottom: 0;
-    border-bottom: 2px solid var(--colMain);
+    //border-bottom: 2px solid var(--colMain);
     transition: all .5s;
   }
 .navbar-nav .nav-link.active{
@@ -1197,7 +1197,7 @@ background: var(--colMain);
   color: #8bb7e9;
 }
 
-  nav{background: #0a1e3f; border-bottom: 1px solid #fff;}
+  nav{background: #0a1e3f; }
   .bg-fic{background: #0a1e3f;}
   .navbar.bg-fic .topbarlang ul {
   display: flex;
@@ -1866,3 +1866,6 @@ font-size: 40pt;
   background-repeat: no-repeat;
   background-size: 1rem 1rem;
 }
+
+
+a{line-height:1;}

@@ -7,97 +7,113 @@ var lbii_currentscreeninglist = [
 
 
 var lbii_films = [
-    {
+  {
       id: 1,
+      type: 'feature',
+      gallery: ['film1_1.jpg', 'film1_2.jpg', 'film1_3.jpg'],
       film: {
-        name: 'Cabo desesperación',
-        country: 'México',
-        year: '2023',
-        director: 'Juan Javier Maen',
-        script: 'Carlos Aguirre',
-        photo: 'Grabiel Mendoza',
-        duration: '110',
-        rating: 'B',
-        synopsis: 'En “Cabo Desesperación”, la vida de María, interpretada por Camila Sánchez, se ve sacudida por el naufragio de su esposo, interpretado por Javier Morales, frente a la costa de Los Cabos. Atormentada por la incertidumbre y la pérdida, María se sumerge en un viaje emocional por las playas soleadas y los paisajes impresionantes de México en busca de respuestas y consuelo. Con la ayuda de su amiga Ana, encarnada por Gabriela Rojas, y el apoyo inesperado de Juan, interpretado por Carlos Martínez, María se enfrenta a sus miedos más profundos mientras lucha por encontrar la paz interior en medio de la desolación.',
-        synopsis_en: 'In “Cabo Desesperación,” the life of María, played by Camila Sánchez, is shaken by the shipwreck of her husband, played by Javier Morales, off the coast of Los Cabos. Haunted by uncertainty and loss, María embarks on an emotional journey through the sunny beaches and stunning landscapes of Mexico in search of answers and solace. With the help of her friend Ana de ella, played by Gabriela Rojas, and the unexpected support of Juan, played by Carlos Martínez, María faces her deepest fears as she struggles to find inner peace in the midst of the desolation.'
+          name: 'YŪREI (FANTASMAS)',
+          country: 'México',
+          year: '2022',
+          director: 'Sumei García Hirata',
+          script: 'Sumei García Hirata y Óscar Velázquez Lanzázuri',
+          photo: '',
+          duration: '83',
+          rating: 'A',
+          synopsis: 'La historia velada de los mexicanos japoneses y el impacto perdurable del silencio histórico en sus descendientes se retrata a través de una exploración espacial y coreográfica, cuestionando la formación y teatralidad de la identidad individual y colectiva.',
+          synopsis_en: 'The veiled history of Japanese Mexicans and the lasting impact of historical silence on their descendants is portrayed through a spatial and choreographic exploration, questioning the formation and theatricality of individual and collective identity.'
       }
-    },
-    {
+  },
+  {
       id: 2,
+      type: 'feature',
+      gallery: ['film2_1.jpg', 'film2_2.jpg', 'film2_3.jpg'],
       film: {
-        name: 'Navegando en Papel',
-        country: 'México',
-        year: '2022',
-        director: 'Elena García',
-        script: 'Luis Rodríguez',
-        photo: 'Grabiel Mendoza',
-        duration: '95',
-        rating: 'A',
-        synopsis: 'En “Navegando en Papel”, Lucas, un joven creativo, construye un barco de papel que lo lleva a una aventura inesperada en un océano surrealista hecho de papel. En este viaje, enfrentará desafíos extraordinarios y descubrirá lecciones sobre coraje y el poder de la imaginación.',
-        synopsis_en: 'In “Sailing on Paper,” Lucas, a young creative, builds a paper boat that takes him on an unexpected adventure in a surreal ocean made of paper. On this journey, he will face extraordinary challenges and learn lessons about courage and the power of imagination.'
+          name: 'CHÈCHE LAVI: BUSCANDO UNA VIDA',
+          country: 'Estados Unidos, México, Haití',
+          year: '2019',
+          director: 'Sam Ellison',
+          script: '',
+          photo: 'Sam Ellison',
+          duration: '76',
+          rating: '',
+          synopsis: 'La hermandad de dos inmigrantes haitianos es probada cuando se quedan atrapados en el caos geopolítico de la frontera entre México y los Estados Unidos. Sin ninguna posibilidad de avanzar y nadie a quien recurrir, sus difíciles decisiones llevan a los dos amigos a futuros muy diferentes.',
+          synopsis_en: 'The brotherhood of two Haitian immigrants is tested when they become trapped in the geopolitical chaos of the border between Mexico and the United States. With no chance to move forward and no one to turn to, their difficult decisions lead the two friends to very different futures.'
       }
-    },
-    {
+  },
+  {
       id: 3,
+      type: 'feature',
+      gallery: ['film3_1.jpg', 'film3_2.jpg', 'film3_3.jpg'],
       film: {
-        name: 'Trotando en la Arena',
-        country: 'México',
-        year: '2024',
-        director: 'Ana López',
-        script: 'Diego Ramírez',
-        photo: 'Grabiel Mendoza',
-        duration: '120',
-        rating: 'B',
-        synopsis: 'En "Trotando en la Arena", la vida de Pablo, un joven jinete apasionado por los caballos, se encuentra en un viaje de autodescubrimiento mientras entrena en las playas de Baja California. Enfrentándose a desafíos tanto personales como atléticos, Pablo se embarca en un viaje emocionante y emotivo hacia la realización de sus sueños mientras forja una conexión única con su noble corcel.',
-        synopsis_en: 'In "Trotting in the Sand," the life of Pablo, a young horse enthusiast, is on a journey of self-discovery while training on the beaches of Baja California. Facing both personal and athletic challenges, Pablo embarks on an exciting and emotional journey towards the realization of his dreams while forging a unique connection with his noble steed.'
+          name: 'LOS HÁMSTERS',
+          country: 'México',
+          year: '2014',
+          director: 'Gilberto González Penilla',
+          script: 'Gilberto González Penilla y Carlos Rodríguez Rodríguez',
+          photo: 'Juan Pablo Ramírez',
+          duration: '71',
+          rating: '',
+          synopsis: 'Rodolfo y Beatriz son padres de dos jóvenes: Jessica y Juan, juntos forman la perfecta familia disfuncional. Rodolfo sale todos los días como si fuera al trabajo, pero en realidad está desempleado. Beatriz, quien se encuentra en medio de una crisis por la edad, es seducida en el gimnasio. Jessica juega un triángulo amoroso entre su novio y su mejor amiga. Y Juan, se entera que será papá. Una familia común tijuanense en la que cada uno esconde sus secretos a pesar de vivir bajo el mismo techo.',
+          synopsis_en: 'Rodolfo and Beatriz are parents to two young adults: Jessica and Juan, together they form the perfect dysfunctional family. Rodolfo leaves every day as if he were going to work, but in reality, he is unemployed. Beatriz, who is in the midst of a midlife crisis, is seduced at the gym. Jessica plays out a love triangle between her boyfriend and her best friend. And Juan finds out he\'s going to be a father. A typical Tijuana family where everyone hides their secrets despite living under the same roof.'
       }
-    },
-    {
+  },
+  {
       id: 4,
+      type: 'short',
+      gallery: ['film4_1.jpg', 'film4_2.jpg', 'film4_3.jpg'],
       film: {
-        name: 'El Hombre en la Orilla',
-        country: 'México',
-        year: '2023',
-        director: 'Sofía García',
-        script: 'Manuel Pérez',
-        photo: 'Grabiel Mendoza',
-        duration: '105',
-        rating: 'B',
-        synopsis: 'En "El Hombre en la Orilla", Diego, cuya mirada perdida en el horizonte de una playa esconde más que solo pensamientos, se encuentra con una misteriosa mujer, desencadenando una serie de eventos que desafían su percepción de la realidad y lo llevan a enfrentar sus más profundos temores y deseos.',
-        synopsis_en: 'In "The Man on the Shore," Diego, whose lost gaze on the horizon of a beach hides more than just thoughts, encounters a mysterious woman, triggering a series of events that challenge his perception of reality and lead him to confront his deepest fears and desires.'
+          name: 'EL PEREGRINO',
+          country: 'México',
+          year: '2022',
+          director: 'Rodrigo Ruiz Patterson',
+          script: 'Rodrigo Ruiz Patterson y Odei Zabaleta',
+          photo: 'Odei Zabaleta',
+          duration: '18',
+          rating: '',
+          synopsis: 'El cuidador de un rancho en medio de la nada presencia un extraño evento que hace que dos hombres misteriosos en una camioneta negra empiecen a seguirlo.',
+          synopsis_en: 'The caretaker of a ranch in the middle of nowhere witnesses a strange event that causes two mysterious men in a black truck to start following him.'
       }
-    },
-    {
+  },
+  {
       id: 5,
+      type: 'short',
+      gallery: ['film5_1.jpg', 'film5_2.jpg', 'film5_3.jpg'],
       film: {
-        name: 'Bajo el Sol',
-        country: 'México',
-        year: '2022',
-        director: 'Alejandro Gómez',
-        script: 'Ana Martínez',
-        photo: 'Grabiel Mendoza',
-        duration: '115',
-        rating: 'A',
-        synopsis: 'En "Bajo el Sol", Ana, una joven en busca de paz, encuentra un mensaje en una botella en una playa del Caribe. Este hallazgo desencadena un viaje emocional donde Ana descubre secretos enterrados en la arena y encuentra el amor bajo el cálido sol tropical.',
-        synopsis_en: 'In "Under the Sun," Ana, a young woman in search of peace, finds a message in a bottle on a Caribbean beach. This discovery triggers an emotional journey where Ana uncovers secrets buried in the sand and finds love under the warm tropical sun.'
+          name: 'LO QUE DEJAMOS EN EL MAR',
+          country: '',
+          year: '--',
+          director: 'Guido Turtula',
+          script: 'Florencia Goulu y Guido Turtula',
+          photo: '',
+          duration: '',
+          rating: '',
+          synopsis: 'A un año de mudarse a Los Cabos, la pandemia y el encierro ponen en jaque a una pareja que se desintegra en una ciudad que no es la suya.',
+          synopsis_en: 'One year after moving to Los Cabos, the pandemic and confinement put a strain on a couple who are falling apart in a city that is not their own.'
       }
-    },
-    {
-      id: 6,
-      film: {
-        name: 'A la Deriva',
-        country: 'México',
-        year: '2021',
-        director: 'Pedro Ramírez',
-        script: 'María Sánchez',
-        photo: 'Grabiel Mendoza',
-        duration: '100',
-        rating: 'B',
-        synopsis: 'En "A la Deriva", un joven marinero llamado Carlos se embarca en una aventura solitaria en alta mar para escapar de los confines de su vida cotidiana. Sin embargo, cuando una tormenta inesperada lo deja a la deriva, Carlos se enfrenta a su mayor desafío hasta el momento: sobrevivir en un océano implacable mientras lucha por encontrar su camino de regreso a casa y a sí mismo.',
-        synopsis_en: 'In "Adrift," a young sailor named Carlos embarks on a solitary adventure on the high seas to escape the confines of his everyday life. However, when an unexpected storm leaves him adrift, Carlos faces his greatest challenge yet: surviving in a relentless ocean while struggling to find his way back home and to himself.'
-      }
+  },
+  {
+    id: 6,
+    type: 'short',
+    gallery: ['film6_1.jpg'],
+    film: {
+        name: 'TIBURONES DEL MAR DE CORTÉS: ¿UN TESORO PERDIDO?',
+        country: '-',
+        year: '--',
+        director: '-',
+        script: '-',
+        photo: '-',
+        duration: '-',
+        rating: '-',
+        synopsis: '-',
+        synopsis_en: '-'
     }
-  ];
+}
+];
+
+
+
+
 
   var lbii_venues = [
     {
