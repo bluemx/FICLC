@@ -278,11 +278,13 @@
                 <div style="top:20px; position: sticky;" class="mb-5">
                 <div class="h3" style="color:#1fa58b;"><strong>SINOPSIS</strong></div>
                 <p>{{activeFilm.film.synopsis}}</p>
-              </div>
-                <!-- IF SHORT -->
+
+
+
+                   <!-- IF SHORT -->
 
                 <div class="mt-5" v-if="activeFilm.type == 'short'">
-                  <div style="background: #f0f0f0; padding: 10px;">
+                  <div style="background: #1fa58b; color:#fff; padding: 10px;">
                     <div class="text-center">
                       <div class="lbii-title mx-auto lbii-shorts-title">PROGRAMA DE CORTOMETRAJES</div>
                       <div>3 CORTOMETRAJES EN UNA MISMA FUNCIÓN</div>
@@ -292,7 +294,7 @@
 
                         <div class="col-md-4 lbiibox-component cursor-pointer"  v-if="item.type=='short'"   @click="openLink('film',item.id, item.film.name, $event)">
                           <div class="lbiibox-image" style=" aspect-ratio: 16/9; background-size:cover;" :style="'background-image: url(images/labajainspira-itinerante/2024/films/'+item.gallery[0]+')'"></div>
-                          <div class="h6">
+                          <div class="h6 p-1 text-center">
                             {{item.film.name}}
                           </div>
                         </div>
@@ -301,6 +303,10 @@
                   </div>
                 </div>
                 <!-- / IF SHORT-->
+
+
+              </div>
+               
               </div><!-- /sinopsis-->
 
 

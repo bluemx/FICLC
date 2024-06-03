@@ -220,70 +220,44 @@ var lbii_films = [
   ];
 
   var lbii_screenings = [
-    {
-        filmId: 1,
-        venueId: 1,
-        dateTime: '2024-06-05T18:00:00'
-    },
-    {
-        filmId: 1,
-        venueId: 1,
-        dateTime: '2024-06-06T18:00:00'
-    },
-    {
-        filmId: 1,
-        venueId: 2,
-        dateTime: '2024-06-07T18:00:00'
-    },
-    {
-        filmId: 1,
-        venueId: 2,
-        dateTime: '2024-07-07T18:00:00'
-    },
-    {
-        filmId: 1,
-        venueId: 3,
-        dateTime: '2024-10-07T18:00:00'
-    },
-    {
-        filmId: 2,
-        venueId: 2,
-        dateTime: '2024-06-10T19:30:00'
-    },
-    {
-        filmId: 3,
-        venueId: 3,
-        dateTime: '2024-06-15T17:00:00'
-    },
-    {
-        filmId: 4,
-        venueId: 4,
-        dateTime: '2024-07-05T18:00:00'
-    },
-    {
-        filmId: 5,
-        venueId: 5,
-        dateTime: '2024-07-10T19:30:00'
-    },
-    {
-        filmId: 6,
-        venueId: 6,
-        dateTime: '2024-07-15T17:00:00'
-    },
-    {
-        filmId: 1,
-        venueId: 1,
-        dateTime: '2024-10-05T18:00:00'
-    },
-    {
-        filmId: 2,
-        venueId: 2,
-        dateTime: '2024-10-10T19:30:00'
-    },
-    {
-        filmId: 3,
-        venueId: 3,
-        dateTime: '2024-10-15T17:00:00'
-    },
-    // Noviembre vacío o próximo a anunciar
+    // YUREI
+    { filmId: 1, venueId: 6, dateTime: '2024-06-22T18:00:00' },
+    { filmId: 1, venueId: 11, dateTime: '2024-07-04T19:30:00' },
+    { filmId: 1, venueId: 3, dateTime: '2024-07-11T20:00:00' },
+    { filmId: 1, venueId: 2, dateTime: '2024-07-23T18:00:00' },
+    
+    // CHECHE LAVI
+    { filmId: 2, venueId: 4, dateTime: '2024-06-28T17:30:00' },
+    { filmId: 2, venueId: 6, dateTime: '2024-07-06T18:00:00' },
+    { filmId: 2, venueId: 11, dateTime: '2024-07-18T19:30:00' },
+    { filmId: 2, venueId: 2, dateTime: '2024-07-24T18:00:00' },
+    
+    // LOS HAMSTERS
+    { filmId: 3, venueId: 3, dateTime: '2024-06-27T20:00:00' },
+    { filmId: 3, venueId: 1, dateTime: '2024-07-04T19:00:00' },
+    { filmId: 3, venueId: 5, dateTime: '2024-07-13T18:00:00' },
+    { filmId: 3, venueId: 3, dateTime: '2024-07-18T20:00:00' },
+    { filmId: 3, venueId: 8, dateTime: '2024-07-27T19:00:00' },
+    
+    // EL PEREGRINO
+    { filmId: 4, venueId: 1, dateTime: '2024-06-27T19:00:00' },
+    { filmId: 4, venueId: 4, dateTime: '2024-06-29T17:30:00' },
+    { filmId: 4, venueId: 3, dateTime: '2024-07-04T20:00:00' },
+    { filmId: 4, venueId: 5, dateTime: '2024-07-20T18:00:00' },
+    { filmId: 4, venueId: 8, dateTime: '2024-07-20T19:00:00' },
+    
+    // LO QUE DEJAMOS EN EL MAR
+    { filmId: 5, venueId: 1, dateTime: '2024-06-27T19:00:00' },
+    { filmId: 5, venueId: 4, dateTime: '2024-06-29T17:30:00' },
+    { filmId: 5, venueId: 3, dateTime: '2024-07-04T20:00:00' },
+    { filmId: 5, venueId: 5, dateTime: '2024-07-20T18:00:00' },
+    { filmId: 5, venueId: 8, dateTime: '2024-07-20T19:00:00' },
+    
+    // TIBURONES DEL MAR DE CORTÉS
+    { filmId: 6, venueId: 1, dateTime: '2024-06-27T19:00:00' },
+    { filmId: 6, venueId: 4, dateTime: '2024-06-29T17:30:00' },
+    { filmId: 6, venueId: 3, dateTime: '2024-07-04T20:00:00' },
+    { filmId: 6, venueId: 5, dateTime: '2024-07-20T18:00:00' },
+    { filmId: 6, venueId: 8, dateTime: '2024-07-20T19:00:00' },
 ];
+
