@@ -32,7 +32,7 @@ var lbii_films = [
       gallery: ['film2_1.jpg', 'film2_2.jpg', 'film2_3.jpg'],
       film: {
           name: 'CHÈCHE LAVI: BUSCANDO UNA VIDA',
-          country: 'Estados Unidos, México, Haití',
+          country: 'EUA, México, Haití',
           year: '2019',
           director: 'Sam Ellison',
           script: '',

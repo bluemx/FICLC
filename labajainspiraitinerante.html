@@ -66,19 +66,9 @@
   </section>
 
   <section class="container mb-5">
-    <p class="h4 text-center"><strong>La Baja Inspira</strong> surgió en el Festival Internacional de Cine de Los Cabos como una plataforma para visibilizar e impulsar el talento de cineastas de la región y la diversidad y riqueza de los paisajes de esta región, en la cual la audiencia pueda verse reflejada.</p>
-    <div class="introcall">
-      <div class="introcall-l">
-        <p class="h4 text-center text-white"><strong>La Baja Inspira Itinerante</strong> es una muestra fílmica que abarca la región noroeste del país recorriendo parte de la península de Baja California, mediante proyecciones completamente gratuitas en espacios públicos y  escolares, que se llevarán a cabo de junio a noviembre del 2024.</p>
-      </div>
-      <!--
-
-        <div class="introcall-r">
-          <img src="images/labajainspira-itinerante/2024/coral.svg" alt="La Baja Inspira Itinerante" class="w-100">
-        -->
-      </div>
-    </div>
-    <p class="h4 text-center">Este proyecto busca que la cinematografía de la región de Baja California  pueda ser entendida como un mapa a través del cual podamos navegar sus historias, personajes y escenarios que den voz a nuevas perspectivas.</p>
+    <p class="h4" style="text-align: justify;">La Baja Inspira surgió en el Festival Internacional de Cine de Los Cabos como una sección para visibilizar e impulsar el talento de cineastas de la región y la diversidad y riqueza de sus paisajes.</p>
+    <p class="h4 p-5 my-5 text-white" style="background: #01a7ce; text-align: justify;">Más tarde, en el 2023, nace <strong>La Baja Inspira Itinerante</strong>, una muestra fílmica que recorre parte de la Península de Baja California mediante proyecciones completamente gratuitas en espacios públicos y  escolares.</p>
+    <p class="h4"  style="text-align: justify;">Este ciclo, que se llevará a cabo por segunda vez consecutiva, este año de junio a noviembre, busca que la cinematografía de Baja California Sur y Baja California  pueda ser entendida como un mapa a través del cual podamos navegar sus historias, personajes y escenarios que den voz a nuevas perspectivas.</p>
   </section>
 
 
@@ -103,13 +93,9 @@
               <div class="lbiibox-title">{{item.film.name}}</div>
               <div class="lbiibox-image" :style="'background-image: url(images/labajainspira-itinerante/2024/films/'+item.gallery[0]+');'"></div>
 
-                <div class="p-2" style="">
-                  <div class="h6" style="margin-bottom: 0;">Dirección:</div>
-                  <div class=""><strong>{{item.film.director}}</strong></div>
-                  <div class="d-flex justify-content-between" >
-                    <div>{{item.film.year}}</div>
-                    <div style="text-align: right;">{{item.film.country}}</div>
-                  </div>
+                <div class="p-2 lbiibox-information">
+                  <div class="h6" style="margin-bottom: 0;">Dirección: <strong>{{item.film.director}}</strong></div>
+                  <div>{{item.film.country}} / {{item.film.year}}</div>
                 </div>
 
               <div class="px-2 pb-3">
@@ -123,6 +109,7 @@
           <div class="lbiibox-component" @click="openLink('film', (Math.floor(Math.random() * 3) + 4), 'Programa de cortometrajes', $event)">
             <div class="lbiibox-title">PROGRAMA DE CORTOMETRAJES</div>
             <div class="lbiibox-image" :style="'background-image: url(images/labajainspira-itinerante/2024/films/cortos.jpg); '"></div>
+            <div class="p2 lbiibox-information"></div>
             <div class="px-2 pb-3" style="margin-top: auto;">
               <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
             </div>
@@ -130,37 +117,8 @@
         </div>
         <!--/programacortos-->
       </div>
-
-
-      <!--shorts-->
-      <!--
-      <div class="row mt-5 gx-1 lbii-shortsarea"  style="background: #1fa58b; cursor:pointer;">
-        <div>
-          <div class="lbii-title mx-auto lbii-shorts-title">PROGRAMA DE CORTOMETRAJES</div>
-        </div>
-        <template v-for="(item, index) in films" >
-          <div class="col-md-4 lbii-films lbii-films-shorts"  v-if="item.type=='short'"   @click="openLink('film',item.id, item.film.name, $event)">
-            <div class="lbiibox-component">
-              <div class="lbiibox-title">{{item.film.name}}</div>
-              <div class="lbiibox-image" :style="'background-image: url(images/labajainspira-itinerante/2024/films/'+item.gallery[0]+')'"></div>
-              <div class="p-3">
-                <div class="py-3 text-center">
-                  <div class="h6">Dirección:</div>
-                  <div class="h5"><strong>{{item.film.director}}</strong></div>
-                </div>
-                <div class="d-flex justify-content-between h6">
-                  <div>{{item.film.year}}</div>
-                  <div style="text-align: right;">{{item.film.country}}</div>
-                </div>
-              </div>
-              <div class="lbiibox-btn mx-auto my-2">CONSULTAR FUNCIONES</div>
-            </div>
-          </div>
-        </template>
-      </div>
-      -->
-      <div class="downloadprogram mt-1">
-        <a href="#" target="_blank" class="lbiibox-btn">DESCARGA LA PROGRAMACIÓN</a>
+      <div class="text-center p-5">
+        <a href="#" target="_blank" class="lbiibox-btn downloadprogram">DESCARGA LA PROGRAMACIÓN</a>
       </div>
     </section>
 
@@ -172,12 +130,14 @@
       <div class="lbii-title mx-auto">
         CONOCE LAS SEDES
       </div>
-      <div class="row mt-5" >
-        <div class="col-md-4 col-sm-6 mt-5" v-for="(item, index) in venues" :key="index" >
+      <div class="row mt-5 g-1" >
+        <div class="col-md-3 col-sm-4 mt-5" v-for="(item, index) in venues" :key="index" >
           <div class="lbiibox-component" @click="openLink('venue',item.id, item.name)">
             <div class="lbiibox-inner lbii-source" :style="'background-image: url(images/labajainspira-itinerante/2024/sedes/'+item.imageName+')'">
               <div class="lbiibox-icon"><img src="images/labajainspira-itinerante/2024/sedes/marker.svg"></div>
-              <div class="lbiibox-btn">{{item.name}}</div>
+              <div class="p-1 pb-2">
+                <div class="lbiibox-btn">{{item.name}}</div>
+              </div>
             </div>
 
           </div>
@@ -187,7 +147,11 @@
 
 
 
-    <section class="">
+
+    <section class="flogos container">
+      <img src="images/labajainspira-itinerante/2024/logos/logos-gray.svg" alt="TENDENCIA"  class="w-100">
+    </section>
+    <!--<section class="">
       <div class="lbii-flogos">
         <img src="images/labajainspira-itinerante/2024/logos/focine.svg" alt="CULTURA IMCINE FOCINE">
         <img src="images/labajainspira-itinerante/2024/logos/cps.svg" alt="CPS MEDIA">
@@ -196,7 +160,7 @@
         <img src="images/labajainspira-itinerante/2024/logos/tribuna.svg" alt="TRIBUNA">
         <img src="images/labajainspira-itinerante/2024/logos/tendencia.svg" alt="TENDENCIA" >
       </div>
-    </section>
+    </section>-->
 
 
 
@@ -208,12 +172,11 @@
       <!-- ACTIVE FILM -->
       <div class="lbiipop-inner lbii-pop-film" v-if="activeFilm">
           <!-- HEADER -->
-          <div class="d-flex w-100">
-            <div class="lbiipop-close" @click="closePop"><i class="fa fa-times"></i></div>
-          </div>
-          <div class="lbii-title" style="margin-top: -20px;">
-            {{activeFilm.film.name}}
-          </div>
+          
+          <div class="lbiipop-close" @click="closePop"><i class="fa fa-times"></i></div>
+          <!--
+            <div class="lbii-title" style="margin-top: -20px;">{{activeFilm.film.name}}</div>
+          -->
           
           <!-- CONTENT WITH SCROLL-->
           <div class="container h-100 overflow-auto">
@@ -225,6 +188,7 @@
 
 
               <div class="col-md-6">
+                <div class="lbii-title-internal mb-1" style="margin-top: -20px;">{{activeFilm.film.name}}</div>
                 <div class="lbiipop-image lbii-target" :style="'background-image: url(images/labajainspira-itinerante/2024/films/'+activeFilmPhoto+')'"></div>
 
                 <div class="row justify-content-center align-items-center gap-1 mt-1">
@@ -249,15 +213,15 @@
                 </div>
                 <div class="lbiipop-infobox">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/director.png"></div>
-                  <div class="lbiipop-info"><div><strong>Director:</strong></div><div>{{activeFilm.film.director}}</div></div>
+                  <div class="lbiipop-info"><div><strong>Director:</strong> {{activeFilm.film.director}}</div></div>
                 </div>
                 <div class="lbiipop-infobox">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/script.png"></div>
-                  <div class="lbiipop-info"><div><strong>Guión:</strong></div><div>{{activeFilm.film.script}}</div></div>
+                  <div class="lbiipop-info"><div><strong>Guión:</strong> {{activeFilm.film.script}}</div></div>
                 </div>
                 <div class="lbiipop-infobox">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/photo.png"></div>
-                  <div class="lbiipop-info"><div><strong>Fotografía:</strong></div><div>{{activeFilm.film.photo}}</div></div>
+                  <div class="lbiipop-info"><div><strong>Fotografía:</strong> {{activeFilm.film.photo}}</div></div>
                 </div>
                 <div class="lbiipop-infobox">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/duration.png"></div>
@@ -317,10 +281,29 @@
                 
                 <!-- FUNCIONES -->
                 <div class="lbii-screenbyvenue">
-                  <div class="h3 text-center" style="color:#1fa58b;"><strong>FUNCIONES</strong></div>
-                    <template v-for="(item, index) in getScreeningsByFilmId(activeFilm.id)">
+                  <div class="d-flex justify-content-between">
+                    <div class="h3" style="color:#1fa58b;"> <strong style="text-transform: uppercase;">CARTELERA</strong></div>
+                    <div><div class="lbii-entradalibre" style="margin-left:auto;">FUNCIONES GRATUITAS</div></div>
+                  </div>
+                  <!--MONTHS-->
+                  <template v-for="(item, index) in getScreeningsByFilmId(activeFilm.id)">
+                      <div class="my-4">
+                        <div class="h4" style="color:#1fa58b;"> <strong style="text-transform: uppercase;">FUNCIONES {{item.month_es}}</strong></div>
+                        <!--VENUES-->
+                        <template v-for="(venue, indexV) in item.venues">
+                          <div class="h6 p-1" style="color: #fff; background-color: #1fa58b;"><strong>{{venue.venueName}}</strong></div>
+                          <template v-for="(film, indexF) in venue.films">
+                            <div class="text-capitalize"> {{film.day_es}} de {{item.month_es}} | {{film.time}} </div>
+                          </template>
+                        </template>
+                      </div>
+                  </template>
+<!--
+
+
+                  <template v-for="(item, index) in getScreeningsByFilmId(activeFilm.id)">
                       <div>
-                        <div class="h5 p-1" style="color: #fff; background-color: #1fa58b; text-transform: uppercase;"><strong>{{item.venue.name}}</strong></div>
+                        <div class="h6 p-1" style="color: #fff; background-color: #1fa58b;"><strong>{{item.venue.name}}</strong></div>
                         <div><div class="lbii-entradalibre" style="margin-left:auto;">FUNCIONES GRATUITAS</div></div>
                         <template v-for="(month, indexm) in item.screenings" :key="index">
                           <div>
@@ -348,45 +331,11 @@
                     </template>
 
 
+                  -->
+
                   
                 </div> <!--lbii-screenbyvenue-->
-                <!--
-                <div class="" v-for="(screeningmonth, screeningindex) in currentscreeninglist" :key="screeningindex">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="h3" style="color:#1fa58b;"><strong>FUNCIONES {{screeningmonth.month}}</strong></div>
-                    <div>
-                      <div class=" lbii-entradalibre" v-if="filterScreeningsByFilmAndMonth(activeFilm.id, screeningmonth.month_num).length>0">FUNCIONES GRATUITAS</div>
-                    </div>
-                  </div>
-                  
-                  <div style="padding:20px; text-align: center; background: #f0f0f0;" v-if="filterScreeningsByFilmAndMonth(activeFilm.id, screeningmonth.month_num).length==0">
-                    FECHAS POR ANUNCIARSE
-                  </div>
-                  
-                  <div class="lbii-screenings">
 
-
-                    <div v-for="(item, index) in filterScreeningsByFilmAndMonth(activeFilm.id, screeningmonth.month_num)" :key="index" class="lbii-screeningitem">
-                      <div class="d-flex gap-2 flex-wrap justify-content-between p-2">
-                        <div class="d-flex gap-2 h5">
-
-                          <strong>{{item.dayNameSpanish}} {{item.day}}</strong>
-                        </div>
-                        <div class="d-flex gap-2">
-                          {{item.time}} hrs
-                        </div>
-                      </div>
-
-                      <div class="d-flex gap-2 p-2" style="color: #fff; background-color: #1fa58b;">
-                        <strong>{{item.venue.name}}</strong>
-                      </div>
-                  </div>
-
-                </div>
-
-                </div> 
-              -->
-              <!-- / funciones -->
 
 
               </div>
@@ -517,6 +466,56 @@
       const activeVenue = ref(null)
 
 
+      const monthNames_es = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+      const monthNames_en = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      function getScreeningsByFilmId(filmId) {
+          const filmScreenings = screenings.filter(screening => screening.filmId === filmId);
+
+          const screeningsByMonth = {};
+
+          filmScreenings.forEach(screening => {
+              const date = new Date(screening.dateTime);
+              const month = date.getMonth();
+              const year = date.getFullYear();
+              const monthKey = `${year}-${month}`;
+
+              if (!screeningsByMonth[monthKey]) {
+                  screeningsByMonth[monthKey] = {
+                      month_es: monthNames_es[month],
+                      month_en: monthNames_en[month],
+                      venues: {}
+                  };
+              }
+
+              const venue = venues.find(venue => venue.id === screening.venueId);
+              if (!screeningsByMonth[monthKey].venues[venue.id]) {
+                  screeningsByMonth[monthKey].venues[venue.id] = {
+                      venueId: venue.id,
+                      venueName: venue.name,
+                      films: []
+                  };
+              }
+
+              const day_es = `${date.toLocaleDateString('es-ES', { weekday: 'long' })} ${date.getDate()}`;
+              const day_en = `${date.toLocaleDateString('en-US', { weekday: 'long' })} ${date.getDate()}`;
+
+              screeningsByMonth[monthKey].venues[venue.id].films.push({
+                  filmId: screening.filmId,
+                  venueId: screening.venueId,
+                  dateTime: screening.dateTime,
+                  time: date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                  day_es,
+                  day_en
+              });
+          });
+
+          return Object.values(screeningsByMonth).map(monthEntry => ({
+              month_es: monthEntry.month_es,
+              month_en: monthEntry.month_en,
+              venues: Object.values(monthEntry.venues)
+          }));
+      }
+/*
       function getScreeningsByFilmId(filmId) {
     var screenings = lbii_screenings.filter(screening => screening.filmId === filmId);
     var venues = {};
@@ -567,7 +566,7 @@
         screenings: Object.values(venue.screenings)
     })).sort((a, b) => a.venue.name.localeCompare(b.venue.name));
 }
-
+*/
 
 
 
