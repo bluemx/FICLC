@@ -203,31 +203,31 @@
               <!-- MOVIE INFORMATIONS -->
 
               <div class="col-md-6 lbiipop-infoboxes">
-                <div class="lbiipop-infobox">
+                <div class="lbiipop-infobox" v-if="activeFilm.film.country">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/country.png"></div>
                   <div class="lbiipop-info"><div><strong>País:</strong> {{activeFilm.film.country}} </div></div>
                 </div>
-                <div class="lbiipop-infobox">
+                <div class="lbiipop-infobox" v-if="activeFilm.film.year">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/year.png"></div>
                   <div class="lbiipop-info"><div><strong>Año:</strong> {{activeFilm.film.year}} </div></div>
                 </div>
-                <div class="lbiipop-infobox">
+                <div class="lbiipop-infobox" v-if="activeFilm.film.director">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/director.png"></div>
                   <div class="lbiipop-info"><div><strong>Director:</strong> {{activeFilm.film.director}}</div></div>
                 </div>
-                <div class="lbiipop-infobox">
+                <div class="lbiipop-infobox" v-if="activeFilm.film.script">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/script.png"></div>
                   <div class="lbiipop-info"><div><strong>Guión:</strong> {{activeFilm.film.script}}</div></div>
                 </div>
-                <div class="lbiipop-infobox">
+                <div class="lbiipop-infobox" v-if="activeFilm.film.photo">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/photo.png"></div>
                   <div class="lbiipop-info"><div><strong>Fotografía:</strong> {{activeFilm.film.photo}}</div></div>
                 </div>
-                <div class="lbiipop-infobox">
+                <div class="lbiipop-infobox" v-if="activeFilm.film.duration">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/duration.png"></div>
                   <div class="lbiipop-info"><div><strong>Duración:</strong> {{activeFilm.film.duration}} <span>minutos</span></div></div>
                 </div>
-                <div class="lbiipop-infobox">
+                <div class="lbiipop-infobox" v-if="activeFilm.film.trailer">
                   <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/trailer.png"></div>
                   <div class="lbiipop-info"><div><strong>Trailer:</strong> <a class="lbii-vertrailer" target="_blank" :href="activeFilm.film.trailer">Ver trailer</a></div></div>
                 </div>
@@ -289,49 +289,17 @@
                   <template v-for="(item, index) in getScreeningsByFilmId(activeFilm.id)">
                       <div class="my-4">
                         <div class="h4" style="color:#1fa58b;"> <strong style="text-transform: uppercase;">FUNCIONES {{item.month_es}}</strong></div>
-                        <!--VENUES-->
-                        <template v-for="(venue, indexV) in item.venues">
-                          <div class="h6 p-1" style="color: #fff; background-color: #1fa58b;"><strong>{{venue.venueName}}</strong></div>
-                          <template v-for="(film, indexF) in venue.films">
+                        <!--FILMS-->
+                        <template v-for="(film, indexF) in item.films">
+                          <div class="mb-3">
+                            <div class="h6 p-1" style="color: #fff; background-color: #1fa58b;"><strong>{{film.venueName}}</strong></div>
                             <div class="text-capitalize"> {{film.day_es}} de {{item.month_es}} | {{film.time}} </div>
-                          </template>
+                          </div>
                         </template>
+
                       </div>
                   </template>
-<!--
 
-
-                  <template v-for="(item, index) in getScreeningsByFilmId(activeFilm.id)">
-                      <div>
-                        <div class="h6 p-1" style="color: #fff; background-color: #1fa58b;"><strong>{{item.venue.name}}</strong></div>
-                        <div><div class="lbii-entradalibre" style="margin-left:auto;">FUNCIONES GRATUITAS</div></div>
-                        <template v-for="(month, indexm) in item.screenings" :key="index">
-                          <div>
-                            <div class="d-flex w-100 justify-content-between">
-                              <div class="h5 p-1" style="color:#1fa58b; text-transform: uppercase;"><strong>{{month.month_es}}</strong></div>
-                              
-                            </div>
-                            <div>
-                              <template v-for="(film, indexf) in month.films">
-                                <div class="lbii-screeningitem mb-1">
-                                  <div class="d-flex gap-1 flex-wrap justify-content-between align-items-center p-2">
-                                    <div class="text-uppercase d-flex gap-1 align-items-center justify-content-center">
-                                      <div class="" style="width: 6px;"><img src="images/labajainspira-itinerante/2024/ico/angle.png" class="w-100"></div>
-                                      <strong>{{film.day_es}}</strong></div>
-                                    <div class="">{{film.time}}</div>
-                                  </div>
-                                </div>
-                                </div>
-                              </template>
-                            </div>
-                          </div>  
-                        </template>
-
-                      </div>
-                    </template>
-
-
-                  -->
 
                   
                 </div> <!--lbii-screenbyvenue-->
@@ -342,27 +310,7 @@
             </div>
             
 
-            <!--
-              <div class="mt-5">
-
-                <div class="lbii-title">CONSULTA EL RESTO DE LA PROGRAMACIÓN</div>
-                <div class="row justify-content-center">
-                  <template v-for="(item, index) in films" :key="index" >
-                    <div v-if="item.id!==activeFilm.id" class="col-md-4 col-sm-6 col-9">
-                      <div class="lbiibox-component" @click="openLink('film',item.id, item.film.name, $event)">
-                        <div class="lbiibox-inner" :style="'background-image: url(images/labajainspira-itinerante/2024/films/filmId_'+item.id+'.jpg)'">
-                          <div class="lbiibox-title">{{item.film.name}}</div>
-                          <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
-                        </div>
-                      </div>
-                    </div>
-                  </template>
-                </div>
-
-              </div>
-                        
-              -->
-
+         
             </div>
 
 
@@ -469,7 +417,9 @@
       const monthNames_es = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
       const monthNames_en = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
       function getScreeningsByFilmId(filmId) {
-          const filmScreenings = screenings.filter(screening => screening.filmId === filmId);
+          const filmScreenings = screenings
+              .filter(screening => screening.filmId === filmId)
+              .sort((a, b) => new Date(a.dateTime) - new Date(b.dateTime));
 
           const screeningsByMonth = {};
 
@@ -483,27 +433,25 @@
                   screeningsByMonth[monthKey] = {
                       month_es: monthNames_es[month],
                       month_en: monthNames_en[month],
-                      venues: {}
-                  };
-              }
-
-              const venue = venues.find(venue => venue.id === screening.venueId);
-              if (!screeningsByMonth[monthKey].venues[venue.id]) {
-                  screeningsByMonth[monthKey].venues[venue.id] = {
-                      venueId: venue.id,
-                      venueName: venue.name,
                       films: []
                   };
               }
 
+              const venue = venues.find(venue => venue.id === screening.venueId);
+              
               const day_es = `${date.toLocaleDateString('es-ES', { weekday: 'long' })} ${date.getDate()}`;
               const day_en = `${date.toLocaleDateString('en-US', { weekday: 'long' })} ${date.getDate()}`;
 
-              screeningsByMonth[monthKey].venues[venue.id].films.push({
+              const hours = date.getHours().toString().padStart(2, '0');
+              const minutes = date.getMinutes().toString().padStart(2, '0');
+              const time = `${hours}:${minutes}`;
+
+              screeningsByMonth[monthKey].films.push({
                   filmId: screening.filmId,
                   venueId: screening.venueId,
+                  venueName: venue.name,
                   dateTime: screening.dateTime,
-                  time: date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                  time: time,
                   day_es,
                   day_en
               });
@@ -512,61 +460,9 @@
           return Object.values(screeningsByMonth).map(monthEntry => ({
               month_es: monthEntry.month_es,
               month_en: monthEntry.month_en,
-              venues: Object.values(monthEntry.venues)
+              films: monthEntry.films
           }));
       }
-/*
-      function getScreeningsByFilmId(filmId) {
-    var screenings = lbii_screenings.filter(screening => screening.filmId === filmId);
-    var venues = {};
-
-    screenings.forEach(screening => {
-        var venue = lbii_venues.find(v => v.id === screening.venueId);
-        var date = new Date(screening.dateTime);
-        var month = date.getMonth() + 1;
-        var year = date.getFullYear();
-        var month_es = date.toLocaleString('es-ES', { month: 'long' });
-        var month_en = date.toLocaleString('en-US', { month: 'long' });
-        var day_es = date.toLocaleString('es-ES', { weekday: 'long' });
-        var day_en = date.toLocaleString('en-US', { weekday: 'long' });
-        var time = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-        var day = date.getDate();
-        var monthKey = `${month}-${year}`;
-
-        if (!venues[screening.venueId]) {
-            venues[screening.venueId] = {
-                venueId: venue.id,
-                venue: venue,
-                screenings: {}
-            };
-        }
-
-        if (!venues[screening.venueId].screenings[monthKey]) {
-            venues[screening.venueId].screenings[monthKey] = {
-                month: month,
-                month_es: month_es,
-                month_en: month_en,
-                films: []
-            };
-        }
-
-        venues[screening.venueId].screenings[monthKey].films.push({
-            filmId: screening.filmId,
-            venueId: screening.venueId,
-            dateTime: screening.dateTime,
-            time: time,
-            day_es: `${day_es} ${day}`,
-            day_en: `${day_en} ${day}`
-        });
-    });
-
-    return Object.values(venues).map(venue => ({
-        venueId: venue.venueId,
-        venue: venue.venue,
-        screenings: Object.values(venue.screenings)
-    })).sort((a, b) => a.venue.name.localeCompare(b.venue.name));
-}
-*/
 
 
 

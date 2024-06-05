@@ -19,9 +19,9 @@ var lbii_films = [
           year: '2022',
           director: 'Sumei García Hirata',
           script: 'Sumei García Hirata y Óscar Velázquez Lanzázuri',
-          photo: '',
+          photo: 'Rodrigo Sandoval Vega Gil',
           duration: '83',
-          trailer: 'A',
+          trailer: 'https://www.youtube.com/watch?v=N5XimamdlTk',
           synopsis: 'La historia velada de los mexicanos japoneses y el impacto perdurable del silencio histórico en sus descendientes se retrata a través de una exploración espacial y coreográfica, cuestionando la formación y teatralidad de la identidad individual y colectiva.',
           synopsis_en: 'The veiled history of Japanese Mexicans and the lasting impact of historical silence on their descendants is portrayed through a spatial and choreographic exploration, questioning the formation and theatricality of individual and collective identity.'
       }
@@ -35,10 +35,10 @@ var lbii_films = [
           country: 'EUA, México, Haití',
           year: '2019',
           director: 'Sam Ellison',
-          script: '',
+          script: null,
           photo: 'Sam Ellison',
           duration: '76',
-          trailer: '',
+          trailer: 'https://www.youtube.com/watch?v=8Cq9sAyQ_pA',
           synopsis: 'La hermandad de dos inmigrantes haitianos es probada cuando se quedan atrapados en el caos geopolítico de la frontera entre México y los Estados Unidos. Sin ninguna posibilidad de avanzar y nadie a quien recurrir, sus difíciles decisiones llevan a los dos amigos a futuros muy diferentes.',
           synopsis_en: 'The brotherhood of two Haitian immigrants is tested when they become trapped in the geopolitical chaos of the border between Mexico and the United States. With no chance to move forward and no one to turn to, their difficult decisions lead the two friends to very different futures.'
       }
@@ -55,7 +55,7 @@ var lbii_films = [
           script: 'Gilberto González Penilla y Carlos Rodríguez Rodríguez',
           photo: 'Juan Pablo Ramírez',
           duration: '71',
-          trailer: '',
+          trailer: 'https://www.youtube.com/watch?v=rOVTCaOObms',
           synopsis: 'Rodolfo y Beatriz son padres de dos jóvenes: Jessica y Juan, juntos forman la perfecta familia disfuncional. Rodolfo sale todos los días como si fuera al trabajo, pero en realidad está desempleado. Beatriz, quien se encuentra en medio de una crisis por la edad, es seducida en el gimnasio. Jessica juega un triángulo amoroso entre su novio y su mejor amiga. Y Juan, se entera que será papá. Una familia común tijuanense en la que cada uno esconde sus secretos a pesar de vivir bajo el mismo techo.',
           synopsis_en: 'Rodolfo and Beatriz are parents to two young adults: Jessica and Juan, together they form the perfect dysfunctional family. Rodolfo leaves every day as if he were going to work, but in reality, he is unemployed. Beatriz, who is in the midst of a midlife crisis, is seduced at the gym. Jessica plays out a love triangle between her boyfriend and her best friend. And Juan finds out he\'s going to be a father. A typical Tijuana family where everyone hides their secrets despite living under the same roof.'
       }
@@ -72,7 +72,7 @@ var lbii_films = [
           script: 'Rodrigo Ruiz Patterson y Odei Zabaleta',
           photo: 'Odei Zabaleta',
           duration: '18',
-          trailer: '',
+          trailer: null,
           synopsis: 'El cuidador de un rancho en medio de la nada presencia un extraño evento que hace que dos hombres misteriosos en una camioneta negra empiecen a seguirlo.',
           synopsis_en: 'The caretaker of a ranch in the middle of nowhere witnesses a strange event that causes two mysterious men in a black truck to start following him.'
       }
@@ -83,13 +83,13 @@ var lbii_films = [
       gallery: ['film5_1.jpg', 'film5_2.jpg', 'film5_3.jpg'],
       film: {
           name: 'LO QUE DEJAMOS EN EL MAR',
-          country: '',
-          year: '--',
+          country: 'México',
+          year: '2023',
           director: 'Guido Turtula',
           script: 'Florencia Goulu y Guido Turtula',
-          photo: '',
-          duration: '',
-          trailer: '',
+          photo: 'Guido Turtula',
+          duration: '7',
+          trailer: null,
           synopsis: 'A un año de mudarse a Los Cabos, la pandemia y el encierro ponen en jaque a una pareja que se desintegra en una ciudad que no es la suya.',
           synopsis_en: 'One year after moving to Los Cabos, the pandemic and confinement put a strain on a couple who are falling apart in a city that is not their own.'
       }
@@ -104,9 +104,9 @@ var lbii_films = [
         year: '2021',
         director: 'James Ketchum',
         script: 'Alfredo Barroso y Liisa Juuti',
-        photo: '-',
+        photo: null,
         duration: '27',
-        trailer: '-',
+        trailer: null,
         synopsis: 'Hace apenas 30 años, los bancos de tiburones martillo y mantarrayas gigantes hicieron del Mar de Cortés una meca mundial del buceo y crearon la floreciente economía turística de La Paz. Pero en la década de 1990, la emisión indiscriminada de permisos de pesca de tiburones permitió a las flotas multinacionales “minarlos” en hábitats críticos, desencadenando una cascada de colapso entre las poblaciones de tiburones, por lo que la pesca y el turismo locales se desplomaron. Hoy en día, científicos y pescadores trabajan de la mano para restaurar y proteger este ecosistema marino de valor incalculable.',
         synopsis_en: 'Just 30 years ago, schools of hammerhead sharks and giant manta rays made the Sea of Cortez a world mecca for diving and created the thriving tourist economy of La Paz. But in the 1990s, the indiscriminate issuance of shark fishing permits allowed multinational fleets to "mine" them in critical habitats, triggering a cascade of collapse among shark populations, causing local fishing and tourism to plummet. Today, scientists and fishermen are working hand in hand to restore and protect this invaluable marine ecosystem.'
     }
@@ -165,7 +165,7 @@ var lbii_films = [
     },
     {
         id: 6,
-        name: 'Museo Ruta de Plata',
+        name: 'Museo Ruta de Plata (El Triunfo)',
         description: '<p>El Museo Ruta de Plata Centro Regional Interpretativo está dedicado a preservar y compartir la historia minera de Baja California Sur, así como las migraciones, vivencias de las personas que han habitado el lugar, desde los primeros colonos, a mediados de los años 1500, hasta los años del auge minero de la región.</p><p>Facebook: Museo Ruta de Plata Centro Regional Interpretativo</p><p>Instagram: @museorutadeplata</p>',
         description_en: '---',
         address: 'Calle Ayuntamiento (Progreso y, Gral. M. Márquez de León, Centro, El Triunfo, Baja California Sur.',
