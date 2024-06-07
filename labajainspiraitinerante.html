@@ -24,7 +24,7 @@
   <section class="container mb-5">
     <p class="h4" style="text-align: justify;">La Baja Inspira surgió en el Festival Internacional de Cine de Los Cabos como una sección para visibilizar e impulsar el talento de cineastas de la región y la diversidad y riqueza de sus paisajes.</p>
     <p class="h4 p-5 my-5 text-white" style="background: #01a7ce; text-align: justify;">Más tarde, en el 2023, nace <strong>La Baja Inspira Itinerante</strong>, una muestra fílmica que recorre parte de la Península de Baja California mediante proyecciones completamente gratuitas en espacios públicos y  escolares.</p>
-    <p class="h4"  style="text-align: justify;">Este ciclo, que se llevará a cabo por segunda vez consecutiva, este año de junio a noviembre, busca que la cinematografía de Baja California Sur y Baja California  pueda ser entendida como un mapa a través del cual podamos navegar sus historias, personajes y escenarios que den voz a nuevas perspectivas.</p>
+    <p class="h4"  style="text-align: justify;">Este ciclo, que nuevamente será presentado por el Festival Internacional de Cine de Los Cabos, (de junio a noviembre), busca que la cinematografía de Baja California Sur y Baja California pueda ser entendida como un mapa a través del cual podamos navegar sus historias, personajes y escenarios que den voz a nuevas perspectivas.</p>
   </section>
 
 
@@ -142,7 +142,10 @@
             <div class="lbiibox-inner lbii-source" :style="'background-image: url(app/img/lbii/sedes/'+item.imageName+')'">
               <div class="lbiibox-icon"><img src="app/img/lbii/sedes/marker.svg"></div>
               <div class="p-1 pb-2">
-                <div class="lbiibox-btn">{{item.name}}</div>
+                <div class="lbiibox-btn">
+                  {{item.name}}
+                 <div class="small mt-1" style="opacity: 1.7; color:#ff5235;">{{item.location}}</div>
+                </div>
               </div>
             </div>
 
@@ -287,7 +290,7 @@
                         <!--FILMS-->
                         <template v-for="(film, indexF) in item.films">
                           <div class="mb-3">
-                            <div class="h6 p-1" style="color: #fff; background-color: #1fa58b;"><strong>{{film.venueName}}</strong></div>
+                            <div class="h6 p-1 d-flex justify-content-between" style="color: #fff; background-color: #1fa58b;"><strong>{{film.venueName}}</strong> <span class="small">{{film.venueLocation}}</span></div>
                             <div class="text-capitalize"> {{film.day_es}} de {{item.month_es}} | {{film.time}} </div>
                           </div>
                         </template>
@@ -323,7 +326,11 @@
                   <div class="d-flex w-100">
                     <div class="lbiipop-close" @click="closePop"><i class="fa fa-times"></i></div>
                   </div>
-                  <div class="text-center h4 my-3 text-uppercase"><strong>{{activeVenue.name}}</strong></div>
+                  <div class="text-center h4 my-3 ">
+                    <strong class="text-uppercase">{{activeVenue.name}}</strong>
+                    <div class="fw-bold small my-2" style="color:#d93828;">{{activeVenue.location}}</div>
+                  </div>
+
                   <div class="my-1 h5 lbii-venuedescription" v-html="activeVenue.description"></div>
                   <div class="mt-5 lbii-footer-venue">
                     <div class="lbiibox-iconfoot"><img src="app/img/lbii/sedes/marker.svg"></div>
@@ -372,7 +379,7 @@
 
 
       const films = lbii_films
-      const venues = lbii_venues
+      const venues = sortVenuesByLocation(lbii_venues)
       const screenings = lbii_screenings
 
       const activeFilm = ref(null)
@@ -416,6 +423,7 @@
                   filmId: screening.filmId,
                   venueId: screening.venueId,
                   venueName: venue.name,
+                  venueLocation: venue.location,
                   dateTime: screening.dateTime,
                   time: time,
                   day_es,
@@ -503,6 +511,18 @@
       }
 
 
+
+    function sortVenuesByLocation(venues) {
+        return venues.sort((a, b) => {
+            if (a.location < b.location) {
+                return -1;
+            }
+            if (a.location > b.location) {
+                return 1;
+            }
+            return 0;
+        });
+    }
       
 
 

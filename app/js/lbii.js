@@ -16,9 +16,9 @@ var lbii_films = [
       film: {
           name: 'YŪREI (FANTASMAS)',
           country: 'México',
-          year: '2022',
-          director: 'Sumei García Hirata',
-          script: 'Sumei García Hirata y Óscar Velázquez Lanzázuri',
+          year: '2023',
+          director: 'Sumie García Hirata',
+          script: 'Sumie García Hirata y Óscar Velázquez Lanzázuri',
           photo: 'Rodrigo Sandoval Vega Gil',
           duration: '83',
           trailer: 'https://www.youtube.com/watch?v=N5XimamdlTk',
@@ -125,7 +125,8 @@ var lbii_films = [
         description_en: '---',
         address: 'Vía Rápida Oriente 15320, Zona Río 3a. Etapa, Tijuana Baja California.',
         googleMapsLink: 'https://maps.app.goo.gl/NDd8RCj4mfQGUs2V9',
-        imageName: 'ceart.jpg'
+        imageName: 'ceart.jpg',
+        location: 'Tijuana'
     },
     {
         id: 2,
@@ -134,25 +135,28 @@ var lbii_films = [
         description_en: '---',
         address: 'Paseo de los Héroes, No. 9350, Zona Urbana Río, Tijuana, Baja California.',
         googleMapsLink: 'https://maps.app.goo.gl/ckPHfpkpEuBiJMUy8',
-        imageName: 'cecut.jpg'
+        imageName: 'cecut.jpg',
+        location: 'Tijuana'
     },
     {
         id: 3,
         name: 'Cinema Vagabundo',
         description: '<p>Cineclub fundado en agosto del 2011. Ubicado en el Pabellón Cultural de Cabo San Lucas, su propósito es brindar un espacio a películas independientes o de poca difusión en salas comerciales. Uno de sus objetivos principales es incentivar la creación de materiales audiovisuales locales; como cortometrajes, cineminutos, mediometrajes y largometrajes de ficción, así como documentales. El nombre de vagabundo, surge de su esencia itinerante.</p><p>A lo largo de los ya casi 13 años de exhibición, ha contado con la presencia de actores  como: Joaquín Cosío, Tenoch Huerta, Arcelia Ramirez y recientemente Adan Jodorowsky. Los creadores de Cinema Vagabundo también son fundadores de CEDECINE, una comunidad nacional de cineclubes conformada en los estudios churubusco.</p><p>Han proyectado en gran parte de Baja California Sur; San José del Cabo, Todos Santos, San Javier, Loreto, Mulegé, San Francisco de la Sierra, San Ignacio, entre otros.</p>',
         description_en: '---',
-        address: 'Calle Mariano Matamoros 3738, Ildefonso Green, Cabo San Lucas, Baja California Sur',
+        address: 'Calle Mariano Matamoros 3738, Ildefonso Green, Cabo San Lucas, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/NswKTbRnAaqgqHu86',
-        imageName: 'cinema_vagabundo.jpg'
+        imageName: 'cinema_vagabundo.jpg',
+        location: 'Cabo San Lucas'
     },
     {
         id: 4,
-        name: 'MUABCS (Museo de Arte de Baja California Sur)',
+        name: 'Museo de Arte de Baja California Sur (MUABCS)',
         description: '<p>El Museo de Arte de Baja California Sur es el primer espacio en el territorio sudcaliforniano dedicado y equipado para recibir, montar y mostrar arte moderno y arte contemporáneo, además de la sala dedicada a la plástica sudcaliforniana. Sus instalaciones se encuentran en lo que fue la primera Casa de Gobierno reconstruida en 1981. A partir de 2019 se inician los trabajos de ampliación para albergar al MUABCS.</p><p>En coordinación con el Museo de Arte Moderno de la Ciudad de México, el MUABCS se inauguró con la exposición “Paisajes”, colección MAM. Esta exposición se conformó con la obra de reconocidos artistas como Manuel Álvarez Bravo, Rufino Tamayo, Juan Soriano, Carlos Mérida, entre otros; de la generación de La Ruptura se encuentran Lilia Carrillo, Gunther Gerzso y Vicente rojo; una foto icónica de Graciela Iturbide y autores contemporáneos como Helen Escobedo, Gabriel Orozco, Carla Rippey y Daniel Lezama.</p><p><strong>Cuenta con una sala audiovisual para 59 personas.</strong></p>',
         description_en: '---',
         address: 'Francisco I. Madero s/n, Col. Zona Central, La Paz, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/SnCFQb4Knn6Yit9F7',
-        imageName: 'muabcs.jpg'
+        imageName: 'muabcs.jpg',
+        location: 'La Paz'
     },
     {
         id: 5,
@@ -161,16 +165,18 @@ var lbii_films = [
         description_en: '---',
         address: 'Calle Ayuntamiento (entre Gral. Márquez de León y Minero No. 1), El Triunfo, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/Qbfa4DriNu1qydSz5',
-        imageName: 'museo_vaquero_californias.jpg'
+        imageName: 'museo_vaquero_californias.jpg',
+        location: 'El Triunfo'
     },
     {
         id: 6,
-        name: 'Museo Ruta de Plata (El Triunfo)',
+        name: 'Museo Ruta de Plata',
         description: '<p>El Museo Ruta de Plata Centro Regional Interpretativo está dedicado a preservar y compartir la historia minera de Baja California Sur, así como las migraciones, vivencias de las personas que han habitado el lugar, desde los primeros colonos, a mediados de los años 1500, hasta los años del auge minero de la región.</p><p>Facebook: Museo Ruta de Plata Centro Regional Interpretativo</p><p>Instagram: @museorutadeplata</p>',
         description_en: '---',
         address: 'Calle Ayuntamiento (Progreso y, Gral. M. Márquez de León, Centro, El Triunfo, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/MzAKrBTiKW3psd2v8',
-        imageName: 'museo_ruta_plata.jpg'
+        imageName: 'museo_ruta_plata.jpg',
+        location: 'El Triunfo'
     },
     {
         id: 7,
@@ -179,16 +185,18 @@ var lbii_films = [
         description_en: '---',
         address: 'Ubicada en el extremo suroeste de San José del Cabo, entre los kms 28 y 29 de la Carretera Transpeninsular.',
         googleMapsLink: 'https://maps.app.goo.gl/cL143xmGiBGPXW4EA',
-        imageName: 'playa_costa_azul.jpg'
+        imageName: 'playa_costa_azul.jpg',
+        location: 'San José del Cabo'
     },
     {
         id: 8,
-        name: 'Casa de Cultura "Prof. Alfredo Green González"',
+        name: 'Foro de la Casa de la Cultura "Prof. Alfredo Green González"',
         description: '<p>La Casa de la Cultura  "Prof. Alfredo Green González" se fundó el 28 de agosto de 1974. Actualmente es un espacio que abre sus puertas a la cultura y a las artes, con actividades que van desde la danza, el canto, la pintura, el cine, el teatro y la literatura. Con una hermosa vista a Plaza Mijares desde su terraza, en este espacio también se imparten talleres que incentivan la participación de la comunidad.</p>',
         description_en: '---',
         address: 'Álvaro Obregón s/n esquina Blvd. Mijares, Centro, Los Cabos, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/w7X2AbczvqQe7WKRA',
-        imageName: 'prof.jpg'
+        imageName: 'prof.jpg',
+        location: 'Los Cabos'
     },
     {
         id: 9,
@@ -197,7 +205,8 @@ var lbii_films = [
         description_en: '---',
         address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/XBchtNXNJ5tFUnjd6',
-        imageName: 'uabcs.jpg'
+        imageName: 'uabcs.jpg',
+        location: 'La Paz'
     },
     {
         id: 10,
@@ -206,7 +215,8 @@ var lbii_films = [
         description_en: '---',
         address: 'Parcela 47 Z 2 P 1/3 Ejido de Cabo San Lucas, Carretera Transpeninsular Km. 6.5, Los Cabos, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/pfusZMiEz4ert6nQ6',
-        imageName: 'universidad_tijuana.jpg'
+        imageName: 'universidad_tijuana.jpg',
+        location: 'Los Cabos'
     },
     {
         id: 11,
@@ -215,7 +225,8 @@ var lbii_films = [
         description_en: '---',
         address: 'Calle Horizonte, Todos Santos, 23300, La Paz, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/T2syBchnCvd6BWV29',
-        imageName: 'cineclub_el_nido.jpg'
+        imageName: 'cineclub_el_nido.jpg',
+        location: 'La Paz'
     }
   ];
 
@@ -231,12 +242,12 @@ var lbii_films = [
     { filmId: 2, venueId: 6, dateTime: '2024-07-06T18:00:00' },
     { filmId: 2, venueId: 11, dateTime: '2024-07-18T19:30:00' },
     { filmId: 2, venueId: 2, dateTime: '2024-07-24T18:00:00' },
+    { filmId: 2, venueId: 3, dateTime: '2024-07-18T20:00:00' },
     
     // LOS HAMSTERS
     { filmId: 3, venueId: 3, dateTime: '2024-06-27T20:00:00' },
     { filmId: 3, venueId: 1, dateTime: '2024-07-04T19:00:00' },
     { filmId: 3, venueId: 5, dateTime: '2024-07-13T18:00:00' },
-    { filmId: 3, venueId: 3, dateTime: '2024-07-18T20:00:00' },
     { filmId: 3, venueId: 8, dateTime: '2024-07-27T19:00:00' },
     
     // EL PEREGRINO
