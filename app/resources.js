@@ -2,27 +2,22 @@
 const importsConfig = {
     css: [
       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
-      "https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css",
-      "https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css",
       "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css",
-      //"https://fonts.googleapis.com/css?family=Muli:400,700|Open+Sans+Condensed:700",
+      "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;700&family=Barlow:wght@200;300;400;700;800&display=swap",
       //"https://cdn.plyr.io/3.7.8/plyr.css",
-      "app/css/style.css"
+      "app/css/app.css"
       
     ],
     js: [
       "https://code.jquery.com/jquery-3.7.1.min.js",
       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
-      "https://cdn.jsdelivr.net/npm/@glidejs/glide",
       "https://unpkg.com/microlang/MicroLang.min.js",
       "https://unpkg.com/@bluemx/blue-components",
       //"https://cdn.plyr.io/3.7.8/plyr.js",
-      //"app/js/func.js",
+      "app/js/loscabos-components.js",
       "app/js/importer.js",
       "app/js/app.js",
-      "app/js/form.js",
-
-
+      'https://www.googletagmanager.com/gtag/js?id=G-P05N3XLV0M'
     ]
   };
   

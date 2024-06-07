@@ -115,7 +115,7 @@
   color: var(--colMain);
   cursor: pointer;
   padding: 10px;
-  background: #fff;
+  background: rgba(255,255,255,0.4);
 }
 .lbii-pop .lbiipop-inner .lbiipop-close:hover {
   color: var(--lbii);

@@ -1,65 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
-    <link rel="stylesheet" href="app/app.css?v=2.5" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!-- aos.css -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--Newsletter-->
-    <link rel="stylesheet" href="app/newsletter.css" />
-
-    <link rel="stylesheet" href="app/Carousel.css" />
-
-
-    <script type="text/javascript" src="app/newsletter.js"></script>
-    <script type="text/javascript" src="app/include.js"></script>
-   
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0N0NFB1B5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-K0N0NFB1B5');
-  </script>
-  <script>$(document).ready(function () 
-  { $("#myModal").modal("show")});
-    </script>
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIC Los Cabos</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="app/css/ediciones.css">
   </head>
   <body>
-<header id="divmenu" class="inclusion" data-file="header.html" >
-</header>
+    <div id="transitioning" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: white; transition: opacity 0.5s ease;"></div>
 
-  <!-- La Baja Inspira -->
-  <!-- ##########################-->
-  <div class="vacio-xs d-block d-sm-none"></div>
+    <importer src="components/header.html"></importer>
+
+      <!--content-->
+
+
+  <section  class="container my-5">
+    <h2 class="text-center"   >LA BAJA INSPIRA</h2>
+  </section>
+  
+
+
   <section id="LaBajaInspira">
     <div class="container mb-5">
-      <!-- >>>>>>>>>>>>>>>>>>>>>>>-->
-      <!-- TITULO ##### -->
-      <div class="row justify-content-center">
-        <div class="heading-section col-md-12 text-center">
-          <h2 data-l="La Baja Inspira">La Baja Inspira</h2>
-        </div>
-      </div>
-      <!-- >>>>>>>>>>>>>>>>>>>>>>>-->
+     
+      
       <div class="justify-content-center">
-        <p
+        <p class="h5"
           data-l="This program was born in 2021 with the aim of placing the spotlight on films that have a strong bond with La Baja; inspiring new generations to find their stories, images and inspiration in this unique territory.">
           Una sección que nació en 2021 con el objetivo de colocar los reflectores sobre películas que tengan fuertes
           vínculos con la región de La Baja, y así buscar que las nuevas generaciones encuentren sus historias, sus
@@ -114,39 +83,12 @@
     <!--container-->
 
   </section>
-  <!-- ##################################################################################################################################################################################################################-->
 
+  <importer src="components/footer.html"></importer>
+  <script src="app/resources.js"></script>
 
-    <footer id="divfooter" class="inclusion" data-file="footer.html" ></footer>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    
-
-<!-- aos.js -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
-
-
-<script>
-  AOS.init();
-</script>
-
-<!--/aos.js-->
-<!--ediciones-->
-<script src="https://news.loscabosiff.org/loscabos-components.js?v=2"></script>
-<!--/ediciones-->
-
-<script src="app/app.js?v=1.5"></script>
-
-
+  
 
 </body>
 </html>
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIC Los Cabos</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="app/css/ediciones.css">
+  </head>
+  <body>
+    <div id="transitioning" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: white; transition: opacity 0.5s ease;"></div>
+
+    <importer src="components/header.html"></importer>
+
+      <!--content-->
+
+
+
+    <div class="container my-5 text-center">
+        <h2 data-en="DO YOU WANT TO RECEIVE NEWS FROM LOSCABOS IFF?" class="text-center">¿QUIERES RECIBIR NOTICIAS DE FICLOSCABOS?</h2>
+        <p data-en="Suscribe to our newsletter" class="h5">Suscríbete a nuestro newsletter</p>
+    </div>
+    
+    <div class="container my-5">
+    
+
+
+    </div>
+
+
+
+
+    <div class="container pb-5 pt-5">
+        <div class="justify-content-center col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-12">
+            <form>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="txtName" placeholder="*Nombre:   ">
+                        <label id="lblName" class="lblError" hidden>Ingresa tu nombre</label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="txtLastName" placeholder="*Apellido">
+                        <label id="lblLastName" class="lblError" hidden>Ingresa tu apellido</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtEmail" placeholder="*Email: ">
+                    <label id="lblEmail" class="lblError" hidden>Ingresa tu email</label>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <select class="form-control" id="ddlCountry">
+                            <option selected>*País</option>
+                            <option>País 1</option>
+                            <option>País 1</option>
+                            <option>País 1</option>
+                        </select>
+                        <label id="lblCountry" class="lblError" hidden>Selecciona un país</label>
+                    </div>
+                    <div class="form-group col-md-6" id="cmb_selectCity" hidden>
+                        <select class="form-control" id="ddlCity">
+                            <option selected>Ciudad</option>
+                            <option>Ciudad 1</option>
+                            <option>Ciudad 1</option>
+                            <option>Ciudad 1</option>
+                        </select>
+                        <label id="lblState" class="lblError" hidden>Selecciona un Estado</label>
+                    </div>
+
+                </div>
+                <!---info-->
+                <div class="form-group">
+                    <div class="">
+                        <span class="form-check-label">*Información requerida</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chkTerms">
+                        <label class="form-check-label">
+                            Estoy de acuerdo en aceptar el <a href="#avisodeprivacidad" data-bs-toggle="modal">Aviso de Privacidad</a>
+                        </label>
+                    </div>  <label id="lblTerms" class="lblError" hidden>Debes aceptar el aviso de privacidad</label>
+                </div>
+                <div class="text-center my-4">
+                    <button type="submit" class="btn btn-primary btn-lg" id="btnSend">Suscribirme</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Welcome modal-->
+    <div class="modal fade center" id="welcomeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background: #ffcc00;">
+                <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body popup-txt text-center">
+                    <span data-l="We appreciate your interest" class="">¡Agradecemos tu interés!</span>
+                    <h3 data-l="Your data has been registered in our Newsletter." class="text-center pt-5">Tus datos han sido registrados en nuestro Newsletter.</h3>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-popup-nl"><a href="/" target="_self" data-l="Close">Cerrar</a>   </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ya existe -->
+    <div class="modal fade center" id="existsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background: #ffcc00;">
+                <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body popup-txt text-center">
+                    <span data-l="We appreciate your interest" class="">¡Agradecemos tu interés!</span>
+                    <h3 data-l="Your data has been registered in our Newsletter." class="text-center pt-5">Ya te encuentras registrado a nuestro Newsletter.</h3>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-popup-nl"><a href="/" target="_self" data-l="Close">Cerrar</a>   </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<importer src="components/footer.html"></importer>
+<script src="app/resources.js"></script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="app/js/countriesjson.js"></script>
+<script src="app/js/newsletter.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
+

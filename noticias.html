@@ -1,104 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
-    <link rel="stylesheet" href="app/app.css?v=2.5" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!-- aos.css -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--Newsletter-->
-    <link rel="stylesheet" href="app/newsletter.css" />
-
-    <link rel="stylesheet" href="app/Carousel.css" />
-
-
-    <script type="text/javascript" src="app/newsletter.js"></script>
-    <script type="text/javascript" src="app/include.js"></script>
-   
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0N0NFB1B5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-K0N0NFB1B5');
-  </script>
-  <script>$(document).ready(function () 
-  { $("#myModal").modal("show")});
-    </script>
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIC Los Cabos</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="app/css/noticias.css">
   </head>
   <body>
-<header id="divmenu" class="inclusion" data-file="header.html" >
-</header>
+    <div id="transitioning" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: white; transition: opacity 0.5s ease;"></div>
 
-  <!-- ##################################################################################################################################################################################################################-->
-  <!-- Noticias -->
-  <!-- ##########################-->
-  <div class="vacio-xs d-block d-sm-none"></div>
-  <section id="Noticias">
-    <div class="container mb-5">
-      <!-- >>>>>>>>>>>>>>>>>>>>>>>-->
-      <!-- TITULO ##### -->
-      <div class="row justify-content-center">
-        <div class="heading-section col-md-12 text-center">
-          <h2 data-l="News">Noticias</h2>
+    <importer src="components/header.html"></importer>
+
+      <!--content-->
+
+    <div id="noticias-app">
+
+      <div class="container my-5">
+        <h2 :data-en=" isPost ? isPost.titleEn : 'NEWS' " class="text-center">{{isPost ? isPost.title : 'NOTICIAS'}}</h2>
+      </div>
+
+      <div class="container my-5 pt-2">
+        <div class="row  gx-5">
+          
+          <div class="text-center h4 loadingeditions" v-if="loading" data-en="Loading news...">
+            Cargando...
+          </div>
+
+          <template v-else>
+
+            <template v-if="isPost">
+              <div class="container isPost">
+                <div class="text-center mb-5">
+                  <img :src="isPost.featuredImage?.node?.sourceUrl"  alt="Imagen de nota" width="800" height="400" class="img-fluid">
+                </div>
+                <div class="h5" v-html="isPost.content" :data-en="isPost.descEn"></div>
+              </div>
+
+              <hr class="my-5">
+              <div class="container my-2">
+                <div class="row">
+                  <div class="col">
+                    <div class="prevnext"  v-if="prevPost">
+                      <div class="text-small" data-en="Previous article">Artículo anterior</div>
+                      <div class="h5 fw-bold" :data-en="prevPost.titleEn">{{prevPost.title}}</div>
+                      <a class="noticias-btn cursor-pointer text-center p-1 ml-auto" :data-notaid="prevPost.id" role="button" :href="createuri(prevPost.id, prevPost.title)" data-en="Keep reading">Seguir leyendo</a>
+                    </div>
+                  </div>
+                  <div class="col"></div>
+                  <div class="col text-right" >
+                    <div  class="prevnext" v-if="nextPost">
+                      <div class="text-small text-right" data-en="Next article">Artículo siguiente</div>
+                      <div class="h5 fw-bold text-right" :data-en="nextPost.titleEn">{{nextPost.title}}</div>
+                      <div class="text-right w-100 d-flex justify-content-end">
+                        <a class="noticias-btn cursor-pointer text-center p-1 ml-auto" :data-notaid="nextPost.id" role="button" :href="createuri(nextPost.id, nextPost.title)" data-en="Keep reading">Seguir leyendo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </template>
+
+            <template v-else v-for="(item, index) in items">
+              <div class="col-md-6 my-4">
+                <img loading="lazy" :src="item.featuredImage.node.sourceUrl" alt="Edición" width="800" height="400" class="img-fluid">
+                <div class="fw-bold" :data-en="item.titleEn">{{item.title}}</div>
+                <p class="" style="height:3em; overflow:hidden; text-overflow: ellipsis; font-size:1rem;" :data-l="createExcerpt(item.descEn)">{{createExcerpt(item.content)}}</p>
+                <div class="text-right w-100 d-flex justify-content-end">
+                  <a class="noticias-btn cursor-pointer text-center p-1 ml-auto" :data-notaid="item.id" role="button" :href="createuri(item.id, item.title)" data-en="Keep reading">Seguir leyendo</a>
+                </div>
+              </div>
+              <!-- end items loop -->
+            </template>
+
+          <!-- end !loading-->
+          </template>
 
         </div>
       </div>
-      <!-- >>>>>>>>>>>>>>>>>>>>>>>-->
-      <loscabos-posts category="noticias" pagination="4"></loscabos-posts>
-      <!-- >>>>>>>>>>>>>>>>>>>>>>>-->
-
-    </div>
-    <!--container-->
-  </section>
-  <!-- ##################################################################################################################################################################################################################-->
 
 
-    <footer id="divfooter" class="inclusion" data-file="footer.html" ></footer>
+    </div><!--/#noticias-app-->
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    
 
-<!-- aos.js -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <importer src="components/footer.html"></importer>
+  <script src="app/resources.js"></script>
 
-<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
-
-
-<script>
-  AOS.init();
-</script>
-
-<!--/aos.js-->
-<!--ediciones-->
-<script src="https://news.loscabosiff.org/loscabos-components.js?v=2"></script>
-<!--/ediciones-->
-
-<script src="app/app.js?v=1.5"></script>
-
-
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.4.26/dist/vue.global.min.js"></script>
+  <script src="app/js/noticias.js"></script>
 
 </body>
 </html>
+

@@ -1,85 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
-    <link rel="stylesheet" href="app/app.css?v=2.5" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!-- aos.css -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--Newsletter-->
-    <link rel="stylesheet" href="app/newsletter.css" />
-
-    <link rel="stylesheet" href="app/Carousel.css" />
-
-
-    <script type="text/javascript" src="app/newsletter.js"></script>
-    <script type="text/javascript" src="app/include.js"></script>
-   
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0N0NFB1B5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-K0N0NFB1B5');
-  </script>
-  <script>$(document).ready(function () 
-  { $("#myModal").modal("show")});
-    </script>
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIC Los Cabos</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="app/css/ediciones.css">
   </head>
   <body>
-<header id="divmenu" class="inclusion" data-file="header.html" >
-</header>
+    <div id="transitioning" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: white; transition: opacity 0.5s ease;"></div>
 
+    <importer src="components/header.html"></importer>
 
-  <!-- ##################################################################################################################################################################################################################-->
-  <!-- Industria -->
+      <!--content-->
+
+  <!-- Los Cabos+ -->
   <!-- ##########################-->
-  <div class="vacio-xs d-block d-sm-none"></div>
+  <section  class="container my-5">
+    <h2 class="text-center" data-en="INDUSTRY">INDUSTRIA</h2>
+  </section>
+
+
+
+
   <section id="Industria">
     <div class="container mb-5">
-      <!-- >>>>>>>>>>>>>>>>>>>>>>>-->
-      <!-- TITULO ##### -->
-      <div class="row justify-content-center">
-        <div class="heading-section col-md-12 text-center">
-          <h2 data-l="Industry">Industria</h2>
 
-        </div>
-      </div>
-      <!-- >>>>>>>>>>>>>>>>>>>>>>>-->
 
       <div class="row justify-content-center mb-5 mt-5">
 
-        <div class="col-6 col-md-2 btnpik-industria">
-          <a href="fondofilmico.html" target="_self" class="nav-link"><img src="images/industria/img-gabrielfigueroa.jpg"
-              class="img-fluid mx-auto d-block btnpik-industria">
-            <h5>fondo fílmico gabriel figueroa</h5>
+        <div class="col-6 col-md-2 btnpik-industria text-center text-uppercase">
+          <a href="fondofilmico.html" target="_self" class="nav-link">
+            <img src="images/industria/img-gabrielfigueroa.jpg" class="rounded-circle img-fluid mx-auto d-block btnpik-industria">
+            <h5 class="mt-2">fondo fílmico gabriel figueroa</h5>
           </a>
         </div>
-        <div class="col-6 col-md-2 btnpik-industria">
-          <a href="meetmart.html" target="_self" class="nav-link"><img src="images/industria/img-meetmart.jpg"
-              class="img-fluid mx-auto d-block btnpik-industria">
-            <h5>meet mart</h5>
+        <div class="col-6 col-md-2 btnpik-industria text-center text-uppercase">
+          <a href="meetmart.html" target="_self" class="nav-link">
+            <img src="images/industria/img-meetmart.jpg" class="rounded-circle img-fluid mx-auto d-block btnpik-industria">
+            <h class="mt-2">meet mart</h5>
           </a>
         </div>
-        <div class="col-6 col-md-2 btnpik-industria">
-          <a href="paneles.html" target="_self" class="nav-link"><img src="images/industria/img-paneles.jpg"
-              class="img-fluid mx-auto d-block btnpik-industria">
-            <h5>Paneles</h5>
+        <div class="col-6 col-md-2 btnpik-industria text-center text-uppercase">
+          <a href="paneles.html" target="_self" class="nav-link">
+            <img src="images/industria/img-paneles.jpg" class="rounded-circle img-fluid mx-auto d-block btnpik-industria">
+            <h5 class="mt-2">Paneles</h5>
           </a>
         </div>
 
@@ -88,68 +55,45 @@
 
       <!-- >>>>>>>>>>>>>>>>>>>>>>>-->
 
-      <p class="mb-5"
+      <p class="mb-5 h5"
         data-l="Through this initiative, Los Cabos International Film Festival aims to facilitate the gathering of film professionals from Mexico, United States, and Canada with the rest of the world. From here, we promote the exchange of ideas and the development of strategic alliances with the goal of film projects to transcend and become innovative works that invite us to reflect and amaze us with their results.">
         Mediante esta iniciativa, el Festival Internacional de Cine de Los Cabos busca facilitar el encuentro entre los profesionales de las cinematografías de México, Estados Unidos y Canadá con el resto del mundo. Desde aquí, promovemos el intercambio de ideas y desarrollamos alianzas estratégicas con el objetivo de que los proyectos cinematográficos trasciendan y se conviertan en obras propositivas que inviten a la reflexión y nos asombren con sus resultados.</p>
 
 
         
         <loscabos-carousel pagination="3" gap="1em">
-          <div><img src="images/industria/pik01.jpg" class="img-fluid pik"></div>
-          <div><img src="images/industria/pik02.jpg" class="img-fluid pik"></div>
-          <div><img src="images/industria/pik03.jpg" class="img-fluid pik"></div>
-          <div><img src="images/industria/pik04.jpg" class="img-fluid pik"></div>
-          <div><img src="images/industria/pik05.jpg" class="img-fluid pik"></div>
-          <div><img src="images/industria/pik06.jpg" class="img-fluid pik"></div>
-          <div><img src="images/industria/pik07.jpg" class="img-fluid pik"></div>
+          <div><img src="app/img/industria/pik01.jpg" class="img-fluid pik"></div>
+          <div><img src="app/img/industria/pik02.jpg" class="img-fluid pik"></div>
+          <div><img src="app/img/industria/pik03.jpg" class="img-fluid pik"></div>
+          <div><img src="app/img/industria/pik04.jpg" class="img-fluid pik"></div>
+          <div><img src="app/img/industria/pik05.jpg" class="img-fluid pik"></div>
+          <div><img src="app/img/industria/pik06.jpg" class="img-fluid pik"></div>
+          <div><img src="app/img/industria/pik07.jpg" class="img-fluid pik"></div>
         </loscabos-carousel>
 
       
         <div class="mt-5 d-none d-sm-block">
-          <a href="index.html"><img src="images/fondofilmico/btn_convocatoria.jpg" data-l-src="images/fondofilmico/btn_convocatoriaEn.jpg" class="img-fluid"></a>
+          <a href="index.html"><img src="app/img/industria/btn_convocatoria.jpg" data-l-src="images/fondofilmico/btn_convocatoriaEn.jpg" class="img-fluid"></a>
       </div>
       <div class="mt-5 d-block d-sm-block d-md-none">
-        <a href="index.html"><img src="images/fondofilmico/btn_convocatoriaxs.jpg" data-l-src="images/fondofilmico/btn_convocatoriaxsEn.jpg" class="img-fluid"></a>
+        <a href="index.html"><img src="app/img/industria/btn_convocatoriaxs.jpg" data-l-src="images/fondofilmico/btn_convocatoriaxsEn.jpg" class="img-fluid"></a>
     </div>
 
     </div>
     </div>
     <div class="br-6"></div>
   </section>
-  <!-- ##################################################################################################################################################################################################################-->
+  
+  
 
 
+     
 
-    <footer id="divfooter" class="inclusion" data-file="footer.html" ></footer>
+  <importer src="components/footer.html"></importer>
+  <script src="app/resources.js"></script>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    
-
-<!-- aos.js -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
-
-
-<script>
-  AOS.init();
-</script>
-
-<!--/aos.js-->
-<!--ediciones-->
-<script src="https://news.loscabosiff.org/loscabos-components.js?v=2"></script>
-<!--/ediciones-->
-
-<script src="app/app.js?v=1.5"></script>
-
-
+  
 
 </body>
 </html>
+

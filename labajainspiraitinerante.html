@@ -1,67 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;700&family=Barlow:wght@200;300;400;700;800&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="app/app.css?v=2.5" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!-- aos.css -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--Newsletter-->
-    <link rel="stylesheet" href="app/newsletter.css" />
-
-    <link rel="stylesheet" href="app/Carousel.css" />
-
-
-    <script type="text/javascript" src="app/newsletter.js"></script>
-    <script type="text/javascript" src="app/include.js"></script>
-   
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0N0NFB1B5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-K0N0NFB1B5');
-  </script>
-  <script>
-  $(document).ready(function () { 
-    $("#myModal").modal("show")
-  });
-    </script>
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIC Los Cabos</title>
-
-
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    
     <link rel="stylesheet" href="app/lbii.css">
-
-     
-
 
   </head>
   <body>
-<header id="divmenu" class="inclusion" data-file="header.html" ></header>
+    <div id="transitioning" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: white; transition: opacity 0.5s ease;"></div>
 
-  <!-- ##################################################################################################################################################################################################################-->
-  <!-- Fondo Fílmico -->
-  <!-- ##########################-->
+    <importer src="components/header.html"></importer>
 
   <section class="text-center mb-5 w-100 thebannerfull" style="padding:0; margin:0;">
-    <img src="images/labajainspira-itinerante/2024/banner.png" alt="La Baja Inspira Itinerante" class="w-100">
+    <img src="app/img/lbii/banner.png" alt="La Baja Inspira Itinerante" class="w-100">
 
   </section>
 
@@ -86,16 +42,17 @@
 
       <!--features-->
 
-      <div class="row mt-5 gx-1 gy-1" >
+      <div class="row mt-2 gx-1 gy-1" >
         <template v-for="(item, index) in films" >
-          <div class="col-md-3 lbii-films"  v-if="item.type=='feature'">
+          <div class="col-md-4 lbii-films"  v-if="item.type=='feature'">
             <div class="lbiibox-component" @click="openLink('film',item.id, item.film.name, $event)">
               <div class="lbiibox-title">{{item.film.name}}</div>
-              <div class="lbiibox-image" :style="'background-image: url(images/labajainspira-itinerante/2024/films/'+item.gallery[0]+');'"></div>
+              <div class="lbiibox-image" :style="'background-image: url(app/img/lbii/films/'+item.gallery[0]+');'"></div>
 
                 <div class="p-2 lbiibox-information">
                   <div class="h6" style="margin-bottom: 0;">Dirección: <strong>{{item.film.director}}</strong></div>
                   <div>{{item.film.country}} / {{item.film.year}}</div>
+                  <div class="small" style="opacity:0.7;">{{item.film.duration}} minutos.</div>
                 </div>
 
               <div class="px-2 pb-3">
@@ -105,18 +62,67 @@
           </div>
         </template>
         <!--PROGRAMA DE CORTOS-->
-        <div class="col-md-3 lbii-films">
-          <div class="lbiibox-component" @click="openLink('film', (Math.floor(Math.random() * 3) + 4), 'Programa de cortometrajes', $event)">
-            <div class="lbiibox-title">PROGRAMA DE CORTOMETRAJES</div>
-            <div class="lbiibox-image" :style="'background-image: url(images/labajainspira-itinerante/2024/films/cortos.jpg); '"></div>
-            <div class="p2 lbiibox-information"></div>
-            <div class="px-2 pb-3" style="margin-top: auto;">
-              <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
+        <!--
+          <div class="col-md-3 lbii-films">
+            <div class="lbiibox-component" @click="openLink('film', (Math.floor(Math.random() * 3) + 4), 'Programa de cortometrajes', $event)">
+              <div class="lbiibox-title">PROGRAMA DE CORTOMETRAJES</div>
+              <div class="lbiibox-image" :style="'background-image: url(app/img/lbii/films/cortos.jpg); '"></div>
+              <div class="p2 lbiibox-information"></div>
+              <div class="px-2 pb-3" style="margin-top: auto;">
+                <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
+              </div>
             </div>
           </div>
-        </div>
+        -->
         <!--/programacortos-->
       </div>
+
+
+      <div class="lbii-title mx-auto mt-5">
+        PROGRAMA DE CORTOMETRAJES
+      </div>
+      <div class="text-center" style="opacity:0.7;">Duración total: 52 min (los cortos se exhibirán continuos en una sola exhibición).</div>
+      <!--features-->
+
+      <div class="row mt-2 gx-1 gy-1" >
+        <template v-for="(item, index) in films" >
+          <div class="col-md-4 lbii-films"  v-if="item.type=='short'">
+            <div class="lbiibox-component" @click="openLink('film',item.id, item.film.name, $event)">
+              <div class="lbiibox-title">{{item.film.name}}</div>
+              <div class="lbiibox-image" :style="'background-image: url(app/img/lbii/films/'+item.gallery[0]+');'"></div>
+
+                <div class="p-2 lbiibox-information">
+                  <div class="h6" style="margin-bottom: 0;">Dirección: <strong>{{item.film.director}}</strong></div>
+                  <div>{{item.film.country}} / {{item.film.year}}</div>
+                  <div class="small" style="opacity:0.7;">{{item.film.duration}} minutos.</div>
+                </div>
+
+              <div class="px-2 pb-3">
+                <div class="lbiibox-btn" style="margin-top: auto;">CONSULTAR FUNCIONES</div>
+              </div>
+            </div>
+          </div>
+        </template>
+        <!--PROGRAMA DE CORTOS-->
+        <!--
+          <div class="col-md-3 lbii-films">
+            <div class="lbiibox-component" @click="openLink('film', (Math.floor(Math.random() * 3) + 4), 'Programa de cortometrajes', $event)">
+              <div class="lbiibox-title">PROGRAMA DE CORTOMETRAJES</div>
+              <div class="lbiibox-image" :style="'background-image: url(app/img/lbii/films/cortos.jpg); '"></div>
+              <div class="p2 lbiibox-information"></div>
+              <div class="px-2 pb-3" style="margin-top: auto;">
+                <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
+              </div>
+            </div>
+          </div>
+        -->
+        <!--/programacortos-->
+      </div>
+
+
+
+
+
       <div class="text-center p-5">
         <a href="#" target="_blank" class="lbiibox-btn downloadprogram">DESCARGA LA PROGRAMACIÓN</a>
       </div>
@@ -133,8 +139,8 @@
       <div class="row mt-5 g-1" >
         <div class="col-md-3 col-sm-4 mt-5" v-for="(item, index) in venues" :key="index" >
           <div class="lbiibox-component" @click="openLink('venue',item.id, item.name)">
-            <div class="lbiibox-inner lbii-source" :style="'background-image: url(images/labajainspira-itinerante/2024/sedes/'+item.imageName+')'">
-              <div class="lbiibox-icon"><img src="images/labajainspira-itinerante/2024/sedes/marker.svg"></div>
+            <div class="lbiibox-inner lbii-source" :style="'background-image: url(app/img/lbii/sedes/'+item.imageName+')'">
+              <div class="lbiibox-icon"><img src="app/img/lbii/sedes/marker.svg"></div>
               <div class="p-1 pb-2">
                 <div class="lbiibox-btn">{{item.name}}</div>
               </div>
@@ -148,19 +154,9 @@
 
 
 
-    <section class="flogos container">
-      <img src="images/labajainspira-itinerante/2024/logos/logos-gray.svg" alt="TENDENCIA"  class="w-100">
+    <section class="flogos w-100 my-5 p-5">
+      <img src="app/img/lbii/logos/logos-gray.svg" alt="TENDENCIA"  class="img-fluid">
     </section>
-    <!--<section class="">
-      <div class="lbii-flogos">
-        <img src="images/labajainspira-itinerante/2024/logos/focine.svg" alt="CULTURA IMCINE FOCINE">
-        <img src="images/labajainspira-itinerante/2024/logos/cps.svg" alt="CPS MEDIA">
-        <img src="images/labajainspira-itinerante/2024/logos/tvmar.svg" alt="TVMAR">
-        <img src="images/labajainspira-itinerante/2024/logos/radiantefm.svg" alt="RADIANTEFM">
-        <img src="images/labajainspira-itinerante/2024/logos/tribuna.svg" alt="TRIBUNA">
-        <img src="images/labajainspira-itinerante/2024/logos/tendencia.svg" alt="TENDENCIA" >
-      </div>
-    </section>-->
 
 
 
@@ -189,12 +185,12 @@
 
               <div class="col-md-6">
                 <div class="lbii-title-internal mb-1" style="margin-top: -20px;">{{activeFilm.film.name}}</div>
-                <div class="lbiipop-image lbii-target" :style="'background-image: url(images/labajainspira-itinerante/2024/films/'+activeFilmPhoto+')'"></div>
+                <div class="lbiipop-image lbii-target" :style="'background-image: url(app/img/lbii/films/'+activeFilmPhoto+')'"></div>
 
                 <div class="row justify-content-center align-items-center gap-1 mt-1">
                   <template v-for="(item, index) in activeFilm.gallery">
                     <div class="col" @click="activeFilmPhoto = item">
-                      <div class="lbiipop-image-galleryitem" :class="activeFilmPhoto == item ? 'active':''" :style="'background-image: url(images/labajainspira-itinerante/2024/films/'+item+')'"></div>
+                      <div class="lbiipop-image-galleryitem" :class="activeFilmPhoto == item ? 'active':''" :style="'background-image: url(app/img/lbii/films/'+item+')'"></div>
                     </div>
                   </template>
                 </div>
@@ -204,31 +200,31 @@
 
               <div class="col-md-6 lbiipop-infoboxes">
                 <div class="lbiipop-infobox" v-if="activeFilm.film.country">
-                  <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/country.png"></div>
+                  <div class="lbiipop-ico"><img src="app/img/lbii/ico/country.png"></div>
                   <div class="lbiipop-info"><div><strong>País:</strong> {{activeFilm.film.country}} </div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.year">
-                  <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/year.png"></div>
+                  <div class="lbiipop-ico"><img src="app/img/lbii/ico/year.png"></div>
                   <div class="lbiipop-info"><div><strong>Año:</strong> {{activeFilm.film.year}} </div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.director">
-                  <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/director.png"></div>
+                  <div class="lbiipop-ico"><img src="app/img/lbii/ico/director.png"></div>
                   <div class="lbiipop-info"><div><strong>Director:</strong> {{activeFilm.film.director}}</div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.script">
-                  <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/script.png"></div>
+                  <div class="lbiipop-ico"><img src="app/img/lbii/ico/script.png"></div>
                   <div class="lbiipop-info"><div><strong>Guión:</strong> {{activeFilm.film.script}}</div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.photo">
-                  <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/photo.png"></div>
+                  <div class="lbiipop-ico"><img src="app/img/lbii/ico/photo.png"></div>
                   <div class="lbiipop-info"><div><strong>Fotografía:</strong> {{activeFilm.film.photo}}</div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.duration">
-                  <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/duration.png"></div>
+                  <div class="lbiipop-ico"><img src="app/img/lbii/ico/duration.png"></div>
                   <div class="lbiipop-info"><div><strong>Duración:</strong> {{activeFilm.film.duration}} <span>minutos</span></div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.trailer">
-                  <div class="lbiipop-ico"><img src="images/labajainspira-itinerante/2024/ico/trailer.png"></div>
+                  <div class="lbiipop-ico"><img src="app/img/lbii/ico/trailer.png"></div>
                   <div class="lbiipop-info"><div><strong>Trailer:</strong> <a class="lbii-vertrailer" target="_blank" :href="activeFilm.film.trailer">Ver trailer</a></div></div>
                 </div>
               </div>
@@ -251,14 +247,13 @@
                   <div style="background: #1fa58b; color:#fff; padding: 10px;">
                     <div class="text-center">
                       <div class="lbii-title mx-auto lbii-shorts-title">PROGRAMA DE CORTOMETRAJES</div>
-                      <div>3 CORTOMETRAJES EN UNA MISMA FUNCIÓN</div>
                     </div>
                     <div class="row mt-3">
                       <template v-for="(item, index) in films" >
 
                         <div class="col-md-4 lbiibox-component cursor-pointer"  v-if="item.type=='short'"   @click="openLink('film',item.id, item.film.name, $event)">
-                          <div class="lbiibox-image" style=" aspect-ratio: 16/9; background-size:cover;" :style="'background-image: url(images/labajainspira-itinerante/2024/films/'+item.gallery[0]+')'"></div>
-                          <div class="h6 p-1 text-center">
+                          <div class="lbiibox-image" style=" aspect-ratio: 16/9; background-size:cover;" :style="'background-image: url(app/img/lbii/films/'+item.gallery[0]+')'"></div>
+                          <div class="small p-1 text-center">
                             {{item.film.name}}
                           </div>
                         </div>
@@ -320,7 +315,7 @@
         <div class="lbiipop-inner lbii-pop-venue" v-if="activeVenue">
 
             <div class="row h-100 g-0">
-              <div class="col-md-6 lbii-innervenueimg" :style="'background-image: url(images/labajainspira-itinerante/2024/sedes/'+activeVenue.imageName+')'">
+              <div class="col-md-6 lbii-innervenueimg" :style="'background-image: url(app/img/lbii/sedes/'+activeVenue.imageName+')'">
                 
               </div>
               <div class="col-md-6 h-100">
@@ -331,7 +326,7 @@
                   <div class="text-center h4 my-3 text-uppercase"><strong>{{activeVenue.name}}</strong></div>
                   <div class="my-1 h5 lbii-venuedescription" v-html="activeVenue.description"></div>
                   <div class="mt-5 lbii-footer-venue">
-                    <div class="lbiibox-iconfoot"><img src="images/labajainspira-itinerante/2024/sedes/marker.svg"></div>
+                    <div class="lbiibox-iconfoot"><img src="app/img/lbii/sedes/marker.svg"></div>
                     <p>{{activeVenue.address}}</p>
                     <div class="text-center p-2">
                       <a class="lcii-gmapslink" target="_blank" :href="activeVenue.googleMapsLink">
@@ -357,36 +352,8 @@
 
 
 
-  <!-- ##################################################################################################################################################################################################################-->
-
-
-    <footer id="divfooter" class="inclusion" data-file="footer.html" ></footer>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
-    
-
-<!-- aos.js -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
-
-
-<script>
-  AOS.init();
-</script>
-
-<!--/aos.js-->
-<!--ediciones-->
-<script src="https://news.loscabosiff.org/loscabos-components.js?v=2"></script>
-<!--/ediciones-->
-
-<script src="app/app.js?v=1.5"></script>
+  <importer src="components/footer.html"></importer>
+  <script src="app/resources.js"></script>
 
 
 
