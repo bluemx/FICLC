@@ -103,6 +103,7 @@ createApp({
                           }
                     });
                 });
+                makeSwitch()
             }, 100)
             
         }

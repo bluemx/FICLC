@@ -14,8 +14,8 @@ const languageFN = () => {
 }
 /*********************************************************************** */
 const cookiesFN = () => {
-    const information = '<div data-l="This website uses cookies to improve your experience. Continue to use the site as normal if you agree to the use of cookies. If you’d like to find out more about the cookies we use or to opt-out, please see our Privacy Policy"> Este sitio web utiliza cookies para mejorar tu experiencia. Si continúas navegando en el sitio, significa que aceptas el uso de las cookies. Si deseas más información sobre las cookies que empleamos y cómo manejarlas visita nuestra Política de Privacidad. <a href="#" style="color: #061E41" data-toggle="modal" data-target="#aviso" data-l="Privacy Policy.">Leer más.</a></div>'
-    const button = '<span data-l="Accept">Aceptar</span>'
+    const information = '<div data-en="This website uses cookies to improve your experience. Continue to use the site as normal if you agree to the use of cookies. If you’d like to find out more about the cookies we use or to opt-out, please see our Privacy Policy"> Este sitio web utiliza cookies para mejorar tu experiencia. Si continúas navegando en el sitio, significa que aceptas el uso de las cookies. Si deseas más información sobre las cookies que empleamos y cómo manejarlas visita nuestra Política de Privacidad. <a href="#" style="color: #061E41" data-toggle="modal" data-target="#aviso" data-en="Privacy Policy.">Leer más.</a></div>'
+    const button = '<span data-en="Accept">Aceptar</span>'
     BlueCookies(information, "✔ Cookies", button, 'background-color: #8bb8e8; color:#fff;')
 }
 

@@ -20,7 +20,7 @@
 
     <div class="container my-5 text-center">
         <h2 data-en="DO YOU WANT TO RECEIVE NEWS FROM LOSCABOS IFF?" class="text-center">¿QUIERES RECIBIR NOTICIAS DE FICLOSCABOS?</h2>
-        <p data-en="Suscribe to our newsletter" class="h5">Suscríbete a nuestro newsletter</p>
+        <p data-en="Subscribe to our newsletter" class="h5">Suscríbete a nuestro newsletter</p>
     </div>
     
     <div class="container my-5">
@@ -37,56 +37,56 @@
             <form>
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <input type="text" class="form-control" id="txtName" placeholder="*Nombre:   ">
-                        <label id="lblName" class="lblError" hidden>Ingresa tu nombre</label>
+                        <input type="text" class="form-control" id="txtName" placeholder="*Nombre:   " data-lang-attr="placeholder" data-en="*First Name">
+                        <label id="lblName" class="lblError" hidden data-en="Missing First Name">Ingresa tu nombre</label>
                     </div>
                     <div class="form-group col-md-6">
-                        <input type="text" class="form-control" id="txtLastName" placeholder="*Apellido">
-                        <label id="lblLastName" class="lblError" hidden>Ingresa tu apellido</label>
+                        <input type="text" class="form-control" id="txtLastName" placeholder="*Apellido"  data-lang-attr="placeholder" data-en="*Last Name">
+                        <label id="lblLastName" class="lblError" hidden data-en="Missing Last Name">Ingresa tu apellido</label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="txtEmail" placeholder="*Email: ">
-                    <label id="lblEmail" class="lblError" hidden>Ingresa tu email</label>
+                    <input type="text" class="form-control" id="txtEmail" placeholder="*Email: "  data-lang-attr="placeholder" data-en="*Email">
+                    <label id="lblEmail" class="lblError" hidden data-en="Missing Email">Ingresa tu email</label>
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-6">
                         <select class="form-control" id="ddlCountry">
-                            <option selected>*País</option>
+                            <option selected data-en="*Country">*País</option>
                             <option>País 1</option>
                             <option>País 1</option>
                             <option>País 1</option>
                         </select>
-                        <label id="lblCountry" class="lblError" hidden>Selecciona un país</label>
+                        <label id="lblCountry" class="lblError" hidden data-en="Select a country">Selecciona un país</label>
                     </div>
                     <div class="form-group col-md-6" id="cmb_selectCity" hidden>
                         <select class="form-control" id="ddlCity">
-                            <option selected>Ciudad</option>
+                            <option selected data-en="City">Ciudad</option>
                             <option>Ciudad 1</option>
                             <option>Ciudad 1</option>
                             <option>Ciudad 1</option>
                         </select>
-                        <label id="lblState" class="lblError" hidden>Selecciona un Estado</label>
+                        <label id="lblState" class="lblError" hidden data-en="Select a city">Selecciona un Estado</label>
                     </div>
 
                 </div>
                 <!---info-->
                 <div class="form-group">
                     <div class="">
-                        <span class="form-check-label">*Información requerida</span>
+                        <span class="form-check-label" data-en="Required information">*Información requerida</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="chkTerms">
                         <label class="form-check-label">
-                            Estoy de acuerdo en aceptar el <a href="#avisodeprivacidad" data-bs-toggle="modal">Aviso de Privacidad</a>
+                            <span data-en="I agree to accept the">Estoy de acuerdo en aceptar el</span> <a href="#avisodeprivacidad" data-bs-toggle="modal" data-en="privacy notice">Aviso de Privacidad</a>
                         </label>
-                    </div>  <label id="lblTerms" class="lblError" hidden>Debes aceptar el aviso de privacidad</label>
+                    </div>  <label id="lblTerms" class="lblError" hidden data-en="You must acceptthe privacy notice">Debes aceptar el aviso de privacidad</label>
                 </div>
                 <div class="text-center my-4">
-                    <button type="submit" class="btn btn-primary btn-lg" id="btnSend">Suscribirme</button>
+                    <button type="submit" class="btn btn-primary btn-lg" id="btnSend" data-en="Subscribe me">Subscribirme</button>
                 </div>
             </form>
         </div>
@@ -103,12 +103,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body popup-txt text-center">
-                    <span data-l="We appreciate your interest" class="">¡Agradecemos tu interés!</span>
-                    <h3 data-l="Your data has been registered in our Newsletter." class="text-center pt-5">Tus datos han sido registrados en nuestro Newsletter.</h3>
+                    <span data-en="We appreciate your interest" class="">¡Agradecemos tu interés!</span>
+                    <h3 data-en="Your data has been registered in our Newsletter." class="text-center pt-5">Tus datos han sido registrados en nuestro Newsletter.</h3>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-popup-nl"><a href="/" target="_self" data-l="Close">Cerrar</a>   </button>
+                    <button type="button" class="btn btn-popup-nl"><a href="/" target="_self" data-en="Close">Cerrar</a>   </button>
                 </div>
             </div>
         </div>
@@ -123,12 +123,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body popup-txt text-center">
-                    <span data-l="We appreciate your interest" class="">¡Agradecemos tu interés!</span>
-                    <h3 data-l="Your data has been registered in our Newsletter." class="text-center pt-5">Ya te encuentras registrado a nuestro Newsletter.</h3>
+                    <span data-en="We appreciate your interest" class="">¡Agradecemos tu interés!</span>
+                    <h3 data-en="Your data has been registered in our Newsletter." class="text-center pt-5">Ya te encuentras registrado a nuestro Newsletter.</h3>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-popup-nl"><a href="/" target="_self" data-l="Close">Cerrar</a>   </button>
+                    <button type="button" class="btn btn-popup-nl"><a href="/" target="_self" data-en="Close">Cerrar</a>   </button>
                 </div>
             </div>
         </div>

@@ -1,12 +1,3 @@
-var lbii_currentscreeninglist = [
-  {month: 'JUNIO', month_en: 'JUNE', month_num: 6 },
-  {month: 'JULIO', month_en: 'JULY', month_num: 7 },
-  /*
-  {month: 'OCTUBRE', month_en: 'OCTOBER', month_num: 10 },
-  {month: 'NOVIEMBRE', month_en: 'NOVEMBER', month_num: 11 }
-  */
-]
-
 
 var lbii_films = [
   {

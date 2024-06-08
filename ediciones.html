@@ -34,7 +34,7 @@
               <div class="bg-white p-3 cursor-pointer" role="button" data-bs-toggle="modal" :data-bs-target="'#edicion-'+item.title">
                 <img load="lazy" :src="item.featuredImage.node.sourceUrl" alt="Edición" width="800" height="400" class="img-fluid">
                 <div class="text-center h6 mt-2"><strong>{{item.title}}</strong></div>
-                <div role="button" class="ediciones-btn cursor-pointer text-center p-1">Ver más</div>
+                <div role="button" class="ediciones-btn cursor-pointer text-center p-1" data-en="View more">Ver más</div>
               </div>
             </div>
             <!--MODAL-->
@@ -42,7 +42,7 @@
               <div class="modal-dialog" style="max-width: 960px !important;">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body container">
                     

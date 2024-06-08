@@ -146,27 +146,27 @@ class LoscabosPosts extends HTMLElement {
       const nota = document.createElement("div");
       nota.classList.add("col-md-6", "my-2");
       nota.innerHTML = `
-        <img src="${node.featuredImage?.node?.sourceUrl}" data-l-src="${node.imageEn?.sourceUrl}" alt="Imagen de nota" width="800" height="400" class="img-fluid lang-es">
-        <p class="news-tit" data-l='${node.titleEn}'>${node.title}</p>
-        <p class="" style="height:3em; overflow:hidden; text-overflow: ellipsis; font-size:1rem;" data-l="${createExcerpt(node.descEn)}">${createExcerpt(node.content)}</p>
+        <img src="${node.featuredImage?.node?.sourceUrl}" data-en-src="${node.imageEn?.sourceUrl}" alt="Imagen de nota" width="800" height="400" class="img-fluid lang-es">
+        <p class="news-tit" data-en='${node.titleEn}'>${node.title}</p>
+        <p class="" style="height:3em; overflow:hidden; text-overflow: ellipsis; font-size:1rem;" data-en="${createExcerpt(node.descEn)}">${createExcerpt(node.content)}</p>
         <p class="text-right">
         <!--
-          <a data-notaid="${node.id}" role="button" href="#/${node.id}/${this.currentPage}/${slugify(node.title)}" class="open-nota news-link" style="cursor:pointer;" data-l="Keep reading">Seguir leyendo</a>
+          <a data-notaid="${node.id}" role="button" href="#/${node.id}/${this.currentPage}/${slugify(node.title)}" class="open-nota news-link" style="cursor:pointer;" data-en="Keep reading">Seguir leyendo</a>
         -->
-          <a data-notaid="${node.id}" role="button" href="?i=${node.id}&p=${this.currentPage}&t=${slugify(node.title)}" class="open-nota news-link" style="cursor:pointer;" data-l="Keep reading">Seguir leyendo</a>
+          <a data-notaid="${node.id}" role="button" href="?i=${node.id}&p=${this.currentPage}&t=${slugify(node.title)}" class="open-nota news-link" style="cursor:pointer;" data-en="Keep reading">Seguir leyendo</a>
         </p>
         <div class="modal">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
-                <div class="modal-title h4 font-weight-bold" data-l='${node.titleEn}'>${node.title}</div>                
+                <div class="modal-title h4 font-weight-bold" data-en='${node.titleEn}'>${node.title}</div>                
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               </div>
               <div class="modal-body">
                 <div class="text-center">
-                  <img src="${node.featuredImage?.node?.sourceUrl}" data-l-src="${node.imageEn?.sourceUrl}" alt="Imagen de nota" width="800" height="400" class="img-fluid lang-es">
+                  <img src="${node.featuredImage?.node?.sourceUrl}" data-en-src="${node.imageEn?.sourceUrl}" alt="Imagen de nota" width="800" height="400" class="img-fluid lang-es">
                 </div>
-                  <div data-l='${node.descEn}'>${node.content}</div>
+                  <div data-en='${node.descEn}'>${node.content}</div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -352,7 +352,7 @@ class LoscabosEdiciones extends HTMLElement {
 
       const ec_gallery = `
         <div class="my-4">
-          <h3 class="backTitle" data-l="GALLERY">GALERÍA</h3>
+          <h3 class="backTitle" data-en="GALLERY">GALERÍA</h3>
           <div id="edicioncarousel_${node.title}" class="splide edicioncarousel" aria-label="Galerí­a de la edicion">
               <div class="splide__track"><ul class="splide__list"></ul></div>
           </div>
@@ -361,29 +361,29 @@ class LoscabosEdiciones extends HTMLElement {
 
       const ec_program = `
         <div class="my-4">
-          <h3 class="backTitle" data-l="FILM PROGRAMMING">PROGRAMACIÓN</h3>
-          <div class="contenttext" data-l='${node.enProgramacion}'>${node.programacion}</div>
+          <h3 class="backTitle" data-en="FILM PROGRAMMING">PROGRAMACIÓN</h3>
+          <div class="contenttext" data-en='${node.enProgramacion}'>${node.programacion}</div>
         </div>
       `;
       
       const ec_tribute = `
         <div class="my-4">
-          <h3 class="backTitle" data-l="FILM TRIBUTES (Special Guests)">HOMENAJES (Invitados Especiales)</h3>
-          <div class="contenttext" data-l='${node.enHomenajes}'>${node.homenajes}</div>
+          <h3 class="backTitle" data-en="FILM TRIBUTES (Special Guests)">HOMENAJES (Invitados Especiales)</h3>
+          <div class="contenttext" data-en='${node.enHomenajes}'>${node.homenajes}</div>
         </div>
       `;
       
       const ec_awards = `
         <div class="my-4">
-          <h3 class="backTitle" data-l="AWARDS">PREMIOS</h3>
-          <div class="contenttext" data-l='${node.enPremios}'>${node.premios}</div>
+          <h3 class="backTitle" data-en="AWARDS">PREMIOS</h3>
+          <div class="contenttext" data-en='${node.enPremios}'>${node.premios}</div>
         </div>
       `;
       
       const ec_ignite = `
         <div class="my-4">
           <h3 class="backTitle">IGNITE SESSIONS</h3>
-          <div class="contenttext" data-l='${node.enIgnite}'>${node.ignite}</div>
+          <div class="contenttext" data-en='${node.enIgnite}'>${node.ignite}</div>
         </div>
       `;
 
@@ -391,9 +391,9 @@ class LoscabosEdiciones extends HTMLElement {
     
       const ec_video = `
         <div class="my-4">
-          <h3 class="backTitle" data-l="SO IT WAS">ASÍ FUE</h3>
+          <h3 class="backTitle" data-en="SO IT WAS">ASÍ FUE</h3>
           <div class="contenttext text-center" >
-            <iframe id="ytplayer_${node.title}" width="100%" height="315" data-l-src="${node.enVideo}?enablejsapi=1&version=3&playerapiid=ytplayer" src="${node.video}?enablejsapi=1&version=3&playerapiid=ytplayer" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe id="ytplayer_${node.title}" width="100%" height="315" data-en-src="${node.enVideo}?enablejsapi=1&version=3&playerapiid=ytplayer" src="${node.video}?enablejsapi=1&version=3&playerapiid=ytplayer" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
       `;
@@ -425,22 +425,22 @@ class LoscabosEdiciones extends HTMLElement {
       if(node.imageposter && node.imageposter?.sourceUrl){
         ediciondescargas+=`
         <div class="col-12 col-md-6 text-center">
-          <h3 class="backTitle" data-l="POSTER ${node.hashtag}">CARTEL ${node.hashtag}</h3>
+          <h3 class="backTitle" data-en="POSTER ${node.hashtag}">CARTEL ${node.hashtag}</h3>
           <div class="contenttext text-center" >
-            <img data-l-src="${node.enImageposter?.sourceUrl}" src="${node.imageposter?.sourceUrl}"  class="img-fluid" style="width:200px;">
+            <img data-en-src="${node.enImageposter?.sourceUrl}" src="${node.imageposter?.sourceUrl}"  class="img-fluid" style="width:200px;">
           </div>
-          <a href="${api}ediciones/posters/${node.linkposter}" target="_blank" class="btn-download" data-l="Download">Descargar</a>
+          <a href="${api}ediciones/posters/${node.linkposter}" target="_blank" class="btn-download" data-en="Download">Descargar</a>
         </div>
       `;
       }
       if(node.imagecatalogo && node.imagecatalogo?.sourceUrl){
         ediciondescargas+=`
         <div class="col-12 col-md-6 text-center">
-          <h3 class="backTitle" data-l="CATALOGUE ${node.hashtag}">CATÁLOGO ${node.hashtag}</h3>
+          <h3 class="backTitle" data-en="CATALOGUE ${node.hashtag}">CATÁLOGO ${node.hashtag}</h3>
           <div class="contenttext text-center" >
-            <img data-l-src="${node.enImagecatalogo?.sourceUrl}" src="${node.imagecatalogo?.sourceUrl}" class="img-fluid" style="width:200px;">
+            <img data-en-src="${node.enImagecatalogo?.sourceUrl}" src="${node.imagecatalogo?.sourceUrl}" class="img-fluid" style="width:200px;">
           </div>
-          <a href="${api}ediciones/catalogos/${node.linkcatalogo}" target="_blank" class="btn-download" data-l="Download">Descargar</a>
+          <a href="${api}ediciones/catalogos/${node.linkcatalogo}" target="_blank" class="btn-download" data-en="Download">Descargar</a>
         </div>
       `;
       }
@@ -450,7 +450,7 @@ class LoscabosEdiciones extends HTMLElement {
         <div class="bg-white p-3 open-edicion" role="button" style="cursor:pointer; text-align:center">
           <img src="${node.featuredImage?.node?.sourceUrl}"  alt="Imagen de nota" width="800" height="400" class="img-fluid lang-es">
           <p class="news-tit">${node.title}</p>
-          <div role="button" data-l="View more" style="margin:2px auto; background: #0a1e3f; color:#fff; padding:2px 10px; border:1px solid #E4D8AD; display:inline-block; text-align:center; ">Ver más</div>
+          <div role="button" data-en="View more" style="margin:2px auto; background: #0a1e3f; color:#fff; padding:2px 10px; border:1px solid #E4D8AD; display:inline-block; text-align:center; ">Ver más</div>
         </div>
         
         <div class="modal">
@@ -466,10 +466,10 @@ class LoscabosEdiciones extends HTMLElement {
                     <img src="${node.featuredImage?.node?.sourceUrl}"  alt="Imagen de nota" width="800" height="400" class="img-fluid lang-es">
                   </div>
                   <div class="col">
-                    <h2 class="" data-l="${node.title} Edition | ${node.hashtag}">Edición ${node.title} | ${node.hashtag}</h2>
+                    <h2 class="" data-en="${node.title} Edition | ${node.hashtag}">Edición ${node.title} | ${node.hashtag}</h2>
 
-                    <h3 data-l="${node.enFecha}">${node.fecha}</h3>
-                    <div data-l='${node.enDescripcion}'>${node.descripcion}</div>
+                    <h3 data-en="${node.enFecha}">${node.fecha}</h3>
+                    <div data-en='${node.enDescripcion}'>${node.descripcion}</div>
                   </div>
                 </div>
                 ${edicioncontent}

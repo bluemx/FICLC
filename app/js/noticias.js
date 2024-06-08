@@ -55,6 +55,8 @@ createApp({
                     numPages.value = Math.ceil(nodes.length / this.itemsPerPage);
 
                     getURLParams()
+                    setTimeout(()=>{makeSwitch()},500)
+                    
                 })
 
         }

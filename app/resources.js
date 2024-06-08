@@ -11,7 +11,7 @@ const importsConfig = {
     js: [
       "https://code.jquery.com/jquery-3.7.1.min.js",
       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
-      "https://unpkg.com/microlang/MicroLang.min.js",
+      "https://unpkg.com/microlang@1.1.1/MicroLang.min.js",
       "https://unpkg.com/@bluemx/blue-components",
       //"https://cdn.plyr.io/3.7.8/plyr.js",
       "app/js/loscabos-components.js",
@@ -43,6 +43,14 @@ const importsConfig = {
       document.body.appendChild(script);
     });
   }
+
+
+  function setInitialLanguage () {
+
+    if (window.location.href.includes('ficloscabos')) { MicroLangSwitch('es') }
+    if (window.location.href.includes('loscabosiff')) { MicroLangSwitch('en') }
+  }
+
   
   // Import all CSS files
   Promise.all(importsConfig.css.map(importCSS))
@@ -53,6 +61,7 @@ const importsConfig = {
     .then(() => {
       // All JS files are loaded
       console.log("All resources loaded successfully.");
+      setInitialLanguage()
     })
     .catch((error) => {
       console.error("Error loading resources:", error);

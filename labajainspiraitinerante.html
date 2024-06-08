@@ -22,9 +22,9 @@
   </section>
 
   <section class="container mb-5">
-    <p class="h4" style="text-align: justify;">La Baja Inspira surgió en el Festival Internacional de Cine de Los Cabos como una sección para visibilizar e impulsar el talento de cineastas de la región y la diversidad y riqueza de sus paisajes.</p>
-    <p class="h4 p-5 my-5 text-white" style="background: #01a7ce; text-align: justify;">Más tarde, en el 2023, nace <strong>La Baja Inspira Itinerante</strong>, una muestra fílmica que recorre parte de la Península de Baja California mediante proyecciones completamente gratuitas en espacios públicos y  escolares.</p>
-    <p class="h4"  style="text-align: justify;">Este ciclo, que nuevamente será presentado por el Festival Internacional de Cine de Los Cabos, (de junio a noviembre), busca que la cinematografía de Baja California Sur y Baja California pueda ser entendida como un mapa a través del cual podamos navegar sus historias, personajes y escenarios que den voz a nuevas perspectivas.</p>
+    <p data-en="The Baja Inspira emerged at the Los Cabos International Film Festival as a section to showcase and promote the talent of filmmakers from the region and the diversity and richness of its landscapes." class="h4" style="text-align: justify;">La Baja Inspira surgió en el Festival Internacional de Cine de Los Cabos como una sección para visibilizar e impulsar el talento de cineastas de la región y la diversidad y riqueza de sus paisajes.</p>
+    <p data-en="Later, in 2023, La Baja Inspira Itinerante was born, a film showcase that travels through part of the Baja California Peninsula with completely free screenings in public and school spaces." class="h4 p-5 my-5 text-white" style="background: #01a7ce; text-align: justify;">Más tarde, en el 2023, nace <strong>La Baja Inspira Itinerante</strong>, una muestra fílmica que recorre parte de la Península de Baja California mediante proyecciones completamente gratuitas en espacios públicos y  escolares.</p>
+    <p data-en="This cycle, which will once again be presented by the Los Cabos International Film Festival (from June to November), aims to have the cinematography of Baja California Sur and Baja California understood as a map through which we can navigate their stories, characters, and settings, giving voice to new perspectives." class="h4"  style="text-align: justify;">Este ciclo, que nuevamente será presentado por el Festival Internacional de Cine de Los Cabos, (de junio a noviembre), busca que la cinematografía de Baja California Sur y Baja California pueda ser entendida como un mapa a través del cual podamos navegar sus historias, personajes y escenarios que den voz a nuevas perspectivas.</p>
   </section>
 
 
@@ -36,9 +36,7 @@
     
     <section class="container sectionprogram" style="margin-bottom: 60px; " v-cloak>
 
-      <div class="lbii-title mx-auto">
-        CONOCE LA PROGRAMACIÓN
-      </div>
+      <div class="lbii-title mx-auto" data-en="PROGRAMMING">CONOCE LA PROGRAMACIÓN</div>
 
       <!--features-->
 
@@ -50,37 +48,22 @@
               <div class="lbiibox-image" :style="'background-image: url(app/img/lbii/films/'+item.gallery[0]+');'"></div>
 
                 <div class="p-2 lbiibox-information">
-                  <div class="h6" style="margin-bottom: 0;">Dirección: <strong>{{item.film.director}}</strong></div>
+                  <div class="h6" style="margin-bottom: 0;"><span data-en="Director">Dirección</span>: <strong>{{item.film.director}}</strong></div>
                   <div>{{item.film.country}} / {{item.film.year}}</div>
-                  <div class="small" style="opacity:0.7;">{{item.film.duration}} minutos.</div>
+                  <div class="small" style="opacity:0.7;" >{{item.film.duration}} <span data-en="minutes">minutos</span>.</div>
                 </div>
 
               <div class="px-2 pb-3">
-                <div class="lbiibox-btn" style="margin-top: auto;">CONSULTAR FUNCIONES</div>
+                <div class="lbiibox-btn" style="margin-top: auto;" data-en="MORE INFORMATION">CONSULTAR FUNCIONES</div>
               </div>
             </div>
           </div>
         </template>
-        <!--PROGRAMA DE CORTOS-->
-        <!--
-          <div class="col-md-3 lbii-films">
-            <div class="lbiibox-component" @click="openLink('film', (Math.floor(Math.random() * 3) + 4), 'Programa de cortometrajes', $event)">
-              <div class="lbiibox-title">PROGRAMA DE CORTOMETRAJES</div>
-              <div class="lbiibox-image" :style="'background-image: url(app/img/lbii/films/cortos.jpg); '"></div>
-              <div class="p2 lbiibox-information"></div>
-              <div class="px-2 pb-3" style="margin-top: auto;">
-                <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
-              </div>
-            </div>
-          </div>
-        -->
-        <!--/programacortos-->
+
       </div>
 
 
-      <div class="lbii-title mx-auto mt-5">
-        PROGRAMA DE CORTOMETRAJES
-      </div>
+      <div class="lbii-title mx-auto mt-5" data-en="SHORT FILM PROGRAM">PROGRAMA DE CORTOMETRAJES</div>
       <div class="text-center" style="opacity:0.7;">Duración total: 52 min (los cortos se exhibirán continuos en una sola exhibición).</div>
       <!--features-->
 
@@ -98,25 +81,12 @@
                 </div>
 
               <div class="px-2 pb-3">
-                <div class="lbiibox-btn" style="margin-top: auto;">CONSULTAR FUNCIONES</div>
+                <div class="lbiibox-btn" style="margin-top: auto;" data-en="MORE INFORMATION">CONSULTAR FUNCIONES</div>
               </div>
             </div>
           </div>
         </template>
-        <!--PROGRAMA DE CORTOS-->
-        <!--
-          <div class="col-md-3 lbii-films">
-            <div class="lbiibox-component" @click="openLink('film', (Math.floor(Math.random() * 3) + 4), 'Programa de cortometrajes', $event)">
-              <div class="lbiibox-title">PROGRAMA DE CORTOMETRAJES</div>
-              <div class="lbiibox-image" :style="'background-image: url(app/img/lbii/films/cortos.jpg); '"></div>
-              <div class="p2 lbiibox-information"></div>
-              <div class="px-2 pb-3" style="margin-top: auto;">
-                <div class="lbiibox-btn">CONSULTAR FUNCIONES</div>
-              </div>
-            </div>
-          </div>
-        -->
-        <!--/programacortos-->
+
       </div>
 
 
@@ -124,7 +94,7 @@
 
 
       <div class="text-center p-5">
-        <a href="#" target="_blank" class="lbiibox-btn downloadprogram">DESCARGA LA PROGRAMACIÓN</a>
+        <a href="#" target="_blank" class="lbiibox-btn downloadprogram" data-en="DOWNLOAD THE PROGRAMMING">DESCARGA LA PROGRAMACIÓN</a>
       </div>
     </section>
 
@@ -204,31 +174,31 @@
               <div class="col-md-6 lbiipop-infoboxes">
                 <div class="lbiipop-infobox" v-if="activeFilm.film.country">
                   <div class="lbiipop-ico"><img src="app/img/lbii/ico/country.png"></div>
-                  <div class="lbiipop-info"><div><strong>País:</strong> {{activeFilm.film.country}} </div></div>
+                  <div class="lbiipop-info"><div><strong data-en="Country:">País:</strong> {{activeFilm.film.country}} </div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.year">
                   <div class="lbiipop-ico"><img src="app/img/lbii/ico/year.png"></div>
-                  <div class="lbiipop-info"><div><strong>Año:</strong> {{activeFilm.film.year}} </div></div>
+                  <div class="lbiipop-info"><div><strong data-en="Year:">Año:</strong> {{activeFilm.film.year}} </div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.director">
                   <div class="lbiipop-ico"><img src="app/img/lbii/ico/director.png"></div>
-                  <div class="lbiipop-info"><div><strong>Director:</strong> {{activeFilm.film.director}}</div></div>
+                  <div class="lbiipop-info"><div><strong data-en="Director:">Director:</strong> {{activeFilm.film.director}}</div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.script">
                   <div class="lbiipop-ico"><img src="app/img/lbii/ico/script.png"></div>
-                  <div class="lbiipop-info"><div><strong>Guión:</strong> {{activeFilm.film.script}}</div></div>
+                  <div class="lbiipop-info"><div><strong data-en="Script:">Guión:</strong> {{activeFilm.film.script}}</div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.photo">
                   <div class="lbiipop-ico"><img src="app/img/lbii/ico/photo.png"></div>
-                  <div class="lbiipop-info"><div><strong>Fotografía:</strong> {{activeFilm.film.photo}}</div></div>
+                  <div class="lbiipop-info"><div><strong data-en="Photography:">Fotografía:</strong> {{activeFilm.film.photo}}</div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.duration">
                   <div class="lbiipop-ico"><img src="app/img/lbii/ico/duration.png"></div>
-                  <div class="lbiipop-info"><div><strong>Duración:</strong> {{activeFilm.film.duration}} <span>minutos</span></div></div>
+                  <div class="lbiipop-info"><div><strong data-en="Duration">Duración:</strong> {{activeFilm.film.duration}} <span data-en="minutes">minutos</span></div></div>
                 </div>
                 <div class="lbiipop-infobox" v-if="activeFilm.film.trailer">
                   <div class="lbiipop-ico"><img src="app/img/lbii/ico/trailer.png"></div>
-                  <div class="lbiipop-info"><div><strong>Trailer:</strong> <a class="lbii-vertrailer" target="_blank" :href="activeFilm.film.trailer">Ver trailer</a></div></div>
+                  <div class="lbiipop-info"><div><strong>Trailer:</strong> <a class="lbii-vertrailer" target="_blank" :href="activeFilm.film.trailer" data-en="View trailer">Ver trailer</a></div></div>
                 </div>
               </div>
 
@@ -239,8 +209,8 @@
             <div class="row mt-5" >
               <div class="col-md-6" >
                 <div style="top:20px; position: sticky;" class="mb-5">
-                <div class="h3" style="color:#1fa58b;"><strong>SINOPSIS</strong></div>
-                <p>{{activeFilm.film.synopsis}}</p>
+                <div class="h3" style="color:#1fa58b;"><strong data-en="SYNOPSIS">SINOPSIS</strong></div>
+                <p :data-en="activeFilm.film.synopsis_en">{{activeFilm.film.synopsis}}</p>
 
 
 
@@ -249,7 +219,7 @@
                 <div class="mt-5" v-if="activeFilm.type == 'short'">
                   <div style="background: #1fa58b; color:#fff; padding: 10px;">
                     <div class="text-center">
-                      <div class="lbii-title mx-auto lbii-shorts-title">PROGRAMA DE CORTOMETRAJES</div>
+                      <div class="lbii-title mx-auto lbii-shorts-title" data-en="SHORT FILM PROGRAMMING">PROGRAMA DE CORTOMETRAJES</div>
                     </div>
                     <div class="row mt-3">
                       <template v-for="(item, index) in films" >
@@ -280,18 +250,18 @@
                 <!-- FUNCIONES -->
                 <div class="lbii-screenbyvenue">
                   <div class="d-flex justify-content-between">
-                    <div class="h3" style="color:#1fa58b;"> <strong style="text-transform: uppercase;">CARTELERA</strong></div>
-                    <div><div class="lbii-entradalibre" style="margin-left:auto;">FUNCIONES GRATUITAS</div></div>
+                    <div class="h3" style="color:#1fa58b;"> <strong style="text-transform: uppercase;" data-en="SHOWTIMES">CARTELERA</strong></div>
+                    <div><div class="lbii-entradalibre" style="margin-left:auto;" data-en="FREE FEATURES">FUNCIONES GRATUITAS</div></div>
                   </div>
                   <!--MONTHS-->
                   <template v-for="(item, index) in getScreeningsByFilmId(activeFilm.id)">
                       <div class="my-4">
-                        <div class="h4" style="color:#1fa58b;"> <strong style="text-transform: uppercase;">FUNCIONES {{item.month_es}}</strong></div>
+                        <div class="h4" style="color:#1fa58b;"> <strong style="text-transform: uppercase;" :data-en="item.month_en+' FEATURES'">FUNCIONES {{item.month_es}}</strong></div>
                         <!--FILMS-->
                         <template v-for="(film, indexF) in item.films">
                           <div class="mb-3">
                             <div class="h6 p-1 d-flex justify-content-between" style="color: #fff; background-color: #1fa58b;"><strong>{{film.venueName}}</strong> <span class="small">{{film.venueLocation}}</span></div>
-                            <div class="text-capitalize"> {{film.day_es}} de {{item.month_es}} | {{film.time}} </div>
+                            <div class="text-capitalize"> <span :data-en="film.day_en + ' of '+ item.month_en">{{film.day_es}} de {{item.month_es}}</span> | {{film.time}} </div>
                           </div>
                         </template>
 
@@ -374,7 +344,7 @@
   createApp({
     setup() {
 
-      const currentscreeninglist = lbii_currentscreeninglist
+
 
 
 
@@ -488,6 +458,9 @@
         } else {
             console.log("Invalid hash.");
         }
+        setTimeout(()=>{
+          makeSwitch()
+        }, 250)
       }
 
 
@@ -540,7 +513,6 @@
         activeVenue: activeVenue,
         filterScreeningsByFilmAndMonth,
         closePop,
-        currentscreeninglist,
         getScreeningsByFilmId
       }
     }
