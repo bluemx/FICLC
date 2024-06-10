@@ -1,3 +1,4 @@
+
 <div class="modal fade" id="newslettermodal" aria-hidden="true" aria-labelledby="newslettermodal" id="newslettermodal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content" style="background: #ffcc02; color: var(--colMain);">
@@ -20,6 +21,7 @@
 
 <script>
     setTimeout(()=>{
+        if(localStorage.getItem('microlang-lang')=='en'){ return false }
         new bootstrap.Modal('#newslettermodal').show()
     },500)
 </script>
