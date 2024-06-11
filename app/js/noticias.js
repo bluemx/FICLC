@@ -97,7 +97,7 @@ createApp({
           }
 
           function createuri(noteID, noteTitle){
-            return '?i=' + noteID + '&p=' + currentPage.value + '&t=' + slugify(noteTitle)
+            return '/NoticiasInicial?i=' + noteID + '&p=' + currentPage.value + '&t=' + slugify(noteTitle)
           }
           function slugify(str) {
             return String(str)

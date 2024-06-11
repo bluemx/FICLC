@@ -156,3 +156,11 @@ input.form-control, select.form-control, textarea.form-control{
 .btn-secondary{background:var(--colSec);box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);}
 .btn-secondary a{color: #fff;}
 .btn-secondary a:hover{text-decoration: none;}
+
+
+.img-skeleton{
+    background: var(--colSec);
+    min-height: 100px;
+    min-width: 100px;
+    border-radius: 5px;
+}

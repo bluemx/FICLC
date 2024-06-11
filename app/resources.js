@@ -49,6 +49,23 @@ const importsConfig = {
 
     if (window.location.href.includes('ficloscabos')) { MicroLangSwitch('es') }
     if (window.location.href.includes('loscabosiff')) { MicroLangSwitch('en') }
+
+    // Make links redirect to each domain
+
+    var currentUrl = window.location.href;
+    var langLinks = {
+        "ficloscabos": document.querySelector('a.nav-lang.nav-lang-en'),
+        "loscabosiff": document.querySelector('a.nav-lang.nav-lang-es')
+    };
+
+    for (var key in langLinks) {
+        if (currentUrl.includes(key) && langLinks[key]) {
+            langLinks[key].href = currentUrl.replace(key, key === "ficloscabos" ? "loscabosiff" : "ficloscabos");
+            break;
+        }
+    }
+
+
   }
 
   

@@ -217,7 +217,7 @@ var lbii_films = [
         address: 'Calle Horizonte, Todos Santos, 23300, La Paz, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/T2syBchnCvd6BWV29',
         imageName: 'cineclub_el_nido.jpg',
-        location: 'La Paz'
+        location: 'Todos Santos'
     }
   ];
 
