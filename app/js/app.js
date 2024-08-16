@@ -3,8 +3,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-P05N3XLV0M');
-
-
+gtag('config', 'G-K0N0NFB1B5');
 
 /*********************************************************************** */
 const languageFN = () => {
