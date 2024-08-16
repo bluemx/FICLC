@@ -1,9 +1,69 @@
 <section class="splide homebanner" aria-label="Banner del HOME">
     <div class="splide__track">
           <ul class="splide__list">
+              <li class="splide__slide" style="background-image:url(https://placehold.co/1600x1200?text=ESPA%C3%91OL);" data-lang-attr="style" data-en="background-image:url(https://placehold.co/1600x1200/000000/ffdd00/?text=english);"></li>
               <li class="splide__slide" style="background-image:url(app/img/banners/LBII2024.png);" onclick="window.location.href = 'labajainspiraitinerante.html'"></li>
               <li class="splide__slide" style="background-image:url(app/img/banners/SpikeLee.jpg);" onclick="window.location.href = 'NoticiasInicial?i=cG9zdDozODE=&p=0&t=spike-lee-prepara-remake-de-cielo-e-infierno-de-akira-kurosawa'"></li>
               <li class="splide__slide" style="background-image:url(app/img/banners/PosterCanes2024.jpg);" onclick="window.location.href = 'NoticiasInicial?i=cG9zdDozOTA=&p=0&t=una-escena-de-rapsodia-en-agosto-de-akira-kurosawa-es-la-protagonista-del-poster-de-cannes-2024'"></li>
           </ul>
-    </div>
+        </div>
+        
+
+
+
+
+
+        
+        <!-- autoplay -->
+         <div class="carousel_playpause">
+            <button class="splide__toggle" type="button">
+                <span class="splide__toggle__play"><i class="fa-solid fa-play"></i></span>
+                <span class="splide__toggle__pause"><i class="fa-solid fa-pause"></i></span>
+                <div class="splide__progress"><div class="splide__progress__bar"></div></div>
+            </button>
+        </div>
+
   </section>
+
+
+  <style>
+    /* autoplay */
+    .homebanner{
+        position: relative;
+        aspect-ratio: 32/17;
+    }
+    .carousel_playpause{
+        position: absolute;
+        top:6px;
+        right:6px;
+        z-index: 99;
+    }
+    .splide__progress{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+    }
+    .splide__progress__bar {
+        height: 100%;
+        background: rgba(255,255,255,0.8);
+    }
+    .splide__toggle{
+        position: relative;
+        aspect-ratio: 1/1;
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: rgba(200,200,200,0.3);
+        color: var(--colMain);
+    }
+    .splide__toggle:hover{
+        color: rgba(200,200,200,0.5);
+        background: var(--colMain);
+    }
+    @media (max-width:600px){
+        .carousel_playpause{transform: scale(0.7);}
+    }
+  </style>

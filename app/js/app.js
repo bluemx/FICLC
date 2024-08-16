@@ -26,7 +26,9 @@ const cookiesFN = () => {
 /*********************************************************************** */
 const carouselFN = () => {
     if(document.getElementsByClassName('homebanner').length==0){return false}
-    new Splide( '.homebanner',{ type   : 'loop' }).mount();
+    setTimeout(()=>{
+        new Splide( '.homebanner',{ type   : 'loop', autoplay: true, pauseOnHover: false }).mount();
+    }, 500)
 }
     
 /*********************************************************************** */

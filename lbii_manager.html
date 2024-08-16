@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LBII Manager</title>
+  <script src="https://unpkg.com/vue"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .container { max-width: 1200px; margin: auto; }
+    .section { margin-bottom: 20px; }
+    textarea { width: 100%; height: 200px; }
+    input, select { width: 100%; padding: 8px; margin-bottom: 10px; }
+    button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #45a049; }
+  </style>
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>LBII Manager</h1>
+    
+    <div class="section">
+      <h2>Paste lbii.js Content</h2>
+      <textarea v-model="pastedContent" placeholder="Paste your lbii.js content here..."></textarea>
+      <button @click="loadData">Load Data</button>
+    </div>
+    
+    <div class="section" v-if="films.length || venues.length || screenings.length">
+      <h2>Manage Films</h2>
+      <div v-for="(film, index) in films" :key="film.id" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+        <h3>Film {{ index + 1 }}</h3>
+        <label>ID: <input type="number" v-model="film.id"></label>
+        <label>Type: <select v-model="film.type">
+          <option value="feature">Feature</option>
+          <option value="short">Short</option>
+        </select></label>
+        <label>Name: <input type="text" v-model="film.film.name"></label>
+        <label>Country: <input type="text" v-model="film.film.country"></label>
+        <label>Year: <input type="number" v-model="film.film.year"></label>
+        <label>Director: <input type="text" v-model="film.film.director"></label>
+        <label>Script: <input type="text" v-model="film.film.script"></label>
+        <label>Photo: <input type="text" v-model="film.film.photo"></label>
+        <label>Duration: <input type="number" v-model="film.film.duration"></label>
+        <label>Trailer: <input type="text" v-model="film.film.trailer"></label>
+        <label>Synopsis: <textarea v-model="film.film.synopsis"></textarea></label>
+        <label>Synopsis (EN): <textarea v-model="film.film.synopsis_en"></textarea></label>
+        <button @click="removeFilm(index)">Remove Film</button>
+      </div>
+      <button @click="addFilm">Add New Film</button>
+    </div>
+
+    <div class="section" v-if="venues.length">
+      <h2>Manage Venues</h2>
+      <div v-for="(venue, index) in venues" :key="venue.id" style="border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;">
+        <h3>Venue {{ index + 1 }}</h3>
+        <label>ID: <input type="number" v-model="venue.id"></label>
+        <label>Name: <input type="text" v-model="venue.name"></label>
+        <label>Description: <textarea v-model="venue.description"></textarea></label>
+        <label>Description (EN): <textarea v-model="venue.description_en"></textarea></label>
+        <label>Address: <input type="text" v-model="venue.address"></label>
+        <label>Google Maps Link: <input type="text" v-model="venue.googleMapsLink"></label>
+        <label>Image Name: <input type="text" v-model="venue.imageName"></label>
+        <label>Location: <input type="text" v-model="venue.location"></label>
+        <button @click="removeVenue(index)">Remove Venue</button>
+      </div>
+      <button @click="addVenue">Add New Venue</button>
+    </div>
+
+    <div class="section">
+      <button @click="exportData">Export Data</button>
+      <textarea v-if="exportedContent" :value="exportedContent" readonly></textarea>
+    </div>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          pastedContent: '',
+          films: [],
+          venues: [],
+          screenings: [],
+          exportedContent: ''
+        };
+      },
+      methods: {
+        loadData() {
+          const data = new Function(this.pastedContent + '; return { lbii_films, lbii_venues, lbii_screenings };')();
+          this.films = data.lbii_films || [];
+          this.venues = data.lbii_venues || [];
+          this.screenings = data.lbii_screenings || [];
+        },
+        addFilm() {
+          this.films.push({
+            id: this.films.length + 1,
+            type: 'feature',
+            gallery: [],
+            film: {
+              name: '',
+              country: '',
+              year: '',
+              director: '',
+              script: '',
+              photo: '',
+              duration: '',
+              trailer: '',
+              synopsis: '',
+              synopsis_en: ''
+            }
+          });
+        },
+        removeFilm(index) {
+          this.films.splice(index, 1);
+        },
+        addVenue() {
+          this.venues.push({
+            id: this.venues.length + 1,
+            name: '',
+            description: '',
+            description_en: '',
+            address: '',
+            googleMapsLink: '',
+            imageName: '',
+            location: ''
+          });
+        },
+        removeVenue(index) {
+          this.venues.splice(index, 1);
+        },
+        exportData() {
+          this.exportedContent = `
+var lbii_films = ${JSON.stringify(this.films, null, 2)};
+var lbii_venues = ${JSON.stringify(this.venues, null, 2)};
+var lbii_screenings = ${JSON.stringify(this.screenings, null, 2)};
+          `;
+        }
+      }
+    });
+    app.mount('#app');
+  </script>
+</body>
+</html>
