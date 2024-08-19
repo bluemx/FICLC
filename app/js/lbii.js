@@ -191,7 +191,7 @@ var lbii_films = [
     },
     {
         id: 9,
-        name: 'Universidad Autónoma de Baja California Sur (UABCS)',
+        name: 'Universidad Autónoma de Baja California Sur (UABCS) - (Campus La Paz)',
         description: '<p>Creada el 31 de diciembre de 1975, la Universidad Autónoma de Baja California Sur (UABCS) es la institución de educación superior con más variedad disciplinar y de niveles educativos en Sudcalifornia al ofrecer programas de tecnicatura superior universitaria, licenciaturas, ingenierías, maestrías y doctorados en las áreas de conocimiento de ciencias sociales y humanidades, ciencias del mar y de la tierra, ciencias agropecuarias, y sistemas computacionales.</p><p>En el ámbito de la docencia, la Universidad ha aumentado y diversificado significativamente sus servicios educativos en los cinco municipios de la entidad a través del campus La Paz y cuatro extensiones académicas: Guerrero Negro, Loreto, Ciudad Insurgentes, y Los Cabos.</p><p><strong>Cuenta con una sala de cine</strong>, un espacio creado para que los y las estudiantes puedan disfrutar de una película, que comúnmente no podrían encontrar en otros cines comerciales. Y siempre aprender cosas nuevas con cada proyección.</p><p>Facebook: Sala de cine UABCS</p><p>Instagram: UABCS_sala de cine</p>',
         description_en: '---',
         address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
@@ -200,8 +200,28 @@ var lbii_films = [
         location: 'La Paz'
     },
     {
+        id: 91,
+        name: 'Universidad Autónoma de Baja California Sur (UABCS) - (Campus Ciudad Insurgentes)',
+        description: '<p>Creada el 31 de diciembre de 1975, la Universidad Autónoma de Baja California Sur (UABCS) es la institución de educación superior con más variedad disciplinar y de niveles educativos en Sudcalifornia al ofrecer programas de tecnicatura superior universitaria, licenciaturas, ingenierías, maestrías y doctorados en las áreas de conocimiento de ciencias sociales y humanidades, ciencias del mar y de la tierra, ciencias agropecuarias, y sistemas computacionales.</p><p>En el ámbito de la docencia, la Universidad ha aumentado y diversificado significativamente sus servicios educativos en los cinco municipios de la entidad a través del campus La Paz y cuatro extensiones académicas: Guerrero Negro, Loreto, Ciudad Insurgentes, y Los Cabos.</p><p><strong>Cuenta con una sala de cine</strong>, un espacio creado para que los y las estudiantes puedan disfrutar de una película, que comúnmente no podrían encontrar en otros cines comerciales. Y siempre aprender cosas nuevas con cada proyección.</p><p>Facebook: Sala de cine UABCS</p><p>Instagram: UABCS_sala de cine</p>',
+        description_en: '---',
+        address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
+        googleMapsLink: 'https://maps.app.goo.gl/XBchtNXNJ5tFUnjd6',
+        imageName: 'uabcs.jpg',
+        location: 'Ciudad Insurgentes'
+    },
+    {
+        id: 92,
+        name: 'Universidad Autónoma de Baja California Sur (UABCS) - (Campus Guerrero Negro)',
+        description: '<p>Creada el 31 de diciembre de 1975, la Universidad Autónoma de Baja California Sur (UABCS) es la institución de educación superior con más variedad disciplinar y de niveles educativos en Sudcalifornia al ofrecer programas de tecnicatura superior universitaria, licenciaturas, ingenierías, maestrías y doctorados en las áreas de conocimiento de ciencias sociales y humanidades, ciencias del mar y de la tierra, ciencias agropecuarias, y sistemas computacionales.</p><p>En el ámbito de la docencia, la Universidad ha aumentado y diversificado significativamente sus servicios educativos en los cinco municipios de la entidad a través del campus La Paz y cuatro extensiones académicas: Guerrero Negro, Loreto, Ciudad Insurgentes, y Los Cabos.</p><p><strong>Cuenta con una sala de cine</strong>, un espacio creado para que los y las estudiantes puedan disfrutar de una película, que comúnmente no podrían encontrar en otros cines comerciales. Y siempre aprender cosas nuevas con cada proyección.</p><p>Facebook: Sala de cine UABCS</p><p>Instagram: UABCS_sala de cine</p>',
+        description_en: '---',
+        address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
+        googleMapsLink: 'https://maps.app.goo.gl/XBchtNXNJ5tFUnjd6',
+        imageName: 'uabcs.jpg',
+        location: 'Guerrero Negro'
+    },
+    {
         id: 10,
-        name: 'Universidad de Tijuana (UDT)',
+        name: 'Universidad de Tijuana (UDT) - (Campus Cabo San Lucas)',
         description: '<p>La Universidad de Tijuana es una institución que concibe a la educación desde una perspectiva universalista e integral, promoviendo la formación de ciudadanos conscientes, críticos, ocupados y preocupados por el respeto a los derechos humanos, la ética profesional y el desarrollo sustentable. A partir de su fundación y la apertura de operaciones en el Estado de Baja California Sur se ha incorporado a un número creciente de estudiantes y profesionistas orientados al desarrollo económico, social y cultural de la región.</p>',
         description_en: '---',
         address: 'Parcela 47 Z 2 P 1/3 Ejido de Cabo San Lucas, Carretera Transpeninsular Km. 6.5, Los Cabos, Baja California Sur.',
@@ -218,7 +238,8 @@ var lbii_films = [
         googleMapsLink: 'https://maps.app.goo.gl/T2syBchnCvd6BWV29',
         imageName: 'cineclub_el_nido.jpg',
         location: 'Todos Santos'
-    }
+    },
+    
   ];
 
   var lbii_screenings = [
