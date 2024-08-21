@@ -265,11 +265,16 @@
                           <div class="mb-3">
                             <div class="h6 p-1 d-flex justify-content-between" style="color: #fff; background-color: #1fa58b;"><strong>{{film.venueName}}</strong> <span class="small">{{film.venueLocation}}</span></div>
                             <div class="text-capitalize"> <span :data-en="film.day_en + ' of '+ item.month_en">{{film.day_es}} de {{item.month_es}}</span> | {{film.time}} </div>
+                            <div class="fw-bold">{{film.note}}</div>
                           </div>
                         </template>
 
                       </div>
                   </template>
+
+                  <div class="my-4 h3 text-center" style="color:#aaa;" v-if="getScreeningsByFilmId(activeFilm.id).length==0">
+                    <span data-en="SOON">PRÓXIMAMENTE</span>
+                  </div>
 
 
                   
@@ -393,6 +398,7 @@
               const time = `${hours}:${minutes}`;
 
               screeningsByMonth[monthKey].films.push({
+                  note: screening.note,
                   filmId: screening.filmId,
                   venueId: screening.venueId,
                   venueName: venue.name,

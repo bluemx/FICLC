@@ -192,7 +192,7 @@ var lbii_films = [
     {
         id: 9,
         name: 'Universidad Autónoma de Baja California Sur (UABCS) - (Campus La Paz)',
-        description: '<p>Creada el 31 de diciembre de 1975, la Universidad Autónoma de Baja California Sur (UABCS) es la institución de educación superior con más variedad disciplinar y de niveles educativos en Sudcalifornia al ofrecer programas de tecnicatura superior universitaria, licenciaturas, ingenierías, maestrías y doctorados en las áreas de conocimiento de ciencias sociales y humanidades, ciencias del mar y de la tierra, ciencias agropecuarias, y sistemas computacionales.</p><p>En el ámbito de la docencia, la Universidad ha aumentado y diversificado significativamente sus servicios educativos en los cinco municipios de la entidad a través del campus La Paz y cuatro extensiones académicas: Guerrero Negro, Loreto, Ciudad Insurgentes, y Los Cabos.</p><p><strong>Cuenta con una sala de cine</strong>, un espacio creado para que los y las estudiantes puedan disfrutar de una película, que comúnmente no podrían encontrar en otros cines comerciales. Y siempre aprender cosas nuevas con cada proyección.</p><p>Facebook: Sala de cine UABCS</p><p>Instagram: UABCS_sala de cine</p>',
+        description: '<p>Cineclub UABC es un espacio que busca promover expresiones cinematográficas y proyectos audiovisuales nacionales e internacionales de tópicos interesantes, de autor o propuestas audaces, aproximando a la audiencia a la narrativa cinematográfica y sus múltiples manifestaciones con actitud crítica y de respeto.</p>',
         description_en: '---',
         address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/XBchtNXNJ5tFUnjd6',
@@ -202,7 +202,7 @@ var lbii_films = [
     {
         id: 91,
         name: 'Universidad Autónoma de Baja California Sur (UABCS) - (Campus Ciudad Insurgentes)',
-        description: '<p>Creada el 31 de diciembre de 1975, la Universidad Autónoma de Baja California Sur (UABCS) es la institución de educación superior con más variedad disciplinar y de niveles educativos en Sudcalifornia al ofrecer programas de tecnicatura superior universitaria, licenciaturas, ingenierías, maestrías y doctorados en las áreas de conocimiento de ciencias sociales y humanidades, ciencias del mar y de la tierra, ciencias agropecuarias, y sistemas computacionales.</p><p>En el ámbito de la docencia, la Universidad ha aumentado y diversificado significativamente sus servicios educativos en los cinco municipios de la entidad a través del campus La Paz y cuatro extensiones académicas: Guerrero Negro, Loreto, Ciudad Insurgentes, y Los Cabos.</p><p><strong>Cuenta con una sala de cine</strong>, un espacio creado para que los y las estudiantes puedan disfrutar de una película, que comúnmente no podrían encontrar en otros cines comerciales. Y siempre aprender cosas nuevas con cada proyección.</p><p>Facebook: Sala de cine UABCS</p><p>Instagram: UABCS_sala de cine</p>',
+        description: '<p>Cineclub UABC es un espacio que busca promover expresiones cinematográficas y proyectos audiovisuales nacionales e internacionales de tópicos interesantes, de autor o propuestas audaces, aproximando a la audiencia a la narrativa cinematográfica y sus múltiples manifestaciones con actitud crítica y de respeto.</p>',
         description_en: '---',
         address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/XBchtNXNJ5tFUnjd6',
@@ -212,12 +212,32 @@ var lbii_films = [
     {
         id: 92,
         name: 'Universidad Autónoma de Baja California Sur (UABCS) - (Campus Guerrero Negro)',
-        description: '<p>Creada el 31 de diciembre de 1975, la Universidad Autónoma de Baja California Sur (UABCS) es la institución de educación superior con más variedad disciplinar y de niveles educativos en Sudcalifornia al ofrecer programas de tecnicatura superior universitaria, licenciaturas, ingenierías, maestrías y doctorados en las áreas de conocimiento de ciencias sociales y humanidades, ciencias del mar y de la tierra, ciencias agropecuarias, y sistemas computacionales.</p><p>En el ámbito de la docencia, la Universidad ha aumentado y diversificado significativamente sus servicios educativos en los cinco municipios de la entidad a través del campus La Paz y cuatro extensiones académicas: Guerrero Negro, Loreto, Ciudad Insurgentes, y Los Cabos.</p><p><strong>Cuenta con una sala de cine</strong>, un espacio creado para que los y las estudiantes puedan disfrutar de una película, que comúnmente no podrían encontrar en otros cines comerciales. Y siempre aprender cosas nuevas con cada proyección.</p><p>Facebook: Sala de cine UABCS</p><p>Instagram: UABCS_sala de cine</p>',
+        description: '<p>Cineclub UABC es un espacio que busca promover expresiones cinematográficas y proyectos audiovisuales nacionales e internacionales de tópicos interesantes, de autor o propuestas audaces, aproximando a la audiencia a la narrativa cinematográfica y sus múltiples manifestaciones con actitud crítica y de respeto.</p>',
         description_en: '---',
         address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
         googleMapsLink: 'https://maps.app.goo.gl/XBchtNXNJ5tFUnjd6',
         imageName: 'uabcs.jpg',
         location: 'Guerrero Negro'
+    },
+    {
+        id: 93,
+        name: 'Universidad Autónoma de Baja California Sur (UABCS) - (Campus Loreto)',
+        description: '<p>Cineclub UABC es un espacio que busca promover expresiones cinematográficas y proyectos audiovisuales nacionales e internacionales de tópicos interesantes, de autor o propuestas audaces, aproximando a la audiencia a la narrativa cinematográfica y sus múltiples manifestaciones con actitud crítica y de respeto.</p>',
+        description_en: '---',
+        address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
+        googleMapsLink: 'https://maps.app.goo.gl/XBchtNXNJ5tFUnjd6',
+        imageName: 'uabcs.jpg',
+        location: 'Loreto'
+    },
+    {
+        id: 94,
+        name: 'Universidad Autónoma de Baja California Sur (UABCS) - (Campus Mexicali)',
+        description: '<p>Cineclub UABC es un espacio que busca promover expresiones cinematográficas y proyectos audiovisuales nacionales e internacionales de tópicos interesantes, de autor o propuestas audaces, aproximando a la audiencia a la narrativa cinematográfica y sus múltiples manifestaciones con actitud crítica y de respeto.</p>',
+        description_en: '---',
+        address: 'Boulevard Forjadores S/N entre Calle Av. Universidad y Calle Félix Agramont Cota Col. Universitario. La Paz, Baja California Sur.',
+        googleMapsLink: 'https://maps.app.goo.gl/XBchtNXNJ5tFUnjd6',
+        imageName: 'uabcs.jpg',
+        location: 'Mexicali'
     },
     {
         id: 10,
@@ -239,48 +259,66 @@ var lbii_films = [
         imageName: 'cineclub_el_nido.jpg',
         location: 'Todos Santos'
     },
+    {
+        id: 12,
+        name: 'Puerto Paraíso (Cabo San Lucas)',
+        description: '<p>Plaza Puerto Paraíso emblemático centro comercial iniciando sus operaciones desde el año 2001, ubicado en el municipio Los Cabos en la delegación de Cabo San Lucas frente a la Marina principal de este hermoso Puerto, con atardeceres espectaculares y una vista privilegiada donde puedes disfrutar de sus diversas actividades en su gran variedad de entretenimiento.</p>',
+        description_en: '---',
+        address: 'Boulevard Lázaro Cárdenas 1501, CP. 23410, Cabo San Lucas, Baja California Sur',
+        googleMapsLink: 'https://maps.app.goo.gl/bcErFLWSLmgtCBDZA',
+        imageName: 'paraiso.jpg',
+        location: 'Cabo San Lucas'
+    },
     
   ];
 
-  var lbii_screenings = [
-    // YUREI
-    { filmId: 1, venueId: 6, dateTime: '2024-06-22T18:00:00' },
-    { filmId: 1, venueId: 11, dateTime: '2024-07-04T19:30:00' },
-    { filmId: 1, venueId: 3, dateTime: '2024-07-11T20:00:00' },
-    { filmId: 1, venueId: 2, dateTime: '2024-07-23T18:00:00' },
-    
-    // CHECHE LAVI
-    { filmId: 2, venueId: 4, dateTime: '2024-06-28T17:30:00' },
-    { filmId: 2, venueId: 6, dateTime: '2024-07-06T18:00:00' },
-    { filmId: 2, venueId: 11, dateTime: '2024-07-18T19:30:00' },
-    { filmId: 2, venueId: 2, dateTime: '2024-07-24T18:00:00' },
-    { filmId: 2, venueId: 3, dateTime: '2024-07-18T20:00:00' },
-    
-    // LOS HAMSTERS
-    { filmId: 3, venueId: 3, dateTime: '2024-06-27T20:00:00' },
-    { filmId: 3, venueId: 1, dateTime: '2024-07-04T19:00:00' },
-    { filmId: 3, venueId: 5, dateTime: '2024-07-13T18:00:00' },
-    { filmId: 3, venueId: 8, dateTime: '2024-07-27T19:00:00' },
-    
-    // EL PEREGRINO
-    { filmId: 4, venueId: 1, dateTime: '2024-06-27T19:00:00' },
-    { filmId: 4, venueId: 4, dateTime: '2024-06-29T17:30:00' },
-    { filmId: 4, venueId: 3, dateTime: '2024-07-04T20:00:00' },
-    { filmId: 4, venueId: 5, dateTime: '2024-07-20T18:00:00' },
-    { filmId: 4, venueId: 8, dateTime: '2024-07-20T19:00:00' },
-    
-    // LO QUE DEJAMOS EN EL MAR
-    { filmId: 5, venueId: 1, dateTime: '2024-06-27T19:00:00' },
-    { filmId: 5, venueId: 4, dateTime: '2024-06-29T17:30:00' },
-    { filmId: 5, venueId: 3, dateTime: '2024-07-04T20:00:00' },
-    { filmId: 5, venueId: 5, dateTime: '2024-07-20T18:00:00' },
-    { filmId: 5, venueId: 8, dateTime: '2024-07-20T19:00:00' },
-    
-    // TIBURONES DEL MAR DE CORTÉS
-    { filmId: 6, venueId: 1, dateTime: '2024-06-27T19:00:00' },
-    { filmId: 6, venueId: 4, dateTime: '2024-06-29T17:30:00' },
-    { filmId: 6, venueId: 3, dateTime: '2024-07-04T20:00:00' },
-    { filmId: 6, venueId: 5, dateTime: '2024-07-20T18:00:00' },
-    { filmId: 6, venueId: 8, dateTime: '2024-07-20T19:00:00' },
+/*
+var lbii_screenings = [
+    { filmId: 1, venueId: 6, dateTime: '2024-06-22T18:00:00, note: '' },
+    { filmId: 1, venueId: 11, dateTime: '2024-07-04T19:30:00, note: '' },
+    { filmId: 1, venueId: 3, dateTime: '2024-07-11T20:00:00, note: '' },
+    { filmId: 1, venueId: 2, dateTime: '2024-07-23T18:00:00, note: '' },
+    { filmId: 2, venueId: 4, dateTime: '2024-06-28T17:30:00, note: '' },
+    { filmId: 2, venueId: 6, dateTime: '2024-07-06T18:00:00, note: '' },
+    { filmId: 2, venueId: 11, dateTime: '2024-07-18T19:30:00, note: '' },
+    { filmId: 2, venueId: 2, dateTime: '2024-07-24T18:00:00, note: '' },
+    { filmId: 2, venueId: 3, dateTime: '2024-07-18T20:00:00, note: '' },
+    { filmId: 3, venueId: 3, dateTime: '2024-06-27T20:00:00, note: '' },
+    { filmId: 3, venueId: 1, dateTime: '2024-07-04T19:00:00, note: '' },
+    { filmId: 3, venueId: 5, dateTime: '2024-07-13T18:00:00, note: '' },
+    { filmId: 3, venueId: 8, dateTime: '2024-07-27T19:00:00, note: '' },
+    { filmId: 4, venueId: 1, dateTime: '2024-06-27T19:00:00, note: '' },
+    { filmId: 4, venueId: 4, dateTime: '2024-06-29T17:30:00, note: '' },
+    { filmId: 4, venueId: 3, dateTime: '2024-07-04T20:00:00, note: '' },
+    { filmId: 4, venueId: 5, dateTime: '2024-07-20T18:00:00, note: '' },
+    { filmId: 4, venueId: 8, dateTime: '2024-07-20T19:00:00, note: '' },
+    { filmId: 5, venueId: 1, dateTime: '2024-06-27T19:00:00, note: '' },
+    { filmId: 5, venueId: 4, dateTime: '2024-06-29T17:30:00, note: '' },
+    { filmId: 5, venueId: 3, dateTime: '2024-07-04T20:00:00, note: '' },
+    { filmId: 5, venueId: 5, dateTime: '2024-07-20T18:00:00, note: '' },
+    { filmId: 5, venueId: 8, dateTime: '2024-07-20T19:00:00, note: '' },
+    { filmId: 6, venueId: 1, dateTime: '2024-06-27T19:00:00, note: '' },
+    { filmId: 6, venueId: 4, dateTime: '2024-06-29T17:30:00, note: '' },
+    { filmId: 6, venueId: 3, dateTime: '2024-07-04T20:00:00, note: '' },
+    { filmId: 6, venueId: 5, dateTime: '2024-07-20T18:00:00, note: '' },
+    { filmId: 6, venueId: 8, dateTime: '2024-07-20T19:00:00, note: '' }
 ];
+*/
 
+var lbii_screenings = [
+    { filmId: 1, venueId: 10, dateTime: '2024-10-08T10:30', note: '*Sesión de preguntas y respuestas con la realizadora + actividad lúdica al finalizar la función.' },
+    { filmId: 1, venueId: 9, dateTime: '2024-10-09T11:00', note: '*Sesión de preguntas y respuestas con la realizadora + actividad lúdica al finalizar la función.' },
+    { filmId: 1, venueId: 91, dateTime: '2024-10-15T10:00', note: '' },
+    { filmId: 1, venueId: 92, dateTime: '2024-10-22T17:00', note: '' },
+    { filmId: 1, venueId: 7, dateTime: '2024-11-30T17:00', note: '' },
+    { filmId: 2, venueId: 93, dateTime: '2024-10-14T10:00', note: '' },
+    { filmId: 3, venueId: 94, dateTime: '2024-10-16T11:00', note: '' },
+    { filmId: 3, venueId: 10, dateTime: '2024-10-22T10:30', note: '' },
+    { filmId: 3, venueId: 9, dateTime: '2024-10-23T11:00', note: '' },
+    { filmId: 6, venueId: 12, dateTime: '2024-10-11T19:00', note: '' },
+    { filmId: 6, venueId: 92, dateTime: '2024-10-17T10:00', note: '' },
+    { filmId: 6, venueId: 92, dateTime: '2024-10-21T17:00', note: '' },
+    { filmId: 6, venueId: 92, dateTime: '2024-10-24T17:00', note: '' },
+    { filmId: 2, venueId: 94, dateTime: '2024-10-24T19:00', note: '' },
+    { filmId: 2, venueId: 7, dateTime: '2024-11-29T19:00', note: 'Al aire libre' },
+];
