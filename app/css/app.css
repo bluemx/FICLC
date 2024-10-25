@@ -346,3 +346,23 @@ input.form-control, select.form-control, textarea.form-control{
 }
 
 .encajar{object-fit: fill;}
+
+.col-custom
+{
+    flex: 0 0 20%; /* 20% de ancho para 5 columnas */
+    max-width: 20%; /* 20% de ancho para 5 columnas */
+}
+
+@media (max-width: 1200px) {
+    .col-custom {
+        flex: 0 0 50%; /* 50% para 2 columnas en pantallas medianas */
+        max-width: 50%; /* 50% para 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .col-custom {
+        flex: 0 0 100%; /* 100% para 1 columna en pantallas pequeñas */
+        max-width: 100%; /* 100% para 1 columna en pantallas pequeñas */
+    }
+}
