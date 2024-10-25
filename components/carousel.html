@@ -1,29 +1,39 @@
 <section class="splide homebanner" aria-label="Banner del HOME">
     <div class="splide__track">
           <ul class="splide__list">
-              <li class="splide__slide" style="background-image:url(https://placehold.co/1600x1200?text=ESPA%C3%91OL);" data-lang-attr="style" data-en="background-image:url(https://placehold.co/1600x1200/000000/ffdd00/?text=english);"></li>
-              <li class="splide__slide" style="background-image:url(app/img/banners/LBII2024.png);" onclick="window.location.href = 'labajainspiraitinerante.html'"></li>
-              <li class="splide__slide" style="background-image:url(app/img/banners/SpikeLee.jpg);" onclick="window.location.href = 'NoticiasInicial?i=cG9zdDozODE=&p=0&t=spike-lee-prepara-remake-de-cielo-e-infierno-de-akira-kurosawa'"></li>
-              <li class="splide__slide" style="background-image:url(app/img/banners/PosterCanes2024.jpg);" onclick="window.location.href = 'NoticiasInicial?i=cG9zdDozOTA=&p=0&t=una-escena-de-rapsodia-en-agosto-de-akira-kurosawa-es-la-protagonista-del-poster-de-cannes-2024'"></li>
+            <!-- <li class="banner" style="background-image:url(https://picsum.photos/600/300)"
+            onclick="window.open('https://placehold.co/600x600?text=LINK_EN_ESPAÑOL', '_blank')"
+            data-en="window.open('https://placehold.co/600x600?text=ENGLISH_LINK', '_blank')"
+            data-lang-attr="onclick"
+            >
+         <span data-en="English link">Link español</span>
+          </li> -->
+          <li class="splide__slide" style="background-image:url(app/img/banners/ConvocatoriaTaller_ESP.jpg)"
+          data-en="background-image:url(app/img/banners/ConvocatoriaTaller_ENG.jpg)" data-lang-attr="style" onclick="window.open((currentLanguage=='es' ? 'https://ficloscabos.org/convocatoria-taller.html' : 'https://loscabosiff.org/convocatoria-taller.html'), '_blank')"></li>
+          <li class="splide__slide" style="background-image:url(app/img/banners/convocatoria_esp.jpg)"
+          data-en="background-image:url(app/img/banners/convocatoria_eng.jpg)" data-lang-attr="style" onclick="window.open((currentLanguage=='es' ? 'https://ficloscabos.org/convocatoria.html' : 'https://loscabosiff.org/convocatoria.html'), '_blank')"></li>
+          <li class="splide__slide" style="background-image:url(app/img/banners/cartel_esp.jpg)"
+          data-en="background-image:url(app/img/banners/cartel_eng.jpg)" data-lang-attr="style" onclick="window.open((currentLanguage=='es' ? 'https://ficloscabos.org/NoticiasInicial?i=cG9zdDo0MzU=&p=0&t=nos-vemos-del-4-al-8-de-diciembre-para-celebrar-el-festival-internacional-de-cine-de-los-cabos-encuentros-de-cine#es' : 'https://loscabosiff.org/NoticiasInicial?i=cG9zdDo0MzU=&p=0&t=nos-vemos-del-4-al-8-de-diciembre-para-celebrar-el-festival-internacional-de-cine-de-los-cabos-encuentros-de-cine#en'), '_blank')"></li>
+            <!-- <li class="splide__slide" style="background-image:url(app/img/banners/cartel_esp.jpg);" data-lang-attr="style" data-en="background-image:url(app/img/banners/cartel_eng.jpg);" onclick="window.location.href = 'https://ficloscabos.org/NoticiasInicial?i=cG9zdDo0MzU=&p=0&t=nos-vemos-del-4-al-8-de-diciembre-para-celebrar-el-festival-internacional-de-cine-de-los-cabos-encuentros-de-cine#es'"></li> -->
+            <li class="splide__slide" style="background-image:url(app/img/banners/LBII2024-octnov.jpg);" data-lang-attr="style" data-en="background-image:url(app/img/banners/LBII2024-octnov2.jpg);" onclick="window.location.href = 'labajainspiraitinerante.html'"></li>
+            <li class="splide__slide" style="background-image:url(app/img/banners/eleco.jpg);" onclick="window.location.href='https://ficloscabos.org/NoticiasInicial?i=cG9zdDo0Mjc=&p=0&t=el-eco-de-tatiana-huezo-tiene-fecha-de-estreno#es'"></li>
+            <li class="splide__slide" style="background-image:url(app/img/banners/guiadelocaciones.jpg);" data-lang-attr="style" data-en="background-image:url(app/img/banners/Locationguide.jpg);" onclick="window.open('https://issuu.com/adogmx/docs/locationguide_bcs_web', '_blank')"></li>
+             <!-- <li class="splide__slide" style="background-image:url(app/img/banners/guiadelocaciones.jpg);" data-lang-attr="style" data-en="background-image:url(app/img/banners/Locationguide.jpg);" onclick="window.open( localStorage.getItem('microlang-lang')=='es' ? 'https://issuu.com/adogmx/docs/locationguide_bcs_web' : '_blank').focus();"></li>  -->
           </ul>
-        </div>
-        
+    </div>
 
+<!-- autoplay -->
+<div class="carousel_playpause">
+    <button class="splide__toggle" type="button">
+        <span class="splide__toggle__play"><i class="fa-solid fa-play"></i></span>
+        <span class="splide__toggle__pause"><i class="fa-solid fa-pause"></i></span>
+        <div class="splide__progress"><div class="splide__progress__bar"></div></div>
+    </button>
+</div>
 
-
-
-
-        
-        <!-- autoplay -->
-         <div class="carousel_playpause">
-            <button class="splide__toggle" type="button">
-                <span class="splide__toggle__play"><i class="fa-solid fa-play"></i></span>
-                <span class="splide__toggle__pause"><i class="fa-solid fa-pause"></i></span>
-                <div class="splide__progress"><div class="splide__progress__bar"></div></div>
-            </button>
-        </div>
 
   </section>
+
 
 
   <style>

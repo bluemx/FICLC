@@ -10,21 +10,35 @@
   --lbii: #9EBCE7;
   --bs-primary-rgb: 15, 31, 62;
   --bs-secondary-rgb: 52, 107, 109;
+  --colSite1: #5182AF;
+  --colSite2: #A2574A;
+  --colSite3: #857F5E;
+  --colSite4: #D5C7AA;
+  --colSite5: #D1954D;
+  --colSite6: #E2E1DE;
 }
 
 body{
     background: #fff;
     font-family: 'Barlow', sans-serif;
+    max-width: 100%;
+overflow-x: hidden;
 }
 
 p {
     margin: 0.8rem 0;
     line-height: 1.5;
 }
-a { color: var(--colSec); }
-h1, h3, h4, h5 {
-    font-family: 'Barlow Condensed', sans-serif;
+li {
+    margin: 0.8rem 0;
+    line-height: 1.5;
 }
+a { color: var(--colSec); text-decoration: none; }
+h1, h2, h3, h4, h5 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+}
+
 /* ******************************************************** */
 /* TOP NAVIGATION */
 .topnavigation{
@@ -55,6 +69,10 @@ h1, h3, h4, h5 {
 .topnavigation .nav-lang.active-language{ background: var(--colMain); color: #fff; }
 .topnavigation .nav-comunicado{background: #ffcc02;}
 .topnavigation .nav-lbii{background: #1fa58b;}
+.topnavigation .nav-locaciones{background: #e08d40;}
+.topnavigation .nav-convocatoria{background: #cde023;}
+.topnavigation .nav-vacantes{background: #23aae0;}
+.topnavigation .nav-voluntarios{background: #f38fdd;}
 
 .topnavigation a:hover{
     background: #f5f5f5;
@@ -164,3 +182,167 @@ input.form-control, select.form-control, textarea.form-control{
     min-width: 100px;
     border-radius: 5px;
 }
+
+.btn-reglamento{background-image: linear-gradient(175deg, #df74ff 0, #b25aff 25%, #783cf2 50%, #1623de 75%, #0017cd 100%); box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);}
+.btn-reglamento p{color: #fff;}
+.btn-reglamento:hover {border-color: var(--colMain);}
+.btn-reglamento:active{background: var(--colMain);}
+
+.btn-convocatoria{background-image: radial-gradient(circle at 50% -20.71%, #fe8f62 0, #ff8564 8.33%, #ff7967 16.67%, #ff6c6b 25%, #fd5e6e 33.33%, #f84e73 41.67%, #f23c78 50%, #ea287e 58.33%, #e10e86 66.67%, #d6008f 75%, #ca0098 83.33%, #bb00a3 91.67%, #aa00ae 100%); box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2); padding:3px; border-radius: 3px; text-decoration: none; 
+    vertical-align: middle; user-select: none; margin-left: 10px;}
+  .btn-convocatoria p{color: #fff; padding-left: 10px; padding-right: 10px;}
+  .btn-convocatoria:hover {border-color: var(--colMain);}
+  .btn-convocatoria:active{background: var(--colMain);}
+
+  .btn-white{background-color: #fff; border: 1px solid #0f1f3e; display: inline-block;  border-radius: 3px;font-size: .8em;padding:10px;color:var(--colMain)}
+  .btn-white:hover {border-color: var(--colMain); color:var(--colMain)}
+
+  .btn-terracota{background-color:var(--colSite2); display: inline-block; padding-top: -10px; border-radius: 3px;color:#fff; font-size: .8em;padding: 10px;}
+  .btn-terracota:hover {border-color: var(--colSite2); color:var(--colMain); background-color:var(--colSite2)}
+
+  .btn-boleto{background-color:var(--colSite2); display: inline-block; padding-top: -10px; border-radius: 3px;color:#fff; font-size: 1.2em;padding: 20px;}
+  .btn-boleto:hover {border-color: var(--colSite2); color:var(--colMain); background-color:var(--colSite2);}
+
+  .btn-olivo{background-color:var(--colSite3); display: inline-block; border-radius: 3px; color: #fff;color:#fff; font-size: .8em;padding: 10px; text-decoration: none; letter-spacing: .1em;}
+  .btn-olivo:hover {border-color: var(--colSite3); color:var(--colMain); background-color:var(--colSite3)}
+
+  .boton-azul{background-color:var(--colSite1); display: inline-block; padding-top: -10px; border-radius: 3px;color: #fff; font-weight: 600; display: table-cell; width: calc(100vw - 10px); height: calc(10vh - 10px); vertical-align: middle;}
+  .boton-azul:hover {border-color: var(--colSite4); color:#fff; background:var(--colSite4);}
+
+  .boton-beige{background-color:var(--colSite4); display: inline-block; padding-top: -10px; border-radius: 3px;color: #fff; font-weight: 600; display: table-cell; width: calc(100vw - 10px); height: calc(10vh - 10px); vertical-align: middle;}
+  
+  .boton-beige:hover {border-color: var(--colSite1); color:#fff; background:var(--colSite1);}
+
+  .btn-hotel{background-color:var(--colSite3); display: inline-block; border-radius: 3px; color: #fff;color:#fff; font-size: 1.3em;padding: 10px; text-decoration: none; letter-spacing: .1em;}
+  .btn-hotel:hover {border-color: var(--colSite3); color:var(--colMain); background-color:var(--colSite3)}
+
+  .linea{height: 3px;width: 100%;background: var(--colMain);}
+
+.contenido-tit{margin-left: 3em; margin-top: 5em; }
+.contenido{margin-left: 3em; margin-right: 3em; }
+.participantes{margin-left: 3em; margin-right: 3em;}
+
+
+
+.img-right img{float: right;}
+.movie{font-weight: 600;}
+.year{margin-top: -10px;padding-bottom: 10px;}
+
+
+.conversatorio > img{
+	width: 100%;
+	height: 6 00px;
+	object-fit: none;
+}
+.c-title{font-weight:600; font-size: 1.4em;}
+.c-fecha{font-weight:600; font-size: 1em;}
+.c-foro{ font-weight:400; font-size: 1em; margin-top: -15px;}
+.c-libre{ font-weight:600; font-size: 1em; margin-top: -15px; color: rgb(134, 22, 22);}
+.pe{color:var(--colSite1)}
+.fg{color:var(--colSite2); text-transform: uppercase; font-weight: 600;}
+.conversatorios h4{font-weight: 400;}
+
+.pfgf-dir{font-size: 1.2em; font-weight: 600;}
+.pfgf-dirbox{background-color: var(--colSite4); margin-left: -20px; padding-left: 20px; padding-top: 20px; padding-bottom: 20px;}
+
+
+.loscabos h3{font-weight: 200; padding-top: 5px;}
+.loscabos01{background-color: var(--colSite1); color: #fff; margin-top: 30px;}
+.loscabos02{background-color: var(--colSite2); color: #fff; margin-top: 30px;}
+.loscabos03{background-color: var(--colSite3); color: #fff; margin-top: 30px;}
+.loscabos04{background-color: var(--colSite5); color: #fff; margin-top: 30px;}
+
+.box-gray{background:var(--colSite6); margin: 20px 0px 20px 0px;}
+
+.pik-left{float: right;}
+
+
+@media only screen and (max-width: 320px) {
+.pik-left{float: none;}
+.contenedor h1{font-size: 1em;}
+.contenedor h4{font-size: .8em;}
+.contenedor h6{font-size: .5em;}
+
+    /* Estilos para teléfonos pequeños */
+}
+@media only screen and (max-width: 480px) {
+.pik-left{float: none;display: block;
+    width: 60%;
+    margin: auto;}
+.contenedor h1{font-size: 1em;}
+.contenedor h4{font-size: .8em;}
+.contenedor h6{font-size: .5em;}
+
+    /* Estilos para teléfonos estándar */
+}
+@media only screen and (max-width: 768px) {
+    /* Estilos para tablets pequeñas o teléfonos grandes */
+}
+@media only screen and (max-width: 1024px) {
+    /* Estilos para tablets */
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--colW);
+}
+
+.contenedorbajo{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.bajo{
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: var(--colW);
+}
+.contenedor-pf{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+.title-encuadres {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: var(--colW);
+    background-color: var(--colSite3);
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+}
+
+.encuadres{width: 100%;}
+#encuadresmexicanos img{width: 200px;height: auto;}
+.insignia{
+    position: absolute;
+    top: 20%;
+    right: -12%;
+    transform: translate(-50%, -50%);
+    color: var(--colW);
+}
+.insignia img{width: 120px;}
+
+
+
+.team1 img{width: 150px;}
+
+.participante{ border: 1px solid var(--colMain); margin-top: 10px; display: block; width: 100%;}
+
+.recuadro{
+    border: 1px solid rgb(158, 158, 158); display: inline-block; padding: 5px;
+}
+
+.encajar{object-fit: fill;}

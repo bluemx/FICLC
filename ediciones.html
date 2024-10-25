@@ -19,129 +19,126 @@
     <importer src="components/header.html"></importer>
 
       <!--content-->
+<!--ediciones-->
+<div id="ediciones-app">
+  <div class="contenido my-5">
+    <h2 data-en="EDITIONS" class="text-center">EDICIONES </h2>
+  </div>
+  <div class="contenido my-5">
 
-    <div id="ediciones-app">
-
-      <div class="container my-5">
-        <h2 data-en="EDITIONS" class="text-center">EDICIONES</h2>
+    <div class="row gx-1 gy-5">
+      
+      <div class="text-center h4 loadingeditions" v-if="items.length==0" data-en="Loading editions...">
+        Cargando ediciones...
       </div>
-      <div class="container my-5">
-
-        <div class="row gx-1 gy-5">
-          
-          <div class="text-center h4 loadingeditions" v-if="items.length==0" data-en="Loading editions...">
-            Cargando ediciones...
+      <template v-for="(item, index) in items">
+        <!--BOTÓN-->
+        <div class="col-6 col-sm-4 col-md-3">
+          <div class="bg-white p-3 cursor-pointer" role="button" data-bs-toggle="modal" :data-bs-target="'#edicion-'+item.title">
+            <img load="lazy" :src="item.featuredImage.node.sourceUrl" alt="Edición" width="800" height="400" class="img-fluid">
+            <div class="text-center h6 mt-2"><strong>{{item.title}}</strong></div>
+            <div role="button" class="ediciones-btn cursor-pointer text-center p-1" data-en="View more">Ver más</div>
           </div>
-          <template v-for="(item, index) in items">
-            <!--BOTÓN-->
-            <div class="col-6 col-sm-4 col-md-3">
-              <div class="bg-white p-3 cursor-pointer" role="button" data-bs-toggle="modal" :data-bs-target="'#edicion-'+item.title">
-                <img load="lazy" :src="item.featuredImage.node.sourceUrl" alt="Edición" width="800" height="400" class="img-fluid">
-                <div class="text-center h6 mt-2"><strong>{{item.title}}</strong></div>
-                <div role="button" class="ediciones-btn cursor-pointer text-center p-1" data-en="View more">Ver más</div>
+        </div>
+        <!--MODAL-->
+        <div :id="'edicion-'+item.title" class="modal fade" tabindex="-1" aria-hidden="true" :aria-labelledby="'edicion-'+item.title">
+          <div class="modal-dialog" style="max-width: 960px !important;">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-            </div>
-            <!--MODAL-->
-            <div :id="'edicion-'+item.title" class="modal fade" tabindex="-1" aria-hidden="true" :aria-labelledby="'edicion-'+item.title">
-              <div class="modal-dialog" style="max-width: 960px !important;">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="modal-body contenido">
+                
+                <!--modal INTRO-->
+                <div class="row align-items-center">
+                  <div class="col-4">
+                    <img :src="item.featuredImage?.node?.sourceUrl"  alt="Imagen de nota" width="800" height="400" class="img-fluid">
                   </div>
-                  <div class="modal-body container">
-                    
-                    <!--modal INTRO-->
-                    <div class="row align-items-center">
-                      <div class="col-4">
-                        <img :src="item.featuredImage?.node?.sourceUrl"  alt="Imagen de nota" width="800" height="400" class="img-fluid">
-                      </div>
-                      <div class="col">
-                        <h2 class="text-bold" :data-en="item.title +' Edition | '+ item.hashtag">Edición {{item.title}} | {{item.hashtag}}</h2>
-    
-                        <h3 :data-en="item.enFecha">{{item.fecha}}</h3>
-                        <div class="text-small" :data-en='item.enDescripcion' v-html="item.descripcion"></div>
-                      </div>
-                    </div>
-                    <!--modal gallery-->
-                    <div class="my-4">
-                      <h3 class="innertitle" data-en="GALLERY">GALERÍA</h3>
-                      
-                      
-                      <div class="splide loscabos-carousel" data-splide='{"perPage":3, "gap":"2px"}'>
-                        <div class="splide__track">
-                          <ul class="splide__list">
-                            <template v-for="(itemG, indexG) in item.gallery">
-                              <div class="splide__slide" :style="'width:'+newImgWidth(itemG.mediaDetails.width, itemG.mediaDetails.height)+'px;'">
-                                <img :src="itemG.mediaItemUrl" class="img-fluid">
-                              </div>
-                          </template>
-                          </ul>
-                        </div>
-                      </div>
+                  <div class="col">
+                    <h2 class="text-bold" :data-en="item.title +' Edition | '+ item.hashtag">Edición {{item.title}} | {{item.hashtag}}</h2>
 
-                    </div>
-                    <!--modal program-->
-                    <div class="my-4" v-if="item.programacion">
-                      <h3 class="innertitle" data-en="FILM PROGRAMMING">PROGRAMACIÓN</h3>
-                      <div class="ed-contenttext" :data-en="item.enProgramacion" v-html="item.programacion"></div>
-                    </div>
-                    <!--modal tribute-->
-                    <div class="my-4" v-if="item.homenajes">
-                      <h3 class="innertitle" data-en="FILM TRIBUTES (Special Guests)">HOMENAJES (Invitados Especiales)</h3>
-                      <div class="ed-contenttext" :data-en="item.enHomenajes" v-html="item.homenajes"></div>
-                    </div>
-                    <!--modal awards-->
-                    <div class="my-4" v-if="item.premios">
-                      <h3 class="innertitle" data-en="AWARDS">PREMIOS</h3>
-                      <div class="ed-contenttext" :data-en="item.enPremios" v-html="item.premios"></div>
-                    </div>
-                    <!--modal ignite-->
-                    <div class="my-4" v-if="item.ignite">
-                      <h3 class="innertitle" >IGNITE SESSIONS</h3>
-                      <div class="ed-contenttext" :data-en="item.enIgnite" v-html="item.ignite"></div>
-                    </div>
-                    <!--modal video-->
-                    <div class="my-4" v-if="item.video">
-                      <h3 class="innertitle" data-en="SO IT WAS">ASÍ FUE</h3>
-                      <div  class="ed-contenttext">
-                          <iframe :id="'ytplayer_'+item.title" width="100%" height="315" :data-en="item.enVideo+'?enablejsapi=1&version=3&playerapiid=ytplayer'" :src="item.video+'?enablejsapi=1&version=3&playerapiid=ytplayer'" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                      </div>
-                    </div>
-                    <!--modal downloads-->
-                    <div class="my-4 row">
-                      <div class="col-md-6" v-if="item.imageposter && item.imageposter?.sourceUrl">
-                        <h3 class="innertitle" data-en="POSTER">CARTEL</h3>
-                        <div class="ed-contenttext text-center">
-                          <img :data-en="item.enImageposter?.sourceUrl" :src="item.imageposter?.sourceUrl"  class="img-fluid" style="width:200px;">
-                        </div>
-                        <div class="text-center my-1">
-                          <a :href="thepath+'ediciones/posters/'+item.linkposter" target="_blank" class="ediciones-btn p-1 mx-auto" data-en="Download">Descargar</a>
-                        </div>
-                      </div>
-                      <div class="col-md-6" v-if="item.imagecatalogo && item.imagecatalogo?.sourceUrl">
-                        <h3 class="innertitle" data-en="CATALOGUE">CATÁLOGO</h3>
-                        <div class="ed-contenttext text-center">
-                          <img :data-en="item.enImagecatalogo?.sourceUrl" :src="item.imagecatalogo?.sourceUrl"  class="img-fluid" style="width:200px;">
-                        </div>
-                        <div class="text-center my-1">
-                          <a :href="thepath+'ediciones/catalogos/'+item.linkcatalogo" target="_blank" class="ediciones-btn p-1 mx-auto" data-en="Download">Descargar</a>
-                        </div>
-                      </div>
-                    </div>
-
+                    <h3 :data-en="item.enFecha">{{item.fecha}}</h3>
+                    <div class="text-small" :data-en='item.enDescripcion' v-html="item.descripcion"></div>
                   </div>
                 </div>
+                <!--modal gallery-->
+                <div class="my-4">
+                  <h3 class="innertitle" data-en="GALLERY">GALERÍA</h3>
+                  
+                  
+                  <div class="splide loscabos-carousel" data-splide='{"perPage":3, "gap":"2px"}'>
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <template v-for="(itemG, indexG) in item.gallery">
+                          <div class="splide__slide" :style="'width:'+newImgWidth(itemG.mediaDetails.width, itemG.mediaDetails.height)+'px;'">
+                            <img :src="itemG.mediaItemUrl" class="img-fluid">
+                          </div>
+                      </template>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+                <!--modal program-->
+                <div class="my-4" v-if="item.programacion">
+                  <h3 class="innertitle" data-en="FILM PROGRAMMING">PROGRAMACIÓN</h3>
+                  <div class="ed-contenttext" :data-en="item.enProgramacion" v-html="item.programacion"></div>
+                </div>
+                <!--modal tribute-->
+                <div class="my-4" v-if="item.homenajes">
+                  <h3 class="innertitle" data-en="FILM TRIBUTES (Special Guests)">HOMENAJES (Invitados Especiales)</h3>
+                  <div class="ed-contenttext" :data-en="item.enHomenajes" v-html="item.homenajes"></div>
+                </div>
+                <!--modal awards-->
+                <div class="my-4" v-if="item.premios">
+                  <h3 class="innertitle" data-en="AWARDS">PREMIOS</h3>
+                  <div class="ed-contenttext" :data-en="item.enPremios" v-html="item.premios"></div>
+                </div>
+                <!--modal ignite-->
+                <div class="my-4" v-if="item.ignite">
+                  <h3 class="innertitle" >IGNITE SESSIONS</h3>
+                  <div class="ed-contenttext" :data-en="item.enIgnite" v-html="item.ignite"></div>
+                </div>
+                <!--modal video-->
+                <div class="my-4" v-if="item.video">
+                  <h3 class="innertitle" data-en="SO IT WAS">ASÍ FUE</h3>
+                  <div  class="ed-contenttext">
+                      <iframe :id="'ytplayer_'+item.title" width="100%" height="315" :data-en="item.enVideo+'?enablejsapi=1&version=3&playerapiid=ytplayer'" :src="item.video+'?enablejsapi=1&version=3&playerapiid=ytplayer'" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <!--modal downloads-->
+                <div class="my-4 row">
+                  <div class="col-md-6" v-if="item.imageposter && item.imageposter?.sourceUrl">
+                    <h3 class="innertitle" data-en="POSTER">CARTEL</h3>
+                    <div class="ed-contenttext text-center">
+                      <img :data-en="item.enImageposter?.sourceUrl" :src="item.imageposter?.sourceUrl"  class="img-fluid" style="width:200px;">
+                    </div>
+                    <div class="text-center my-1">
+                      <a :href="thepath+'ediciones/posters/'+item.linkposter" target="_blank" class="ediciones-btn p-1 mx-auto" data-en="Download">Descargar</a>
+                    </div>
+                  </div>
+                  <div class="col-md-6" v-if="item.imagecatalogo && item.imagecatalogo?.sourceUrl">
+                    <h3 class="innertitle" data-en="CATALOGUE">CATÁLOGO</h3>
+                    <div class="ed-contenttext text-center">
+                      <img :data-en="item.enImagecatalogo?.sourceUrl" :src="item.imagecatalogo?.sourceUrl"  class="img-fluid" style="width:200px;">
+                    </div>
+                    <div class="text-center my-1">
+                      <a :href="thepath+'ediciones/catalogos/'+item.linkcatalogo" target="_blank" class="ediciones-btn p-1 mx-auto" data-en="Download">Descargar</a>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-          </template>
-
+          </div>
         </div>
-      </div>
+      </template>
+
+    </div>
+  </div>
 
 
-    </div><!--/#ediciones-app-->
-
-
+</div><!--/#ediciones-app-->
 
 
   <importer src="components/footer.html"></importer>

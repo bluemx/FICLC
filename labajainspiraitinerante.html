@@ -24,7 +24,7 @@
 
   </section>
 
-  <section class="container mb-5">
+  <section class="contenido mb-5">
     <p data-en="La Baja Inspira emerged at the Los Cabos International Film Festival as a section to showcase and promote the talent of filmmakers from the region and the diversity and richness of its landscapes." class="h4" style="text-align: justify;">La Baja Inspira surgió en el Festival Internacional de Cine de Los Cabos como una sección para visibilizar e impulsar el talento de cineastas de la región y la diversidad y riqueza de sus paisajes.</p>
     <p data-en="Later, in 2023, La Baja Inspira Itinerante was born, a film showcase that travels through part of the Baja California Peninsula with completely free screenings in public and school spaces." class="h4 p-5 my-5 text-white" style="background: #01a7ce; text-align: justify;">Más tarde, en el 2023, nace <strong>La Baja Inspira Itinerante</strong>, una muestra fílmica que recorre parte de la Península de Baja California mediante proyecciones completamente gratuitas en espacios públicos y  escolares.</p>
     <p data-en="This cycle, which will once again be presented by the Los Cabos International Film Festival (from June to November), aims to have the cinematography of Baja California Sur and Baja California understood as a map through which we can navigate their stories, characters, and settings, giving voice to new perspectives." class="h4"  style="text-align: justify;">Este ciclo, que nuevamente será presentado por el Festival Internacional de Cine de Los Cabos, (de junio a noviembre), busca que la cinematografía de Baja California Sur y Baja California pueda ser entendida como un mapa a través del cual podamos navegar sus historias, personajes y escenarios que den voz a nuevas perspectivas.</p>
@@ -37,7 +37,7 @@
 
   <div id="lbii-app">
     
-    <section class="container sectionprogram" style="margin-bottom: 60px; " v-cloak>
+    <section class="contenido sectionprogram" style="margin-bottom: 60px; " v-cloak>
 
       <div class="lbii-title mx-auto" data-en="PROGRAMMING">CONOCE LA PROGRAMACIÓN</div>
 
@@ -105,9 +105,12 @@
 
     
 
-    <section class="container sectionvenues" v-cloak>
+    <section class="contenido sectionvenues" v-cloak>
       <div class="lbii-title mx-auto">
         CONOCE LAS SEDES
+      </div>
+      <div class="my-5 p-5 contenido justify-content-center">
+        <img src="app/img/lbii/logos/logos-sedes.svg" alt="Sedes"  class="img-fluid mx-auto d-block" >
       </div>
       <div class="row mt-5 g-1" >
         <div class="col-md-3 col-sm-4 mt-5" v-for="(item, index) in venues" :key="index" >
@@ -129,9 +132,8 @@
 
 
 
-
-    <section class="flogos w-100 my-5 p-5">
-      <img src="app/img/lbii/logos/logos-gray.svg" alt="TENDENCIA"  class="img-fluid">
+    <section class="my-5 p-5 contenido justify-content-center text-center">
+      <img src="app/img/lbii/logos/logos-gray.svg" alt="TENDENCIA"  class="text-center img-fluid mx-auto d-block">
     </section>
 
 
@@ -151,7 +153,7 @@
           -->
           
           <!-- CONTENT WITH SCROLL-->
-          <div class="container h-100 overflow-auto">
+          <div class="contenido h-100 overflow-auto">
             
             
             
@@ -345,7 +347,7 @@
 <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/vue@3.4.26/dist/vue.global.min.js"></script>
 
-<script src="app/js/lbii.js"></script>
+<script src="app/js/lbii.js?v=1.1"></script>
 <script>
   const { createApp, ref } = Vue
 

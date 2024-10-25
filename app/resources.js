@@ -4,9 +4,10 @@ const importsConfig = {
       "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
       "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css",
       "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;700&family=Barlow:wght@200;300;400;700;800&display=swap",
+      "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css",
       //"https://cdn.plyr.io/3.7.8/plyr.css",
       "app/css/app.css"
-      
+          
     ],
     js: [
       "https://code.jquery.com/jquery-3.7.1.min.js",
