@@ -324,6 +324,22 @@ input.form-control, select.form-control, textarea.form-control{
     padding-top: 1%;
 }
 
+@media (max-width: 768px) {
+    .title-encuadres {
+        padding-left: 2%;  /* Reduce el padding en móviles */
+        padding-right: 2%;
+        padding-top: 0.5%; /* Reduce el padding superior */
+    }
+
+    .title-encuadres h1 {
+        font-size: 1.2rem;  /* Reduce el tamaño de la fuente */
+    }
+
+    .title-encuadres p {
+        font-size: 0.9rem;  /* Reduce el tamaño del texto */
+    }
+}
+
 .encuadres{width: 100%;}
 #encuadresmexicanos img{width: 200px;height: auto;}
 .insignia{
@@ -366,3 +382,4 @@ input.form-control, select.form-control, textarea.form-control{
         max-width: 100%; /* 100% para 1 columna en pantallas pequeñas */
     }
 }
+
