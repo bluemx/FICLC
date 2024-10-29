@@ -332,11 +332,11 @@ input.form-control, select.form-control, textarea.form-control{
     }
 
     .title-encuadres h1 {
-        font-size: 1rem;  /* Reduce el tamaño de la fuente */
+        font-size: 0.8rem;  /* Reduce el tamaño de la fuente */
     }
 
     .title-encuadres p {
-        font-size: 0.7rem;  /* Reduce el tamaño del texto */
+        font-size: 0.6rem;  /* Reduce el tamaño del texto */
     }
 }
 
