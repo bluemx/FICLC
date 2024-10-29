@@ -383,3 +383,20 @@ input.form-control, select.form-control, textarea.form-control{
     }
 }
 
+.p-em
+{
+    padding-right: 150px;
+}
+
+@media (max-width: 1200px) {
+    .p-em{
+        padding-right: 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .p-em{
+        padding-right: 0px;
+    }
+}
+
