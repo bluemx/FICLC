@@ -313,6 +313,8 @@ input.form-control, select.form-control, textarea.form-control{
     display: inline-block;
     text-align: left;
 }
+
+/*
 .title-encuadres {
     position: absolute;
     bottom: 0;
@@ -326,19 +328,36 @@ input.form-control, select.form-control, textarea.form-control{
 
 @media (max-width: 768px) {
     .title-encuadres {
-        padding-left: 2%;  /* Reduce el padding en móviles */
+        padding-left: 2%;  // Reduce el padding en móviles
         padding-right: 2%;
-        padding-top: 2%; /* Reduce el padding superior */
+        padding-top: 2%; // Reduce el padding superior
     }
 
     .title-encuadres h1 {
-        font-size: 0.7rem;  /* Reduce el tamaño de la fuente */
+        font-size: 0.7rem;  // Reduce el tamaño de la fuente
     }
 
     .title-encuadres p {
-        font-size: 0.5rem;  /* Reduce el tamaño del texto */
+        font-size: 0.5rem;  // Reduce el tamaño del texto
     }
 }
+*/
+
+.title-encuadres{
+    position: absolute;
+    bottom:0; left:0;
+    background-color: var(--colSite3);
+    color: var(--colW);
+    padding: 2% 48px;
+    margin-right: 48px;
+}
+.title-encuadres h1, .title-encuadres p{ margin:0; padding: 0;}
+@media(max-width: 768px){
+    .title-encuadres{ position:static; margin-right: 0; }
+    .title-encuadres h1{ font-size: 0.9rem;  }
+    .title-encuadres p{ font-size: 0.8rem; }
+}
+
 
 .encuadres{width: 100%;}
 #encuadresmexicanos img{width: 200px;height: auto;}
