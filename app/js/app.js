@@ -86,6 +86,12 @@ function loadImportsRecursive() {
 
 loadImportsRecursive();
 
+/************************************************************************/
+
+function showImage(image) {
+    document.getElementById('modalImage').src = image.src;
+  }
+
 
 
 
