@@ -167,19 +167,115 @@ Modal para la imagen ampliada
 
 
 -->
+<div class="contenido pb-5 pt-5">
+  <div class="row align-items-center pb-3">
+    <!---->
+    <div class="col-3" ><h3>CUPONES</h3></div>
+    <!---->
+    <div class="col">
+      <div class="linea"></div>
+    </div>
 
-<div class="row pt-3 pb-3 contenido">
-  <div class="col-md-4"></div>
- <div class="col-md-8">
-  
- <p class="fw-bold" data-en="Discount Code: FILMFESTIVAL2024">Código de descuento: FILMFESTIVAL2024</p>
- <ul>
-   <li data-en="Offer: 15% discount on public rates when booking directly with the hotel.">Oferta: 15% de descuento en tarifas públicas al reservar directo hotel</li>
-   <li data-en="Contact: <a href='mailto:reservations.seplc@secretsresorts.com' target='_blank'>reservations.seplc@secretsresorts.com</a>  o <a href='tel:6241442600'>624 144 2600</a> ext 2630">
-     Contacto: <a href="mailto:reservations.seplc@secretsresorts.com" target="_blank">reservations.seplc@secretsresorts.com</a>  o <a href="tel:6241442600">624 144 2600</a> ext 2630</li>
- </ul>
-   </div>
+    <div class="row pt-5 pb-3 contenido">
 
+      <div class="col-md-8">
+       <h5>Almazén</h5>
+       <ul>
+         <li><a href="#" onclick="showImage('app/img/loscabos/Cupon Almazen_Crepas.jpeg', 'Cupon Almazén Crepas')" data-bs-toggle="modal" data-bs-target="#imageModal">2 + 1 en Crepas</a></li>
+         <li><a href="#" onclick="showImage('app/img/loscabos/Cupon Almazen_Gelato.jpeg', 'Cupon Almazén Gelato')" data-bs-toggle="modal" data-bs-target="#imageModal">2 + 1 en Gelato</a></li>
+       </ul>
+      
+        </div>
+
+        <div class="col-md-8">
+          <h5>Garage</h5>
+          <ul>
+            <li><a href="#" onclick="showImage('app/img/loscabos/Cupon Garage.jpeg', 'Cupon Garage')" data-bs-toggle="modal" data-bs-target="#imageModal">10% en tu consumo general</a></li>
+          </ul>
+         
+           </div>
+
+           <div class="col-md-8">
+            <h5>Mi Cocina</h5>
+            <ul>
+              <li><a href="#" onclick="showImage('app/img/loscabos/Cupon Mi Cocina.jpeg', 'Cupon Mi Cocina')" data-bs-toggle="modal" data-bs-target="#imageModal">20% en tu compra</a></li>
+            </ul>
+           
+          </div>
+
+          <div class="col-md-8">
+            <h5>Rogelio Sánchez</h5>
+            <ul>
+              <li><a href="#" onclick="showImage('app/img/loscabos/Cupon Rogelio Sanchez.jpeg', 'Rogelio Sánchez')" data-bs-toggle="modal" data-bs-target="#imageModal">25% off Joyería Mexicana</a></li>
+            </ul>
+             
+          </div>
+
+          <div class="col-md-8">
+            <h5>Sánchez Luna</h5>
+            <ul>
+              <li><a href="#" onclick="showImage('app/img/loscabos/Cupon Sanchez Luna.jpeg', 'Sánchez Luna')" data-bs-toggle="modal" data-bs-target="#imageModal">20% en plata y 10% en oro</a></li>
+            </ul>
+               
+          </div>
+
+          <div class="col-md-8">
+            <h5>Taller Maya</h5>
+            <ul>
+              <li><a href="#" onclick="showImage('app/img/loscabos/Cupon Taller Maya.jpeg', 'Taller Maya')" data-bs-toggle="modal" data-bs-target="#imageModal">Descuentos</a></li>
+            </ul>
+                 
+          </div>
+
+          <div class="col-md-8">
+            <h5>Alcari</h5>
+            <ul>
+              <li><a href="#" onclick="showPdf('app/img/loscabos/CuponesAlcari.pdf', 'Alcari')" data-bs-toggle="modal" data-bs-target="#pdfModal">Cupones Alcari</a></li>
+            </ul>
+                 
+          </div>
+     
+     </div>
+</div>
+
+
+<!-- Modal para mostrar imagen ampliada -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="imageModalLabel">Título de la Imagen</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body text-center">
+              <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid" />
+          </div>
+          <div class="modal-footer">
+              <a id="downloadButton" href="#" download class="btn btn-primary">Descargar Cupon</a>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal para mostrar el PDF -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="pdfModalLabel">Título del PDF</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+              <!-- Visor de PDF -->
+              <embed id="modalPdfViewer" src="" type="application/pdf" width="100%" height="500px" />
+          </div>
+          <div class="modal-footer">
+              <a id="downloadPdfButton" href="#" download class="btn btn-primary">Descargar Cuponera</a>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+      </div>
+  </div>
 </div>
 
    <!--botón-->  

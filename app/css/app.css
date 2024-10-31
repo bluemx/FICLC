@@ -434,3 +434,8 @@ input.form-control, select.form-control, textarea.form-control{
     height: auto; /* Mantiene la proporción de la imagen */
 }
 
+#modalPdfViewer {
+    max-height: 70vh; /* Limita la altura máxima al 80% de la ventana */
+    width: 100%;
+}
+
