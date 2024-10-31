@@ -89,8 +89,22 @@ loadImportsRecursive();
 /************************************************************************/
 
 function showImage(image) {
-    document.getElementById('modalImage').src = image.src;
-  }
+    const modalImage = document.getElementById('modalImage');
+    const downloadButton = document.getElementById('downloadButton');
+    const modalTitle = document.getElementById('imageModalLabel'); // Obtener el título del modal
+
+    // Configurar la imagen en el modal
+    modalImage.src = image.src;
+
+    // Configurar el enlace de descarga
+    downloadButton.href = image.src;
+    downloadButton.download = image.alt || "imagen"; // Usa el atributo alt como nombre de archivo, o 'imagen' si no está disponible
+
+    // Establecer el título del modal
+    modalTitle.textContent = image.alt || "Imagen"; // Usa el atributo alt como título
+}
+
+  
 
 
 

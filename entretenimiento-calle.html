@@ -101,34 +101,34 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="row">
-          <div class="col-md-4">
-            <img src="app/img/loscabos/Cupon Almazen_Crepas.jpeg" class="d-block w-100 carousel-image" alt="Cupón Almazén_Crepas" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          <div class="col-md-4 col-6">
+            <img src="app/img/loscabos/Cupon Almazen_Crepas.jpeg" class="d-block w-100 carousel-image" alt="Cupón Almazén Crepas" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
           </div>
-          <div class="col-md-4">
-            <img src="app/img/loscabos/Cupon Almazen_Gelato.jpeg" class="d-block w-100 carousel-image" alt="Cupón Almazén_Gelato" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          <div class="col-md-4 col-6">
+            <img src="app/img/loscabos/Cupon Almazen_Gelato.jpeg" class="d-block w-100 carousel-image" alt="Cupón Almazén Gelato" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-6">
             <img src="app/img/loscabos/Cupon Garage.jpeg" class="d-block w-100 carousel-image" alt="Cupón Garage" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 col-6">
             <img src="app/img/loscabos/Cupon Mi Cocina.jpeg" class="d-block w-100 carousel-image" alt="Cupón Mi Cocina" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-6">
             <img src="app/img/loscabos/Cupon Rogelio Sanchez.jpeg" class="d-block w-100 carousel-image" alt="Cupón Rogelio Sánchez" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-6">
             <img src="app/img/loscabos/Cupon Sanchez Luna.jpeg" class="d-block w-100 carousel-image" alt="Cupón Sánchez Luna" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="row">
-          <div class="col-md-4">
-            <img src="app/img/loscabos/Cupones/Cupón Taller Maya.jpeg" class="d-block w-100 carousel-image" alt="Cupón Taller Maya" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
+          <div class="col-md-4 col-6">
+            <img src="app/img/loscabos/Cupon Taller Maya.jpeg" class="d-block w-100 carousel-image" alt="Cupón Taller Maya" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage(this)">
           </div>
           <!-- Puedes agregar dos imágenes más aquí para completar el grupo de tres -->
         </div>
@@ -148,10 +148,18 @@
 
 <!-- Modal para la imagen ampliada -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-body">
-        <img id="modalImage" class="img-fluid" alt="Imagen ampliada">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Cupon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" alt="Imagen ampliada" class="img-fluid" />
+      </div>
+      <div class="modal-footer">
+        <a id="downloadButton" href="#" download class="btn btn-primary">Descargar Imagen</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>

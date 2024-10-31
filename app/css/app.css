@@ -428,3 +428,9 @@ input.form-control, select.form-control, textarea.form-control{
     margin: 0 auto;
 }
 
+#modalImage {
+    max-height: 70vh; /* Limita la altura máxima al 70% de la altura de la ventana */
+    width: auto; /* Mantiene la proporción de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
