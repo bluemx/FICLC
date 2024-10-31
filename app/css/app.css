@@ -439,3 +439,7 @@ input.form-control, select.form-control, textarea.form-control{
     width: 100%;
 }
 
+@media (max-width: 768px)
+{
+    .linea{height: 3px;width: 100%;background: var(--colMain);}
+}
