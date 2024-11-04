@@ -86,6 +86,57 @@ function loadImportsRecursive() {
 
 loadImportsRecursive();
 
+/************************************************************************/
+/*
+function showImage(image) {
+    const modalImage = document.getElementById('modalImage');
+    const downloadButton = document.getElementById('downloadButton');
+    const modalTitle = document.getElementById('imageModalLabel'); // Obtener el título del modal
+
+    // Configurar la imagen en el modal
+    modalImage.src = image.src;
+
+    // Configurar el enlace de descarga
+    downloadButton.href = image.src;
+    downloadButton.download = image.alt || "imagen"; // Usa el atributo alt como nombre de archivo, o 'imagen' si no está disponible
+
+    // Establecer el título del modal
+    modalTitle.textContent = image.alt || "Imagen"; // Usa el atributo alt como título
+}
+*/
+
+function showImage(imageSrc, imageTitle) {
+    const modalImage = document.getElementById('modalImage');
+    const downloadButton = document.getElementById('downloadButton');
+    const modalTitle = document.getElementById('imageModalLabel');
+
+    // Configurar la imagen en el modal
+    modalImage.src = imageSrc;
+
+    // Configurar el enlace de descarga
+    downloadButton.href = imageSrc;
+    downloadButton.download = imageTitle; // Usa el título como nombre de archivo para descargar
+
+    // Establecer el título de la imagen en el modal
+    modalTitle.textContent = imageTitle;
+}
+
+function showPdf(pdfSrc, pdfTitle) {
+    const pdfViewer = document.getElementById('modalPdfViewer');
+    const downloadButton = document.getElementById('downloadPdfButton');
+    const modalTitle = document.getElementById('pdfModalLabel');
+
+    // Configurar el visor de PDF sin barra de herramientas
+    pdfViewer.src = pdfSrc + "#toolbar=0";
+
+    // Configurar el enlace de descarga
+    downloadButton.href = pdfSrc;
+    downloadButton.download = pdfTitle + ".pdf"; // Usa el título como nombre de archivo para descargar
+
+    // Establecer el título del PDF en el modal
+    modalTitle.textContent = pdfTitle;
+}
+
 
 
 
