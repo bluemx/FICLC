@@ -1,0 +1,7 @@
+<mj-section padding="0">
+
+  <mj-column background-color="#011E41">
+    <mj-image src="iconocabos.png" width="110px" align="center" href="https://loscabosiff.org/" target="_blank" ></mj-image>
+  </mj-column>
+
+</mj-section>

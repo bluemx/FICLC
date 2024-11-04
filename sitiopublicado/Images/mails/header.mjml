@@ -1,0 +1,9 @@
+<mj-section>
+
+  <mj-column>
+    <mj-image src="logo.png" padding="0" align="center" width="240px"></mj-image>
+
+
+  </mj-column>
+
+</mj-section>

@@ -1,0 +1,95 @@
+<mjml>
+
+  <mj-head>
+    <mj-font name="Poppins" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"></mj-font>
+    <mj-attributes>
+      <mj-text font-family="Poppins, Helvetica, Arial, sans-serif;" align="left" color="#0f1f3e" />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body background-color="#fff">
+
+    <mj-include path="./header.mjml" />
+
+    
+    <mj-section padding="0">
+      <mj-column>
+        <mj-text align="center" font-size="16px" font-weight="800"><h2>Hola {{{Nombre}}}</h1></mj-text>
+      </mj-column>
+    </mj-section>
+  
+    
+     <mj-section padding="0">
+    <mj-column>
+      <mj-image src="foto02.jpg" padding="0">
+</mj-image>
+      </mj-column>
+    
+    </mj-section>
+    
+    
+      <mj-section padding="0" background-color="#011E41">
+  <mj-column >
+    <mj-text align="center" color="#ffffff">
+    <h1 style="padding-top:10px; line-height: 30px;">
+Aquí te mantendremos informado de nuestras actividades.
+</h1>
+    </mj-text>
+    </mj-column>
+    
+  </mj-section>
+    
+       <mj-section padding="0">
+    <mj-column>
+      <mj-image src="foto04.jpg" padding="0">
+</mj-image>
+      </mj-column>
+    <mj-column>
+      <mj-image src="foto03.jpg" padding="0">
+</mj-image>
+      </mj-column>
+    </mj-section>
+
+
+    
+  <mj-section padding="0">
+  <mj-column>
+    <mj-text align="center" line-height="30px"><p><b>No olvides seguirnos en:</b> </p>
+    </mj-text>
+    </mj-column>
+  </mj-section>
+  
+
+  <mj-section padding="0">
+   
+  <mj-column>
+    
+    <mj-image src="redes_fb.png" width="40px" href="https://www.facebook.com/festivaldecinedeloscabos" target="_blank"></mj-image>
+    <mj-text align="center">Los Cabos International Film Festival</mj-text>
+    </mj-column>
+    <mj-column>
+    <mj-image src="redes_tw.png" width="40px" href="https://twitter.com/loscabosiff?s=21&t=DKyaSDpYA85289efsuw3MQ" target="_blank"></mj-image>
+      <mj-text align="center">@LosCabosIFF</mj-text>
+    </mj-column>
+    <mj-column>
+    <mj-image src="redes_ig.png" width="40px" href="https://instagram.com/loscabosiff?igshid=MzRlODBiNWFlZA==" target="_blank"></mj-image>
+      <mj-text align="center"> @loscabosiff </mj-text>
+    </mj-column>
+
+
+  </mj-section>
+  
+  <mj-section padding="0">
+      <mj-column>
+        <mj-text font-size="10px" align="center" line-height="12px"><p >Proyecto realizado con el apoyo del Instituto Mexicano de Cinematografía, a través del Programa Fomento al Cine Mexicano (FOCINE). Consulta los términos y condiciones en nuestro sitio web</p></mj-text>
+      </mj-column>
+   
+    </mj-section>
+
+
+
+    <mj-include path="./footer.mjml" />
+
+  </mj-body>
+
+</mjml>
