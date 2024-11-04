@@ -1,0 +1,44 @@
+.modal-dialog .modal-lg{
+    max-width: 800px !important;
+}
+
+.ediciones-btn{
+    background: #0a1e3f;
+    color: #fff;
+    border:1px solid #E4D8AD;
+}
+a.ediciones-btn{
+    display: block;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.innertitle{
+    background: #0e1f3e;
+    color: #e4d9ad;
+    padding: 2px 8px;
+}
+.text-bold{
+    font-weight: bold;
+}
+.text-small{
+    font-size: 0.8rem;
+}
+
+.ed-contenttext h3{
+    font-size: 1.2rem;
+    background: #e4d9ad;
+    padding: 2px;
+    display: inline-block;
+    font-weight: normal;
+}
+
+.ed-contenttext h3 b{ font-weight: normal; }
+
+.ed-contenttext ul{ margin: 0 40px; }
+
+.loadingeditions{
+    color: var(--colSec);
+    background: #f0f0f0;
+    padding: 1rem;
+}

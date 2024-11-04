@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIC Los Cabos</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="app/css/noticias.css">
+    <meta name="description" content="Mantente al tanto de las últimas noticias y novedades del Festival Internacional de Cine de Los Cabos. Descubre los anuncios más recientes, entrevistas exclusivas, cobertura de eventos y todo lo relacionado con el mundo del cine y las artes visuales. Explora los detalles de las películas destacadas, los invitados especiales y las actividades programadas en el festival." />
+    <meta name="keywords" content="FIC Los Cabos, Festival Internacional de Cine, Noticias, novedades, anuncios, entrevistas, cobertura de eventos, cine, artes visuales, películas, invitados especiales, actividades, programación, exclusivas" />
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+  </head>
+  <body>
+    <div id="transitioning" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: white; transition: opacity 0.5s ease;"></div>
+
+    <importer src="components/header.html"></importer>
+
+      <!--content-->
+
+    <div id="noticias-app">
+
+      <div class="container my-5">
+        <h2 :data-en=" isPost ? isPost.titleEn : 'NEWS' " class="text-center">{{isPost ? isPost.title : 'NOTICIAS'}}</h2>
+      </div>
+
+      <div class="container my-5 pt-2">
+        <div class="row  gx-5">
+          
+          <div class="text-center h4 loadingeditions" v-if="loading" data-en="Loading news...">
+            Cargando...
+          </div>
+
+          <template v-else>
+
+            <template v-if="isPost">
+              <div class="container isPost">
+                <div class="text-center mb-5">
+                  <img :src="isPost.featuredImage?.node?.sourceUrl"  alt="Imagen de nota" width="800" height="400" class="img-fluid">
+                </div>
+                <div class="h5" v-html="isPost.content" :data-en="isPost.descEn"></div>
+              </div>
+
+              <hr class="my-5">
+              <div class="container my-2">
+                <div class="row">
+                  <div class="col">
+                    <div class="prevnext"  v-if="prevPost">
+                      <div class="text-small" data-en="Previous article">Artículo anterior</div>
+                      <div class="h5 fw-bold" :data-en="prevPost.titleEn">{{prevPost.title}}</div>
+                      <a class="noticias-btn cursor-pointer text-center p-1 ml-auto" :data-notaid="prevPost.id" role="button" :href="createuri(prevPost.id, prevPost.title)" data-en="Keep reading">Seguir leyendo</a>
+                    </div>
+                  </div>
+                  <div class="col"></div>
+                  <div class="col text-right" >
+                    <div  class="prevnext" v-if="nextPost">
+                      <div class="text-small text-right" data-en="Next article">Artículo siguiente</div>
+                      <div class="h5 fw-bold text-right" :data-en="nextPost.titleEn">{{nextPost.title}}</div>
+                      <div class="text-right w-100 d-flex justify-content-end">
+                        <a class="noticias-btn cursor-pointer text-center p-1 ml-auto" :data-notaid="nextPost.id" role="button" :href="createuri(nextPost.id, nextPost.title)" data-en="Keep reading">Seguir leyendo</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </template>
+
+            <template v-else v-for="(item, index) in items">
+              <div class="col-md-6 my-4">
+                <img loading="lazy" :src="item.featuredImage.node.sourceUrl" alt="Edición" width="800" height="400" class="img-fluid">
+                <div class="fw-bold" :data-en="item.titleEn">{{item.title}}</div>
+                <p class="" style="height:3em; overflow:hidden; text-overflow: ellipsis; font-size:1rem;" :data-en="createExcerpt(item.descEn)">{{createExcerpt(item.content)}}</p>
+                <div class="text-right w-100 d-flex justify-content-end">
+                  <a class="noticias-btn cursor-pointer text-center p-1 ml-auto" :data-notaid="item.id" role="button" :href="createuri(item.id, item.title)" data-en="Keep reading">Seguir leyendo</a>
+                </div>
+              </div>
+              <!-- end items loop -->
+            </template>
+
+          <!-- end !loading-->
+          </template>
+
+        </div>
+      </div>
+
+
+    </div><!--/#noticias-app-->
+
+
+
+
+  <importer src="components/footer.html"></importer>
+  <script src="app/resources.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.4.26/dist/vue.global.min.js"></script>
+  <script src="app/js/noticias.js"></script>
+
+</body>
+</html>
+

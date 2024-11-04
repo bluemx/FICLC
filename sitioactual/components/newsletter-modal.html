@@ -1,0 +1,27 @@
+
+<div class="modal fade" id="newslettermodal" aria-hidden="true" aria-labelledby="newslettermodal" id="newslettermodal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="background: #ffcc02; color: var(--colMain);">
+            <div class="modal-header" style="border: none !important;">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center py-5">
+                <h3 data-en="SUBSCRIBE TO OUR NEWSLETTER" class="fw-bold">¡SUSCRÍBETE A NUESTRO NEWSLETTER!</h3>
+                <p class="mt-4 h4" data-en="Follow us and don't miss any details of Los Cabos FIC">Síguenos la pista y no te pierdas ningún detalle de FIC Los Cabos</p>
+                <div class="mt-5 text-center">
+                    <a href="formulario.html" class="btn btn-light btn-lg" data-en="SUBSCRIBE">SUSCRÍBETE</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    setTimeout(()=>{
+        if(localStorage.getItem('microlang-lang')=='en'){ return false }
+        new bootstrap.Modal('#newslettermodal').show()
+    },500)
+</script>
