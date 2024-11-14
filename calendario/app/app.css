@@ -1,0 +1,18 @@
+body{
+    font-family: 'Barlow', sans-serif;
+}
+
+h1, h3, h4, h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+#calendario-festival{
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+
+}
+
+.eventoCard:nth-child(1) .imgEventoCard, .eventoCard:nth-child(5) .imgEventoCard, .eventoCard:nth-child(9) .imgEventoCard, .eventoCard:nth-child(13) .imgEventoCard{border-left-color: #bf5c4c;}
+.eventoCard:nth-child(2) .imgEventoCard, .eventoCard:nth-child(6) .imgEventoCard, .eventoCard:nth-child(10) .imgEventoCard, .eventoCard:nth-child(14) .imgEventoCard{border-left-color: #867f5a;}
+.eventoCard:nth-child(3) .imgEventoCard, .eventoCard:nth-child(7) .imgEventoCard, .eventoCard:nth-child(11) .imgEventoCard, .eventoCard:nth-child(15) .imgEventoCard{border-left-color: #dc923c;}
+.eventoCard:nth-child(4) .imgEventoCard, .eventoCard:nth-child(8) .imgEventoCard, .eventoCard:nth-child(12) .imgEventoCard, .eventoCard:nth-child(16) .imgEventoCard{border-left-color: #4084b3;}
