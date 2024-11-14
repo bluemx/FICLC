@@ -16,3 +16,13 @@ h1, h3, h4, h5 {
 .eventoCard:nth-child(2) .imgEventoCard, .eventoCard:nth-child(6) .imgEventoCard, .eventoCard:nth-child(10) .imgEventoCard, .eventoCard:nth-child(14) .imgEventoCard{border-left-color: #867f5a;}
 .eventoCard:nth-child(3) .imgEventoCard, .eventoCard:nth-child(7) .imgEventoCard, .eventoCard:nth-child(11) .imgEventoCard, .eventoCard:nth-child(15) .imgEventoCard{border-left-color: #dc923c;}
 .eventoCard:nth-child(4) .imgEventoCard, .eventoCard:nth-child(8) .imgEventoCard, .eventoCard:nth-child(12) .imgEventoCard, .eventoCard:nth-child(16) .imgEventoCard{border-left-color: #4084b3;}
+
+
+/* Fade transition for content */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active in Vue 3 */ {
+    opacity: 0;
+  }
+
