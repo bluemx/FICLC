@@ -7,8 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
     <link rel="stylesheet" href="app/app.css">
 </head>
 <body>
@@ -17,9 +19,9 @@
         
             <!-- Botones de categorías -->
             <div class="flex flex-col sm:flex-row justify-between my-8 gap-3 xs:flex-wrap">
-                <button class="px-4 py-2 bg-[#bf5c4c] text-white rounded hover:bg-white hover:text-black">Evento de apertura</button>
-                <button class="px-4 py-2 bg-[#dc923c] text-white rounded hover:bg-white hover:text-black">Encuadres mexicanos</button>
-                <button class="px-4 py-2 bg-[#857e5a] text-white rounded hover:bg-white hover:text-black">Evento de clausura</button>
+                <a href="/eventoapertura.html" class="px-4 py-2 bg-[#bf5c4c] text-white rounded hover:bg-white hover:text-black">Evento de apertura</a>
+                <a href="#encuadresmexicanos" class="px-4 py-2 bg-[#dc923c] text-white rounded hover:bg-white hover:text-black">Encuadres mexicanos</a>
+                <a href="/eventoclausura.html" class="px-4 py-2 bg-[#857e5a] text-white rounded hover:bg-white hover:text-black">Evento de clausura</a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 my-24">
@@ -53,6 +55,27 @@
             </transition>
         </div>
     </div>
+
+    <style>
+        #calendario-festival{
+            background-image: url(img/bg.jpg);
+            background-size: cover;
+        }
+        .eventoCard:nth-child(1) .imgEventoCard, .eventoCard:nth-child(5) .imgEventoCard, .eventoCard:nth-child(9) .imgEventoCard, .eventoCard:nth-child(13) .imgEventoCard{border-left-color: #bf5c4c;}
+        .eventoCard:nth-child(2) .imgEventoCard, .eventoCard:nth-child(6) .imgEventoCard, .eventoCard:nth-child(10) .imgEventoCard, .eventoCard:nth-child(14) .imgEventoCard{border-left-color: #867f5a;}
+        .eventoCard:nth-child(3) .imgEventoCard, .eventoCard:nth-child(7) .imgEventoCard, .eventoCard:nth-child(11) .imgEventoCard, .eventoCard:nth-child(15) .imgEventoCard{border-left-color: #dc923c;}
+        .eventoCard:nth-child(4) .imgEventoCard, .eventoCard:nth-child(8) .imgEventoCard, .eventoCard:nth-child(12) .imgEventoCard, .eventoCard:nth-child(16) .imgEventoCard{border-left-color: #4084b3;}
+
+
+        /* Fade transition for content */
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity 0.5s ease;
+        }
+        .fade-enter, .fade-leave-to /* .fade-leave-active in Vue 3 */ {
+            opacity: 0;
+        }
+
+    </style>
 
     <script src="app/calendario.js"></script>
     <script src="app/app.js"></script>

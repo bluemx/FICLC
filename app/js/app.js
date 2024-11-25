@@ -5,6 +5,17 @@ gtag('js', new Date());
 gtag('config', 'G-P05N3XLV0M');
 gtag('config', 'G-K0N0NFB1B5');
 
+
+
+// Clarity 
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "oufzx20zbu");
+
+
+
 /*********************************************************************** */
 const languageFN = () => {
     setTimeout(()=>{
@@ -86,6 +97,10 @@ function loadImportsRecursive() {
 
 loadImportsRecursive();
 
+
+
+
+
 /************************************************************************/
 /*
 function showImage(image) {
@@ -136,8 +151,4 @@ function showPdf(pdfSrc, pdfTitle) {
     // Establecer el título del PDF en el modal
     modalTitle.textContent = pdfTitle;
 }
-
-
-
-
 
