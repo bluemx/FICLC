@@ -48,8 +48,12 @@ const importsConfig = {
 
   function setInitialLanguage () {
 
+    /*
     if (window.location.href.includes('ficloscabos')) { MicroLangSwitch('es') }
     if (window.location.href.includes('loscabosiff')) { MicroLangSwitch('en') }
+    */
+
+    
 
     // Make links redirect to each domain
 

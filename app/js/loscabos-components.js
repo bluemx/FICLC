@@ -562,6 +562,7 @@ class LoscabosCarousel extends HTMLElement {
   }
 
   render() {
+
     const items = this.getslides(this)
     const perPage = this.getAttribute('pagination') || 3;
     const gap = this.getAttribute('gap') || 0;
@@ -571,7 +572,7 @@ class LoscabosCarousel extends HTMLElement {
         <div class="splide__track">
           <ul class="splide__list">
             ${items}
-          </ul>3
+          </ul>
         </div>
       </div>
     `;
